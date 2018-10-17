@@ -21,7 +21,7 @@ coming soon
 
 ___
 ## Contributing
-Join us on our [Discord](https://discord.me/remine) server if you would also like to contribute, as we use it for communication.
+Join us on our [Discord](https://discord.me/redmine) server if you would also like to contribute, as we use it for communication.
 
 ___
 ## Credits
