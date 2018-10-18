@@ -1,3 +1,81 @@
+@font-face {
+font-family: "Entypo";
+src: url("../fonts/Entypo/entypo.eot");
+src: url("../fonts/Entypo/entypo.woff") format("woff"), url("../fonts/Entypo/entypo.otf") format("opentype"), url("../fonts/Entypo/entypo.svg#filename") format("svg");
+}
+
+
+//images
+$logotype: "../images/icons/redmine-icon-white.png";
+
+//Font Icons
+//Admin panel
+$projects: "";
+$users: "\1f465";
+$groups: "e705";
+$rolespermissions: "e705";
+$trackers: "e705";
+$issuestatuses: "e705";
+$workflow: "e705";
+$customfields: "e705";
+$enumerators: "e705";
+$information: "e705";
+$settings: "\2692";
+$LDAP: "\e740";
+$plugins: "e705";
+$information: "\e705";
+//General configuratation
+
+$iconfont: Entypo;
+$iconcolor: black;
+$iconmargin: 10px;
+$iconsize: medium;
+$hovercolor: red;
+
+.icon::before{
+	font-family: $iconfont;
+	color: $iconcolor;
+	margin-right: $iconmargin;
+	font-size: $iconsize;
+	text-decoration: none !important;
+}
+
+.top-menu {
+
+}
+
+//[class*="icon-"] {font-weight: bold};
+
+.icon.icon-projects.projects::before {content: $projects;}
+.icon.icon-user.users::before{content: $users;}
+.icon.icon-group.groups::before{content: $groups;}
+.icon.icon-roles.roles::before{content: $rolespermissions;}
+.icon.icon-issue.trackers::before{content: $trackers;}
+.icon.icon-issue-edit.issue-statuses::before{content: $issuestatuses;}
+.icon.icon-workflows.workflows::before{content: $workflow;}
+.icon.icon-custom-fields.custom-fields::before{content: $customfields;}
+.icon.icon-list.enumerations::before{content: $enumerators;}
+.icon.icon-settings.settings::before{content: $settings;}
+.icon.icon-server-authentication.ldap-authentication::before{content: $LDAP;}
+.icon.icon-plugins.plugins::before{content: $plugins;}
+.icon.icon-help.info::before {content: $information;}
+
+#header > h1::before {
+	content: "";
+	background-image: url(#{$logotype});
+	background-size: 30px;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
 $color_1: #333;
 $color_2: #555;
 $color_3: #fff;
@@ -94,7 +172,7 @@ $color_93: #f4f;
 $font_family_1: Verdana, sans-serif;
 $font_family_2: "Trebuchet MS", Verdana, sans-serif;
 $font_family_3: Consolas, Menlo, "Liberation Mono", Courier, monospace;
-$background_color_1: #628DB6;
+$background_color_1: #4a76a8;
 $background_color_2: #759FCF;
 $background_color_3: #fff;
 $background_color_4: transparent;
@@ -333,6 +411,7 @@ code {
 	height: 1.8em;
 	font-size: 0.8em;
 	padding: 2px 2px 0px 6px;
+
 	ul {
 		margin: 0;
 		padding: 0;
@@ -396,6 +475,7 @@ code {
 	left: 6px;
 	margin-right: -500px;
 	width: 100%;
+
 	ul {
 		margin: 0;
 		padding: 0;
@@ -639,7 +719,7 @@ ul.flat {
 		font-weight: normal;
 	}
 	input#openid_url {
-		background: #fff url(../images/openid-bg.gif) no-repeat 4px 50%;
+		background: #fff url(../images/icons/UI/openid-bg.gif) no-repeat 4px 50%;
 		padding-left: 24px !important;
 	}
 	input#login-submit {
@@ -735,10 +815,10 @@ a.user.locked {
 }
 a.collapsible {
 	padding-left: 12px;
-	background: url(../images/arrow_expanded.png) no-repeat -3px 40%;
+	background: url(../images/icons/UI/arrow_expanded.png) no-repeat -3px 40%;
 }
 a.collapsible.collapsed {
-	background: url(../images/arrow_collapsed.png) no-repeat -5px 40%;
+	background: url(../images/icons/UI/arrow_collapsed.png) no-repeat -5px 40%;
 }
 a#toggle-completed-versions {
 	color: $color_10;
@@ -754,7 +834,7 @@ a#toggle-completed-versions {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	padding: 3px 18px 3px 6px;
-	background: #fff url(../images/sort_desc.png) no-repeat 97% 50%;
+	background: #fff url(../images/icons/UI/sort_desc.png) no-repeat 97% 50%;
 	cursor: pointer;
 	user-select: none;
 	-moz-user-select: none;
@@ -785,7 +865,7 @@ a#toggle-completed-versions {
 }
 .drdn.expanded {
 	.drdn-trigger {
-		background-image: url(../images/sort_asc.png);
+		background-image: url(../images/icons/UI/sort_asc.png);
 	}
 	.drdn-content {
 		display: block;
@@ -1019,7 +1099,7 @@ tr.project.archived {
 tr.project.idnt {
 	td.name {
 		span {
-			background: url(../images/bullet_arrow_right.png) no-repeat 0 50%;
+			background: url(../images/icons/UI/bullet_arrow_right.png) no-repeat 0 50%;
 			padding-left: 16px;
 		}
 	}
@@ -1134,7 +1214,7 @@ table.issues {
 }
 tr.issue.idnt {
 	td.subject {
-		background: url(../images/bullet_arrow_right.png) no-repeat 0 50%;
+		background: url(../images/icons/UI/bullet_arrow_right.png) no-repeat 0 50%;
 	}
 }
 tr.issue.idnt-1 {
@@ -1238,7 +1318,7 @@ tr.entry.file {
 }
 tr {
 	span.expander {
-		background-image: url(../images/bullet_toggle_plus.png);
+		background-image: url(../images/icons/UI/bullet_toggle_plus.png);
 		padding-left: 8px;
 		margin-left: 0;
 		cursor: pointer;
@@ -1246,7 +1326,7 @@ tr {
 }
 tr.open {
 	span.expander {
-		background-image: url(../images/bullet_toggle_minus.png);
+		background-image: url(../images/icons/UI/bullet_toggle_minus.png);
 	}
 }
 tr.changeset {
@@ -1533,14 +1613,14 @@ a.sort {
 	background-repeat: no-repeat;
 }
 a.sort.asc {
-	background-image: url(../images/sort_asc.png);
+	background-image: url(../images/icons/UI/sort_asc.png);
 }
 a.sort.desc {
-	background-image: url(../images/sort_desc.png);
+	background-image: url(../images/icons/UI/sort_desc.png);
 }
 table.boards {
 	a.board {
-		background: url(../images/comment.png) no-repeat 0% 50%;
+		background: url(../images/icons/UI/comment.png) no-repeat 0% 50%;
 		padding-left: 20px;
 	}
 	td.last-message {
@@ -1625,7 +1705,7 @@ span.add_attachment {
 	line-height: 2.5em;
 	a {
 		padding-left: 16px;
-		background: url(../images/bullet_add.png) no-repeat 0 50%;
+		background: url(../images/icons/UI/bullet_add.png) no-repeat 0 50%;
 	}
 }
 .highlight {
@@ -1929,13 +2009,13 @@ fieldset.collapsible {
 	border-width: 1px 0 0 0;
 	>legend {
 		padding-left: 16px;
-		background: url(../images/arrow_expanded.png) no-repeat 0% 40%;
+		background: url(../images/icons/UI/arrow_expanded.png) no-repeat 0% 40%;
 		cursor: pointer;
 	}
 }
 fieldset.collapsible.collapsed {
 	>legend {
-		background-image: url(../images/arrow_collapsed.png);
+		background-image: url(../images/icons/UI/arrow_collapsed.png);
 	}
 }
 fieldset#date-range {
@@ -1988,7 +2068,7 @@ fieldset#filters {
 	margin-right: 1em;
 }
 .toggle-multiselect {
-	background: url(../images/bullet_toggle_plus.png) no-repeat 0% 40%;
+	background: url(../images/icons/UI/bullet_toggle_plus.png) no-repeat 0% 40%;
 	padding-left: 16px;
 	margin-left: 0;
 	margin-right: 5px;
@@ -2377,7 +2457,7 @@ textarea#custom_field_default_value {
 	vertical-align: middle;
 	width: 16px;
 	height: 16px;
-	background: url(../images/reorder.png) no-repeat 0 50%;
+	background: url(../images/icons/UI/reorder.png) no-repeat 0 50%;
 	cursor: move;
 }
 input#content_comments {
@@ -2518,7 +2598,7 @@ input#time_entry_comments {
 fieldset.preview {
 	margin-top: 1em;
 	min-width: inherit;
-	background: url(../images/draft.png);
+	background: url(../images/icons/UI/draft.png);
 }
 .tabular.settings {
 	p {
@@ -2599,12 +2679,12 @@ span.required {
 	}
 	.ajax-waiting {
 		input.filename {
-			background: url(../images/hourglass.png) no-repeat 0px 50%;
+			background: url(../images/icons/UI/hourglass.png) no-repeat 0px 50%;
 		}
 	}
 	.ajax-loading {
 		input.filename {
-			background: url(../images/loading.gif) no-repeat 0px 50%;
+			background: url(../images/icons/UI/loading.gif) no-repeat 0px 50%;
 		}
 	}
 	div.ui-progressbar {
@@ -2690,7 +2770,7 @@ p.other-formats {
 	}
 }
 a.atom {
-	background: url(../images/feed.png) no-repeat 1px 50%;
+	background: url(../images/icons/UI/feed.png) no-repeat 1px 50%;
 	padding: 2px 0px 3px 16px;
 }
 em.info {
@@ -2701,7 +2781,7 @@ em.info {
 }
 em.info.error {
 	padding-left: 20px;
-	background: url(../images/exclamation.png) no-repeat 0 50%;
+	background: url(../images/icons/UI/exclamation.png) no-repeat 0 50%;
 }
 textarea.text_cf {
 	width: 95%;
@@ -2765,14 +2845,14 @@ input#user_search {
 	}
 }
 input.autocomplete {
-	background: #fff url(../images/magnifier.png) no-repeat 2px 50%;
+	background: #fff url(../images/icons/UI/magnifier.png) no-repeat 2px 50%;
 	padding-left: 20px !important;
 	border: 1px solid #9EB1C2;
 	border-radius: 2px;
 	height: 1.5em;
 }
 input.autocomplete.ajax-loading {
-	background-image: url(../images/loading.gif);
+	background-image: url(../images/icons/UI/loading.gif);
 }
 .role-visibility {
 	padding-left: 2em;
@@ -2815,7 +2895,7 @@ input.autocomplete.ajax-loading {
 	font-size: 1.1em;
 	border: 1px solid;
 	border-radius: 3px;
-	background: url(../images/exclamation.png) 8px 50% no-repeat;
+	background: url(../images/icons/UI/exclamation.png) 8px 50% no-repeat;
 	background-color: $background_color_19;
 	border-color: $border_color_3;
 	color: $color_22;
@@ -2865,26 +2945,26 @@ div.flash {
 	font-size: 1.1em;
 	border: 1px solid;
 	border-radius: 3px;
-	background: url(../images/warning.png) 8px 5px no-repeat;
+	background: url(../images/icons/UI/warning.png) 8px 5px no-repeat;
 	background-color: $background_color_21;
 	border-color: $border_color_5;
 	color: $color_24;
 	text-align: left;
 }
 div.flash.error {
-	background: url(../images/exclamation.png) 8px 50% no-repeat;
+	background: url(../images/icons/UI/exclamation.png) 8px 50% no-repeat;
 	background-color: $background_color_19;
 	border-color: $border_color_3;
 	color: $color_22;
 }
 div.flash.notice {
-	background: url(../images/true.png) 8px 5px no-repeat;
+	background: url(../images/icons/UI/true.png) 8px 5px no-repeat;
 	background-color: $background_color_20;
 	border-color: $border_color_4;
 	color: $color_23;
 }
 div.flash.warning {
-	background: url(../images/warning.png) 8px 5px no-repeat;
+	background: url(../images/icons/UI/warning.png) 8px 5px no-repeat;
 	background-color: $background_color_21;
 	border-color: $border_color_5;
 	color: $color_24;
@@ -2908,7 +2988,7 @@ div.flash.warning {
 	span {
 		background-position: 0% 40%;
 		background-repeat: no-repeat;
-		background-image: url(../images/loading.gif);
+		background-image: url(../images/icons/UI/loading.gif);
 		padding-left: 26px;
 		vertical-align: bottom;
 	}
@@ -2965,34 +3045,34 @@ table.cal {
 	}
 	.starting {
 		a.issue {
-			background: url(../images/bullet_go.png) no-repeat -1px -2px;
+			background: url(../images/icons/UI/bullet_go.png) no-repeat -1px -2px;
 			padding-left: 16px;
 		}
 	}
 	.ending {
 		a.issue {
-			background: url(../images/bullet_end.png) no-repeat -1px -2px;
+			background: url(../images/icons/UI/bullet_end.png) no-repeat -1px -2px;
 			padding-left: 16px;
 		}
 	}
 	.starting.ending {
 		a.issue {
-			background: url(../images/bullet_diamond.png) no-repeat -1px -2px;
+			background: url(../images/icons/UI/bullet_diamond.png) no-repeat -1px -2px;
 			padding-left: 16px;
 		}
 	}
 }
 p.cal.legend {
 	.starting {
-		background: url(../images/bullet_go.png) no-repeat -1px -2px;
+		background: url(../images/icons/UI/bullet_go.png) no-repeat -1px -2px;
 		padding-left: 16px;
 	}
 	.ending {
-		background: url(../images/bullet_end.png) no-repeat -1px -2px;
+		background: url(../images/icons/UI/bullet_end.png) no-repeat -1px -2px;
 		padding-left: 16px;
 	}
 	.starting.ending {
-		background: url(../images/bullet_diamond.png) no-repeat -1px -2px;
+		background: url(../images/icons/UI/bullet_diamond.png) no-repeat -1px -2px;
 		padding-left: 16px;
 	}
 	span {
@@ -3090,7 +3170,7 @@ button.tab-left {
 	width: 20px;
 	bottom: -1px;
 	right: 20px;
-	background: #eeeeee url(../images/bullet_arrow_left.png) no-repeat 50% 50%;
+	background: #eeeeee url(../images/icons/UI/bullet_arrow_left.png) no-repeat 50% 50%;
 	border-top-left-radius: 3px;
 	&:hover {
 		background-color: $background_color_23;
@@ -3110,7 +3190,7 @@ button.tab-right {
 	width: 20px;
 	bottom: -1px;
 	right: 0;
-	background: #eeeeee url(../images/bullet_arrow_right.png) no-repeat 50% 50%;
+	background: #eeeeee url(../images/icons/UI/bullet_arrow_right.png) no-repeat 50% 50%;
 	border-top-right-radius: 3px;
 	&:hover {
 		background-color: $background_color_23;
@@ -3173,7 +3253,7 @@ div.wiki {
 		background-position: 0% 60%;
 		background-repeat: no-repeat;
 		padding-left: 12px;
-		background-image: url(../images/external.png);
+		background-image: url(../images/icons/UI/external.png);
 	}
 	a {
 		word-wrap: break-word;
@@ -3374,15 +3454,15 @@ h6 {
 	font-weight: bold;
 }
 .task_late {
-	background: #f66 url(../images/task_late.png);
+	background: #f66 url(../images/icons/UI/task_late.png);
 	border: 1px solid #f66;
 }
 .task_done {
-	background: #00c600 url(../images/task_done.png);
+	background: #00c600 url(../images/icons/UI/task_done.png);
 	border: 1px solid #00c600;
 }
 .task_todo {
-	background: #aaa url(../images/task_todo.png);
+	background: #aaa url(../images/icons/UI/task_todo.png);
 	border: 1px solid #aaa;
 }
 .task_todo.parent {
@@ -3398,7 +3478,7 @@ h6 {
 }
 .task.parent.marker.starting {
 	position: absolute;
-	background: url(../images/task_parent_end.png) no-repeat 0 0;
+	background: url(../images/icons/UI/task_parent_end.png) no-repeat 0 0;
 	width: 8px;
 	height: 16px;
 	margin-left: -4px;
@@ -3407,7 +3487,7 @@ h6 {
 }
 .task.parent.marker.ending {
 	position: absolute;
-	background: url(../images/task_parent_end.png) no-repeat 0 0;
+	background: url(../images/icons/UI/task_parent_end.png) no-repeat 0 0;
 	width: 8px;
 	height: 16px;
 	margin-left: -4px;
@@ -3415,50 +3495,50 @@ h6 {
 	top: -1px;
 }
 .version.task_late {
-	background: #f66 url(../images/milestone_late.png);
+	background: #f66 url(../images/icons/UI/milestone_late.png);
 	border: 1px solid #f66;
 	height: 2px;
 	margin-top: 3px;
 }
 .version.task_done {
-	background: #00c600 url(../images/milestone_done.png);
+	background: #00c600 url(../images/icons/UI/milestone_done.png);
 	border: 1px solid #00c600;
 	height: 2px;
 	margin-top: 3px;
 }
 .version.task_todo {
-	background: #fff url(../images/milestone_todo.png);
+	background: #fff url(../images/icons/UI/milestone_todo.png);
 	border: 1px solid #fff;
 	height: 2px;
 	margin-top: 3px;
 }
 .version.marker {
-	background-image: url(../images/version_marker.png);
+	background-image: url(../images/icons/UI/version_marker.png);
 	background-repeat: no-repeat;
 	border: 0;
 	margin-left: -4px;
 	margin-top: 1px;
 }
 .project.task_late {
-	background: #f66 url(../images/milestone_late.png);
+	background: #f66 url(../images/icons/UI/milestone_late.png);
 	border: 1px solid #f66;
 	height: 2px;
 	margin-top: 3px;
 }
 .project.task_done {
-	background: #00c600 url(../images/milestone_done.png);
+	background: #00c600 url(../images/icons/UI/milestone_done.png);
 	border: 1px solid #00c600;
 	height: 2px;
 	margin-top: 3px;
 }
 .project.task_todo {
-	background: #fff url(../images/milestone_todo.png);
+	background: #fff url(../images/icons/UI/milestone_todo.png);
 	border: 1px solid #fff;
 	height: 2px;
 	margin-top: 3px;
 }
 .project.marker {
-	background-image: url(../images/project_marker.png);
+	background-image: url(../images/icons/UI/project_marker.png);
 	background-repeat: no-repeat;
 	border: 0;
 	margin-left: -4px;
@@ -3511,295 +3591,295 @@ h6 {
 	}
 }
 .icon-add {
-	background-image: url(../images/add.png);
+	background-image: url(../images/icons/UI/add.png);
 }
 .icon-edit {
-	background-image: url(../images/edit.png);
+	background-image: url(../images/icons/UI/edit.png);
 }
 .icon-copy {
-	background-image: url(../images/copy.png);
+	background-image: url(../images/icons/UI/copy.png);
 }
 .icon-duplicate {
-	background-image: url(../images/duplicate.png);
+	background-image: url(../images/icons/UI/duplicate.png);
 }
 .icon-del {
-	background-image: url(../images/delete.png);
+	background-image: url(../images/icons/UI/delete.png);
 }
 .icon-move {
-	background-image: url(../images/move.png);
+	background-image: url(../images/icons/UI/move.png);
 }
 .icon-save {
-	background-image: url(../images/save.png);
+	background-image: url(../images/icons/UI/save.png);
 }
 .icon-download {
-	background-image: url(../images/download.png);
+	background-image: url(../images/icons/UI/download.png);
 }
 .icon-cancel {
-	background-image: url(../images/cancel.png);
+	background-image: url(../images/icons/UI/cancel.png);
 }
 .icon-multiple {
-	background-image: url(../images/table_multiple.png);
+	background-image: url(../images/icons/UI/table_multiple.png);
 }
 .icon-folder {
-	background-image: url(../images/folder.png);
+	background-image: url(../images/icons/UI/folder.png);
 }
 .open {
 	.icon-folder {
-		background-image: url(../images/folder_open.png);
+		background-image: url(../images/icons/UI/folder_open.png);
 	}
 }
 .icon-package {
-	background-image: url(../images/package.png);
+	background-image: url(../images/icons/UI/package.png);
 }
 .icon-user {
-	background-image: url(../images/user.png);
+	background-image: url(../images/icons/UI/user.png);
 }
 .icon-project {
-	background-image: url(../images/projects.png);
-	background-image: url(../images/projects.png);
+	background-image: url(../images/icons/UI/projects.png);
+	background-image: url(../images/icons/UI/projects.png);
 }
 .icon-projects {
-	background-image: url(../images/projects.png);
+	background-image: url(../images/icons/UI/projects.png);
 }
 .icon-help {
-	background-image: url(../images/help.png);
+	background-image: url(../images/icons/UI/help.png);
 }
 .icon-attachment {
-	background-image: url(../images/attachment.png);
+	background-image: url(../images/icons/UI/attachment.png);
 }
 .icon-history {
-	background-image: url(../images/history.png);
+	background-image: url(../images/icons/UI/history.png);
 }
 .icon-time-entry {
-	background-image: url(../images/time.png);
+	background-image: url(../images/icons/UI/time.png);
 }
 .icon-time {
-	background-image: url(../images/time.png);
+	background-image: url(../images/icons/UI/time.png);
 }
 .icon-time-add {
-	background-image: url(../images/time_add.png);
+	background-image: url(../images/icons/UI/time_add.png);
 }
 .icon-stats {
-	background-image: url(../images/stats.png);
+	background-image: url(../images/icons/UI/stats.png);
 }
 .icon-warning {
-	background-image: url(../images/warning.png);
+	background-image: url(../images/icons/UI/warning.png);
 }
 .icon-error {
-	background-image: url(../images/exclamation.png);
+	background-image: url(../images/icons/UI/exclamation.png);
 }
 .icon-fav {
-	background-image: url(../images/fav.png);
+	background-image: url(../images/icons/UI/fav.png);
 }
 .icon-fav-off {
-	background-image: url(../images/fav_off.png);
+	background-image: url(../images/icons/UI/fav_off.png);
 }
 .icon-reload {
-	background-image: url(../images/reload.png);
+	background-image: url(../images/icons/UI/reload.png);
 }
 .icon-lock {
-	background-image: url(../images/locked.png);
+	background-image: url(../images/icons/UI/locked.png);
 }
 .icon-locked {
-	background-image: url(../images/locked.png);
+	background-image: url(../images/icons/UI/locked.png);
 }
 .icon-unlock {
-	background-image: url(../images/unlock.png);
+	background-image: url(../images/icons/UI/unlock.png);
 }
 .icon-checked {
-	background-image: url(../images/toggle_check.png);
+	background-image: url(../images/icons/UI/toggle_check.png);
 }
 .icon-report {
-	background-image: url(../images/report.png);
+	background-image: url(../images/icons/UI/report.png);
 }
 .icon-comment {
-	background-image: url(../images/comment.png);
+	background-image: url(../images/icons/UI/comment.png);
 }
 .icon-comments {
-	background-image: url(../images/comment.png);
+	background-image: url(../images/icons/UI/comment.png);
 }
 .icon-summary {
-	background-image: url(../images/lightning.png);
+	background-image: url(../images/icons/UI/lightning.png);
 }
 .icon-server-authentication {
-	background-image: url(../images/server_key.png);
+	background-image: url(../images/icons/UI/server_key.png);
 }
 .icon-issue {
-	background-image: url(../images/ticket.png);
+	background-image: url(../images/icons/UI/ticket.png);
 }
 .icon-zoom-in {
-	background-image: url(../images/zoom_in.png);
+	background-image: url(../images/icons/UI/zoom_in.png);
 }
 .icon-zoom-out {
-	background-image: url(../images/zoom_out.png);
+	background-image: url(../images/icons/UI/zoom_out.png);
 }
 .icon-magnifier {
-	background-image: url(../images/magnifier.png);
+	background-image: url(../images/icons/UI/magnifier.png);
 }
 .icon-passwd {
-	background-image: url(../images/textfield_key.png);
+	background-image: url(../images/icons/UI/textfield_key.png);
 }
 .icon-arrow-right {
-	background-image: url(../images/bullet_go.png);
+	background-image: url(../images/icons/UI/bullet_go.png);
 }
 .icon-test {
-	background-image: url(../images/bullet_go.png);
+	background-image: url(../images/icons/UI/bullet_go.png);
 }
 .icon-sticky {
-	background-image: url(../images/bullet_go.png);
+	background-image: url(../images/icons/UI/bullet_go.png);
 }
 .icon-email {
-	background-image: url(../images/email.png);
+	background-image: url(../images/icons/UI/email.png);
 }
 .icon-email-disabled {
-	background-image: url(../images/email_disabled.png);
+	background-image: url(../images/icons/UI/email_disabled.png);
 }
 .icon-email-add {
-	background-image: url(../images/email_add.png);
+	background-image: url(../images/icons/UI/email_add.png);
 }
 .icon-move-up {
-	background-image: url(../images/1uparrow.png);
+	background-image: url(../images/icons/UI/1uparrow.png);
 }
 .icon-move-top {
-	background-image: url(../images/2uparrow.png);
+	background-image: url(../images/icons/UI/2uparrow.png);
 }
 .icon-move-down {
-	background-image: url(../images/1downarrow.png);
+	background-image: url(../images/icons/UI/1downarrow.png);
 }
 .icon-move-bottom {
-	background-image: url(../images/2downarrow.png);
+	background-image: url(../images/icons/UI/2downarrow.png);
 }
 .icon-ok {
-	background-image: url(../images/true.png);
+	background-image: url(../images/icons/UI/true.png);
 }
 .icon-not-ok {
-	background-image: url(../images/false.png);
+	background-image: url(../images/icons/UI/false.png);
 }
 .icon-link-break {
-	background-image: url(../images/link_break.png);
+	background-image: url(../images/icons/UI/link_break.png);
 }
 .icon-list {
-	background-image: url(../images/text_list_bullets.png);
+	background-image: url(../images/icons/UI/text_list_bullets.png);
 }
 .icon-close {
-	background-image: url(../images/close.png);
+	background-image: url(../images/icons/UI/close.png);
 	&:hover {
-		background-image: url(../images/close_hl.png);
+		background-image: url(../images/icons/UI/close_hl.png);
 	}
 }
 .icon-settings {
-	background-image: url(../images/changeset.png);
+	background-image: url(../images/icons/UI/changeset.png);
 }
 .icon-group {
-	background-image: url(../images/group.png);
+	background-image: url(../images/icons/UI/group.png);
 }
 .icon-groupnonmember {
-	background-image: url(../images/group.png);
+	background-image: url(../images/icons/UI/group.png);
 }
 .icon-groupanonymous {
-	background-image: url(../images/group.png);
+	background-image: url(../images/icons/UI/group.png);
 }
 .icon-roles {
-	background-image: url(../images/database_key.png);
+	background-image: url(../images/icons/UI/database_key.png);
 }
 .icon-issue-edit {
-	background-image: url(../images/ticket_edit.png);
+	background-image: url(../images/icons/UI/ticket_edit.png);
 }
 .icon-workflows {
-	background-image: url(../images/ticket_go.png);
+	background-image: url(../images/icons/UI/ticket_go.png);
 }
 .icon-custom-fields {
-	background-image: url(../images/textfield.png);
+	background-image: url(../images/icons/UI/textfield.png);
 }
 .icon-plugins {
-	background-image: url(../images/plugin.png);
+	background-image: url(../images/icons/UI/plugin.png);
 }
 .icon-news {
-	background-image: url(../images/news.png);
+	background-image: url(../images/icons/UI/news.png);
 }
 .icon-issue-closed {
-	background-image: url(../images/ticket_checked.png);
+	background-image: url(../images/icons/UI/ticket_checked.png);
 }
 .icon-issue-note {
-	background-image: url(../images/ticket_note.png);
+	background-image: url(../images/icons/UI/ticket_note.png);
 }
 .icon-changeset {
-	background-image: url(../images/changeset.png);
+	background-image: url(../images/icons/UI/changeset.png);
 }
 .icon-message {
-	background-image: url(../images/message.png);
+	background-image: url(../images/icons/UI/message.png);
 }
 .icon-reply {
-	background-image: url(../images/comments.png);
+	background-image: url(../images/icons/UI/comments.png);
 }
 .icon-wiki-page {
-	background-image: url(../images/wiki_edit.png);
+	background-image: url(../images/icons/UI/wiki_edit.png);
 }
 .icon-document {
-	background-image: url(../images/document.png);
+	background-image: url(../images/icons/UI/document.png);
 }
 .icon-add-bullet {
-	background-image: url(../images/bullet_add.png);
+	background-image: url(../images/icons/UI/bullet_add.png);
 }
 .icon-shared {
-	background-image: url(../images/link.png);
+	background-image: url(../images/icons/UI/link.png);
 }
 .icon-file {
-	background-image: url(../images/files/default.png);
+	background-image: url(../images/icons/UI/files/default.png);
 }
 .icon-file.text-plain {
-	background-image: url(../images/files/text.png);
+	background-image: url(../images/icons/UI/files/text.png);
 }
 .icon-file.text-x-c {
-	background-image: url(../images/files/c.png);
+	background-image: url(../images/icons/UI/files/c.png);
 }
 .icon-file.text-x-csharp {
-	background-image: url(../images/files/csharp.png);
+	background-image: url(../images/icons/UI/files/csharp.png);
 }
 .icon-file.text-x-java {
-	background-image: url(../images/files/java.png);
+	background-image: url(../images/icons/UI/files/java.png);
 }
 .icon-file.text-x-javascript {
-	background-image: url(../images/files/js.png);
+	background-image: url(../images/icons/UI/files/js.png);
 }
 .icon-file.text-x-php {
-	background-image: url(../images/files/php.png);
+	background-image: url(../images/icons/UI/files/php.png);
 }
 .icon-file.text-x-ruby {
-	background-image: url(../images/files/ruby.png);
+	background-image: url(../images/icons/UI/files/ruby.png);
 }
 .icon-file.text-xml {
-	background-image: url(../images/files/xml.png);
+	background-image: url(../images/icons/UI/files/xml.png);
 }
 .icon-file.text-css {
-	background-image: url(../images/files/css.png);
+	background-image: url(../images/icons/UI/files/css.png);
 }
 .icon-file.text-html {
-	background-image: url(../images/files/html.png);
+	background-image: url(../images/icons/UI/files/html.png);
 }
 .icon-file.image-gif {
-	background-image: url(../images/files/image.png);
+	background-image: url(../images/icons/UI/files/image.png);
 }
 .icon-file.image-jpeg {
-	background-image: url(../images/files/image.png);
+	background-image: url(../images/icons/UI/files/image.png);
 }
 .icon-file.image-png {
-	background-image: url(../images/files/image.png);
+	background-image: url(../images/icons/UI/files/image.png);
 }
 .icon-file.image-tiff {
-	background-image: url(../images/files/image.png);
+	background-image: url(../images/icons/UI/files/image.png);
 }
 .icon-file.application-pdf {
-	background-image: url(../images/files/pdf.png);
+	background-image: url(../images/icons/UI/files/pdf.png);
 }
 .icon-file.application-zip {
-	background-image: url(../images/files/zip.png);
+	background-image: url(../images/icons/UI/files/zip.png);
 }
 .icon-file.application-x-gzip {
-	background-image: url(../images/files/zip.png);
+	background-image: url(../images/icons/UI/files/zip.png);
 }
 .sort-handle.ajax-loading {
-	background-image: url(../images/loading.gif);
+	background-image: url(../images/icons/UI/loading.gif);
 }
 tr.ui-sortable-helper {
 	border: 1px solid #e4e4e4;
