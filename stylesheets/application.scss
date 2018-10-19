@@ -62,12 +62,13 @@ $hovercolor: red;
 
 #header > h1::before {
 	content: "";
-	background-image: url(#{$logotype});
-	background-size: 30px;
+	background-image: url(../images/icons/redmine-icon-white.png);
+	background-size: 37px;
 	display: inline-block;
-	width: 40px;
-	height: 20px;
+	width: 58px;
+	height: 26px;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 
 
@@ -259,6 +260,7 @@ body {
 	margin: 0;
 	padding: 0;
 	min-width: 900px;
+	transition: 2s;
 }
 h1 {
 	font-family: $font_family_2;
@@ -407,9 +409,9 @@ code {
 #top-menu {
 	background: #3E5B76;
 	color: $color_3;
-	height: 1.8em;
-	font-size: 0.8em;
-	padding: 2px 2px 0px 6px;
+	height: 18px;
+	font-size: 11px;
+	padding: 5px 2px 0px 4px;
     position: fixed;
     width: 100%;
     z-index: 9999;
@@ -442,14 +444,16 @@ code {
 #header {
 	min-height: 5.3em;
 	margin: 0;
-	background-color: $background_color_1;
+	background-color: #214d7e;
 	color: $color_4;
-	padding: 24px 6px 6px;
+	padding: 24px 6px 1px 0px;
 	position: relative;
 	a {
 		color: $color_4;
 	}
 	h1 {
+		font-size: 36px;
+		margin-top: 8px;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -462,6 +466,12 @@ code {
 }
 #quick-search {
 	float: right;
+	float: right;
+	position: sticky;
+	top: 23px;
+	z-index: 9999;
+	right: 6px;
+	padding-top: 4px;
 	#q {
 		width: 130px;
 		height: 24px;
@@ -473,10 +483,11 @@ code {
 }
 #main-menu {
     position: sticky;
-    top: 19px;
+    top: 23px;
     width: 100%;
     z-index: 9998;
-	background-color: $background_color_1;
+		font-size: 14px;
+		background-color: $background_color_1;
 
 	ul {
 		margin: 0;
@@ -497,9 +508,10 @@ code {
 			text-decoration: none;
 			font-weight: bold;
 			margin: 0;
-			padding: 4px 10px 4px 10px;
+			padding: 6px 8px 6px 10px;
 			&:hover {
 				background: #759FCF;
+				border-bottom: 4px solid black;
 				color: $color_3;
 			}
 		}
@@ -514,9 +526,11 @@ code {
 		a.selected {
 			background: #fff;
 			color: $color_2;
+			border-bottom: 4px solid black;
 			&:hover {
 				background: #fff;
 				color: $color_2;
+				border-bottom: 4px solid black;
 			}
 		}
 		a.new-object {
@@ -1803,11 +1817,17 @@ input {
 	vertical-align: middle;
 	margin-top: 1px;
 	margin-bottom: 1px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 2px grey;
 }
 select {
 	vertical-align: middle;
 	margin-top: 1px;
 	margin-bottom: 1px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	height: 24px;
+	box-shadow: 0px 0px 2px grey;
 }
 input[type="submit"] {
 	-webkit-appearance: button;
@@ -3888,7 +3908,8 @@ tr.ui-sortable-helper {
 }
 img.gravatar {
 	vertical-align: middle;
-	border-radius: 20%;
+	border: 1px solid black;
+	height: 37px;
 }
 div.gravatar-with-child {
 	position: relative;
@@ -3906,7 +3927,7 @@ div.gravatar-with-child {
 	dt {
 		img.gravatar {
 			float: left;
-			margin: 0 1em 1em 0;
+			margin: 4px 1em 1em 0;
 		}
 		clear: left;
 	}
