@@ -1,37 +1,139 @@
+// Fonts
 @font-face {
-font-family: "Entypo";
-src: url("../fonts/Entypo/entypo.eot");
-src: url("../fonts/Entypo/entypo.woff") format("woff"), url("../fonts/Entypo/entypo.otf") format("opentype"), url("../fonts/Entypo/entypo.svg#filename") format("svg");
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Material/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('../fonts/Entypo/MaterialIcons-Regular'),
+       url(../fonts/Material/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../fonts/Material/MaterialIcons-Regular.woff) format('woff'),
+       url(../fonts/Material/MaterialIcons-Regular.ttf) format('truetype'),
+			 url("../fonts/Material/entypo.svg#filename") format("svg");
 }
 
 
-//images
-$logotype: "../images/icons/redmine-icon-white.png";
 
-//Font Icons
-//Admin panel
-$projects: "";
-$users: "\1f465";
-$groups: "e705";
-$rolespermissions: "e705";
-$trackers: "e705";
-$issuestatuses: "e705";
-$workflow: "e705";
-$customfields: "e705";
-$enumerators: "e705";
-$information: "e705";
-$settings: "\2692";
-$LDAP: "\e740";
-$plugins: "e705";
-$information: "\e705";
-//General configuratation
+@font-face {
+font-family: 'Roboto Thin', sans-serif;
+src: url("../fonts/Roboto/Roboto-Thin.ttf");
+}
 
-$iconfont: Entypo;
+@font-face {
+font-family: 'Roboto', sans-serif;
+src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+//GENERAL
+$globalFont: "Roboto", sans-serif;
+$globalFontTitles: "Roboto Thin", sans-serif;
+$contentContainerBgColor: "";
+$headerTextColor: "";
+$textColor: "";
+$linkColor: "";
+$visitedLinkColor: "";
+
+//TOP BAR
+$tbBgColor: "";
+$tbButtonBgColorIdle: "";
+$tbButtonBgColorHover: "";
+$tbButtonBgColorActive: "";
+$tbButtonBgColorActiveHover: "";
+$tbButtonTextColorIdle: "";
+$tbButtonTextColorHover: "";
+$tbButtonTextColorActive: "";
+$tbButtonTextColorActiveHover: "";
+$tbBorderBottomColorIdle: "";
+$tbBorderBottomColorHover: "";
+$tbBorderBottomColorActive: "";
+$tbBorderBottomColorActiveHover: "";
+$tbShadow: "";
+$tbTransitionTime: "";
+$tbTextSize: "";
+
+//HEADER
+$hdLogotype: "../images/icons/redmine-icon-white.png";
+$hdBgColor: "";
+$hdTextColor: "";
+$hdTextSize: "";
+$hdShadow: 0px 0px 4px black;
+
+//MAIN MENU
+$mmBgColor: "";
+$mmButtonBgColorIdle: "";
+$mmButtonBgColorHover: "";
+$mmButtonBgColorActive: "";
+$mmButtonBgColorActiveHover: "";
+$mmButtonTextColorIdle: "";
+$mmButtonTextColorHover: "";
+$mmButtonTextColorActive: "";
+$mmButtonTextColorActiveHover: "";
+$mmBorderBottomColorIdle: "";
+$mmBorderBottomColorHover: "";
+$mmBorderBottomColorActive: "";
+$mmBorderBottomColorActiveHover: "";
+$mmBorderBottomThickness: "";
+$mmShadow: "";
+$mmTransitionTime: "";
+$mmTextSize: "";
+
+//FOOTER
+$ftBgColor: "";
+$ftTextColor: "";
+$ftLinkColor: "";
+$ftShadow: "";
+
+//NOTIFICATION MESSAGES
+$noDataMSGBgColor: #FFE468;
+$noDataMSGBorderColor: #eadbbc;
+$noDataMSGTextColor: #7e5600;
+
+
+
+//FONT ICON MAPPINGS
+$iconfont: "Material Icons";
 $iconcolor: black;
 $iconmargin: 10px;
 $iconsize: medium;
 $hovercolor: red;
 
+$new: "\e145";
+$time: "\e8b5";
+$apply: "\e5ca";
+$clear: "\e0b8";
+$save: "\e161";
+$zoomin: "\e8ff";
+$zoomout: "\e900";
+$atom: "\e0e5";
+$csv: "\e228";
+$pdf: "\e415";
+$watch: "\e83a";
+$unwatch: "\e838";
+$copy: "\e14d";
+$quote: "\e0cb";
+$edit: "\e3c9";
+$delete: "\e872";
+$sticky: "";
+$issue: "";
+$reorder: "\e8d5";
+$summary: "\e8b0";
+$projects: "\e2c7";
+$users: "\e8e8";
+$groups: "\e7ef";
+$rolespermissions: "\e897";
+$trackers: "\e8e1";
+$issuestatuses: "\e065";
+$workflow: "\e335";
+$customfields: "\e262";
+$enumerators: "\e242";
+$settings: "\e8b8";
+$LDAP: "\e0da";
+$plugins: "\e87b";
+$information: "\e88e";
+$close: "\e899";
+$open: "\e898";
+
+//General configuratation
 .icon::before{
 	font-family: $iconfont;
 	color: $iconcolor;
@@ -43,39 +145,6 @@ $hovercolor: red;
 .top-menu {
 
 }
-
-//[class*="icon-"] {font-weight: bold};
-
-.icon.icon-projects.projects::before {content: $projects;}
-.icon.icon-user.users::before{content: $users;}
-.icon.icon-group.groups::before{content: $groups;}
-.icon.icon-roles.roles::before{content: $rolespermissions;}
-.icon.icon-issue.trackers::before{content: $trackers;}
-.icon.icon-issue-edit.issue-statuses::before{content: $issuestatuses;}
-.icon.icon-workflows.workflows::before{content: $workflow;}
-.icon.icon-custom-fields.custom-fields::before{content: $customfields;}
-.icon.icon-list.enumerations::before{content: $enumerators;}
-.icon.icon-settings.settings::before{content: $settings;}
-.icon.icon-server-authentication.ldap-authentication::before{content: $LDAP;}
-.icon.icon-plugins.plugins::before{content: $plugins;}
-.icon.icon-help.info::before {content: $information;}
-
-#header > h1::before {
-	content: "";
-	background-image: url(../images/icons/redmine-icon-white.png);
-	background-size: 37px;
-	display: inline-block;
-	width: 58px;
-	height: 26px;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-
-
-
-
-
 
 $color_1: #333;
 $color_2: #555;
@@ -170,8 +239,7 @@ $color_90: #0c0;
 $color_91: #c00;
 $color_92: #88f;
 $color_93: #f4f;
-$font_family_1: Verdana, sans-serif;
-$font_family_2: "Trebuchet MS", Verdana, sans-serif;
+
 $font_family_3: Consolas, Menlo, "Liberation Mono", Courier, monospace;
 $background_color_1: #4a76a8;
 $background_color_2: #759FCF;
@@ -214,29 +282,6 @@ $border_color_4: #9fcf9f;
 $border_color_5: #eadbbc;
 $border_bottom_color_1: transparent;
 
-/***** Layout *****/
-/* IE */
-/***** Links *****/
-/***** Dropdown *****/
-/***** Tables *****/
-/***** Tabular forms ******/
-/***** Flash & error messages ****/
-/***** Ajax indicator ******/
-/***** Calendar *****/
-/***** Tooltips ******/
-/***** Progress bar *****/
-/***** Tabs *****/
-/***** Diff *****/
-/***** Wiki *****/
-/* IE6 doesn't autosize div */
-/***** My page layout *****/
-/***** Gantt chart *****/
-/***** Icons *****/
-/* Used on 12px Gravatar img tags without the icon background */
-/* Custom JQuery styles */
-/************* CodeRay styles *************/
-/***** Media print specific styles *****/
-/* Accessibility specific styles */
 html {
 	overflow-y: scroll;
 	>body {
@@ -254,16 +299,25 @@ html {
 	}
 }
 body {
-	font-family: $font_family_1;
+	font-family: $globalFont;
 	font-size: 12px;
 	color: $color_1;
 	margin: 0;
 	padding: 0;
 	min-width: 900px;
-	transition: 2s;
 }
+
+#wrapper {
+	opacity: 0;
+	transition: 0.1s ease-in;
+}
+
+#wrapper.is-visible {
+  	opacity: 1;
+}
+
 h1 {
-	font-family: $font_family_2;
+	font-family: $globalFontTitles;
 	padding: 2px 10px 1px 0px;
 	margin: 0 0 10px 0;
 	&:hover {
@@ -274,7 +328,7 @@ h1 {
 	}
 }
 h2 {
-	font-family: $font_family_2;
+	font-family: $globalFontTitles;
 	padding: 2px 10px 1px 0px;
 	margin: 0 0 10px 0;
 	color: $color_2;
@@ -293,7 +347,7 @@ h2 {
 	}
 }
 h3 {
-	font-family: $font_family_2;
+	font-family: $globalFontTitles;
 	padding: 2px 10px 1px 0px;
 	margin: 0 0 10px 0;
 	color: $color_2;
@@ -309,7 +363,7 @@ h3 {
 	}
 }
 h4 {
-	font-family: $font_family_2;
+	font-family: $globalFontTitles;
 	padding: 2px 10px 1px 0px;
 	margin: 0 0 10px 0;
 	color: $color_2;
@@ -421,6 +475,7 @@ code {
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+	box-shadow: 0px 0px 8px black;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -446,6 +501,7 @@ code {
 #account {
 	float: right;
 }
+
 #header {
 	min-height: 5.3em;
 	margin: 0;
@@ -459,6 +515,7 @@ code {
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+	box-shadow: $hdShadow;
 	a {
 		color: $color_4;
 	}
@@ -474,7 +531,18 @@ code {
 			font-weight: normal;
 		}
 	}
+	h1::before {
+		content: "";
+		background-image: url($hdLogotype);
+		background-size: 37px;
+		display: inline-block;
+		width: 58px;
+		height: 26px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
 }
+
 #quick-search {
 	float: right;
 	float: right;
@@ -505,6 +573,7 @@ code {
 		-moz-user-select: none; /* Firefox */
 		-ms-user-select: none; /* Internet Explorer/Edge */
 		user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+		box-shadow: 0px 0px 8px black;
 
 	ul {
 		margin: 0;
@@ -710,12 +779,13 @@ ul.flat {
 }
 #footer {
 	clear: both;
-	border-top: 1px solid #000;
-	font-size: 0.9em;
+	font-size: 1em;
 	color: #fff;
 	padding: 5px;
 	text-align: center;
 	background: #214d7e;
+	box-shadow: 0px 0px 8px black;
+	font-weight: bold;
 }
 #login-form {
 	margin: 5em auto 2em auto;
@@ -1895,7 +1965,7 @@ body.textarea-monospace {
 }
 body.textarea-proportional {
 	textarea.wiki-edit {
-		font-family: $font_family_1;
+		font-family: $globalFont;
 		font-size: 12px;
 	}
 }
@@ -2349,6 +2419,16 @@ ul.projects.root {
 	margin: 0;
 	padding: 0;
 }
+
+.project.root.leaf::before {
+		font-family: $iconfont;
+    content: $projects;
+    margin-right: 5px;
+    text-decoration: none !important;
+    display: inline-block;
+		vertical-align: -10%;
+}
+
 #projects-index {
 	column-count: auto;
 	column-width: 400px;
@@ -2364,17 +2444,22 @@ ul.projects.root {
 				border-left: 3px solid #e0e0e0;
 				padding-left: 1em;
 			}
-			margin-bottom: 1em;
+			padding: 10px;
+			background: #e7e7e7;
+			height: 50px;
 		}
 		li.child {
 			margin-top: 1em;
 		}
 		div.root {
 			a.project {
-				font-family: $font_family_2;
+				font-family:  $globalFontTitles;
 				font-weight: bold;
 				font-size: 16px;
 				margin: 0 0 10px 0;
+				border-bottom: 1px dashed #aaa;
+				width: 100%;
+				display: block;
 			}
 		}
 	}
@@ -2812,10 +2897,27 @@ p.other-formats {
 		}
 	}
 }
-a.atom {
-	background: url(../images/icons/UI/feed.png) no-repeat 1px 50%;
-	padding: 2px 0px 3px 16px;
+a.atom::before {
+	content: $atom;
+	display: inline-block;
+	font-family: $iconfont;
+	vertical-align: -6%;
 }
+
+a.csv::before {
+	content: $csv;
+	display: inline-block;
+	font-family: $iconfont;
+	vertical-align: -6%;
+}
+
+a.pdf::before {
+	content: $pdf;
+	display: inline-block;
+	font-family: $iconfont;
+	vertical-align: -6%;
+}
+
 em.info {
 	font-style: normal;
 	font-size: 90%;
@@ -2965,11 +3067,11 @@ div.flash {
 	margin-bottom: 12px;
 	font-size: 1.1em;
 	border: 1px solid;
-	border-radius: 3px;
 	text-align: center;
-	background-color: $background_color_21;
-	border-color: $border_color_5;
-	color: $color_24;
+	font-weight: bold;
+	background-color: $noDataMSGBgColor;
+	border-color: $noDataMSGBorderColor;
+	color: $noDataMSGTextColor;
 }
 .warning {
 	padding: 6px 4px 6px 30px;
@@ -3615,7 +3717,8 @@ h6 {
 .icon {
 	background-position: 0% 50%;
 	background-repeat: no-repeat;
-	padding-left: 20px;
+	padding-left: 9px;
+	font-size: 16px;
 }
 .icon-only {
 	background-position: 0% 50%;
@@ -3633,294 +3736,107 @@ h6 {
 		content: "&nbsp;";
 	}
 }
-.icon-add {
-	background-image: url(../images/icons/UI/add.png);
-}
-.icon-edit {
-	background-image: url(../images/icons/UI/edit.png);
-}
-.icon-copy {
-	background-image: url(../images/icons/UI/copy.png);
-}
-.icon-duplicate {
-	background-image: url(../images/icons/UI/duplicate.png);
-}
-.icon-del {
-	background-image: url(../images/icons/UI/delete.png);
-}
-.icon-move {
-	background-image: url(../images/icons/UI/move.png);
-}
-.icon-save {
-	background-image: url(../images/icons/UI/save.png);
-}
-.icon-download {
-	background-image: url(../images/icons/UI/download.png);
-}
-.icon-cancel {
-	background-image: url(../images/icons/UI/cancel.png);
-}
-.icon-multiple {
-	background-image: url(../images/icons/UI/table_multiple.png);
-}
-.icon-folder {
-	background-image: url(../images/icons/UI/folder.png);
-}
-.open {
-	.icon-folder {
-		background-image: url(../images/icons/UI/folder_open.png);
-	}
-}
-.icon-package {
-	background-image: url(../images/icons/UI/package.png);
-}
-.icon-user {
-	background-image: url(../images/icons/UI/user.png);
-}
-.icon-project {
-	background-image: url(../images/icons/UI/projects.png);
-	background-image: url(../images/icons/UI/projects.png);
-}
-.icon-projects {
-	background-image: url(../images/icons/UI/projects.png);
-}
-.icon-help {
-	background-image: url(../images/icons/UI/help.png);
-}
-.icon-attachment {
-	background-image: url(../images/icons/UI/attachment.png);
-}
-.icon-history {
-	background-image: url(../images/icons/UI/history.png);
-}
-.icon-time-entry {
-	background-image: url(../images/icons/UI/time.png);
-}
-.icon-time {
-	background-image: url(../images/icons/UI/time.png);
-}
-.icon-time-add {
-	background-image: url(../images/icons/UI/time_add.png);
-}
-.icon-stats {
-	background-image: url(../images/icons/UI/stats.png);
-}
-.icon-warning {
-	background-image: url(../images/icons/UI/warning.png);
-}
-.icon-error {
-	background-image: url(../images/icons/UI/exclamation.png);
-}
-.icon-fav {
-	background-image: url(../images/icons/UI/fav.png);
-}
-.icon-fav-off {
-	background-image: url(../images/icons/UI/fav_off.png);
-}
-.icon-reload {
-	background-image: url(../images/icons/UI/reload.png);
-}
-.icon-lock {
-	background-image: url(../images/icons/UI/locked.png);
-}
-.icon-locked {
-	background-image: url(../images/icons/UI/locked.png);
-}
-.icon-unlock {
-	background-image: url(../images/icons/UI/unlock.png);
-}
-.icon-checked {
-	background-image: url(../images/icons/UI/toggle_check.png);
-}
-.icon-report {
-	background-image: url(../images/icons/UI/report.png);
-}
-.icon-comment {
-	background-image: url(../images/icons/UI/comment.png);
-}
-.icon-comments {
-	background-image: url(../images/icons/UI/comment.png);
-}
-.icon-summary {
-	background-image: url(../images/icons/UI/lightning.png);
-}
-.icon-server-authentication {
-	background-image: url(../images/icons/UI/server_key.png);
-}
-.icon-issue {
-	background-image: url(../images/icons/UI/ticket.png);
-}
-.icon-zoom-in {
-	background-image: url(../images/icons/UI/zoom_in.png);
-}
-.icon-zoom-out {
-	background-image: url(../images/icons/UI/zoom_out.png);
-}
-.icon-magnifier {
-	background-image: url(../images/icons/UI/magnifier.png);
-}
-.icon-passwd {
-	background-image: url(../images/icons/UI/textfield_key.png);
-}
-.icon-arrow-right {
-	background-image: url(../images/icons/UI/bullet_go.png);
-}
-.icon-test {
-	background-image: url(../images/icons/UI/bullet_go.png);
-}
-.icon-sticky {
-	background-image: url(../images/icons/UI/bullet_go.png);
-}
-.icon-email {
-	background-image: url(../images/icons/UI/email.png);
-}
-.icon-email-disabled {
-	background-image: url(../images/icons/UI/email_disabled.png);
-}
-.icon-email-add {
-	background-image: url(../images/icons/UI/email_add.png);
-}
-.icon-move-up {
-	background-image: url(../images/icons/UI/1uparrow.png);
-}
-.icon-move-top {
-	background-image: url(../images/icons/UI/2uparrow.png);
-}
-.icon-move-down {
-	background-image: url(../images/icons/UI/1downarrow.png);
-}
-.icon-move-bottom {
-	background-image: url(../images/icons/UI/2downarrow.png);
-}
-.icon-ok {
-	background-image: url(../images/icons/UI/true.png);
-}
-.icon-not-ok {
-	background-image: url(../images/icons/UI/false.png);
-}
-.icon-link-break {
-	background-image: url(../images/icons/UI/link_break.png);
-}
-.icon-list {
-	background-image: url(../images/icons/UI/text_list_bullets.png);
-}
-.icon-close {
-	background-image: url(../images/icons/UI/close.png);
-	&:hover {
-		background-image: url(../images/icons/UI/close_hl.png);
-	}
-}
-.icon-settings {
-	background-image: url(../images/icons/UI/changeset.png);
-}
-.icon-group {
-	background-image: url(../images/icons/UI/group.png);
-}
-.icon-groupnonmember {
-	background-image: url(../images/icons/UI/group.png);
-}
-.icon-groupanonymous {
-	background-image: url(../images/icons/UI/group.png);
-}
-.icon-roles {
-	background-image: url(../images/icons/UI/database_key.png);
-}
-.icon-issue-edit {
-	background-image: url(../images/icons/UI/ticket_edit.png);
-}
-.icon-workflows {
-	background-image: url(../images/icons/UI/ticket_go.png);
-}
-.icon-custom-fields {
-	background-image: url(../images/icons/UI/textfield.png);
-}
-.icon-plugins {
-	background-image: url(../images/icons/UI/plugin.png);
-}
-.icon-news {
-	background-image: url(../images/icons/UI/news.png);
-}
-.icon-issue-closed {
-	background-image: url(../images/icons/UI/ticket_checked.png);
-}
-.icon-issue-note {
-	background-image: url(../images/icons/UI/ticket_note.png);
-}
-.icon-changeset {
-	background-image: url(../images/icons/UI/changeset.png);
-}
-.icon-message {
-	background-image: url(../images/icons/UI/message.png);
-}
-.icon-reply {
-	background-image: url(../images/icons/UI/comments.png);
-}
-.icon-wiki-page {
-	background-image: url(../images/icons/UI/wiki_edit.png);
-}
-.icon-document {
-	background-image: url(../images/icons/UI/document.png);
-}
-.icon-add-bullet {
-	background-image: url(../images/icons/UI/bullet_add.png);
-}
-.icon-shared {
-	background-image: url(../images/icons/UI/link.png);
-}
-.icon-file {
-	background-image: url(../images/icons/UI/files/default.png);
-}
-.icon-file.text-plain {
-	background-image: url(../images/icons/UI/files/text.png);
-}
-.icon-file.text-x-c {
-	background-image: url(../images/icons/UI/files/c.png);
-}
-.icon-file.text-x-csharp {
-	background-image: url(../images/icons/UI/files/csharp.png);
-}
-.icon-file.text-x-java {
-	background-image: url(../images/icons/UI/files/java.png);
-}
-.icon-file.text-x-javascript {
-	background-image: url(../images/icons/UI/files/js.png);
-}
-.icon-file.text-x-php {
-	background-image: url(../images/icons/UI/files/php.png);
-}
-.icon-file.text-x-ruby {
-	background-image: url(../images/icons/UI/files/ruby.png);
-}
-.icon-file.text-xml {
-	background-image: url(../images/icons/UI/files/xml.png);
-}
-.icon-file.text-css {
-	background-image: url(../images/icons/UI/files/css.png);
-}
-.icon-file.text-html {
-	background-image: url(../images/icons/UI/files/html.png);
-}
-.icon-file.image-gif {
-	background-image: url(../images/icons/UI/files/image.png);
-}
-.icon-file.image-jpeg {
-	background-image: url(../images/icons/UI/files/image.png);
-}
-.icon-file.image-png {
-	background-image: url(../images/icons/UI/files/image.png);
-}
-.icon-file.image-tiff {
-	background-image: url(../images/icons/UI/files/image.png);
-}
-.icon-file.application-pdf {
-	background-image: url(../images/icons/UI/files/pdf.png);
-}
-.icon-file.application-zip {
-	background-image: url(../images/icons/UI/files/zip.png);
-}
-.icon-file.application-x-gzip {
-	background-image: url(../images/icons/UI/files/zip.png);
-}
+
+
+//All icons
+.icon.icon-user.users::before{content: $users; display: inline-block; vertical-align: -5%;}
+.icon.icon-group.groups::before{content: $groups; display: inline-block; vertical-align: -5%;}
+.icon.icon-roles.roles::before{content: $rolespermissions; display: inline-block; vertical-align: -5%;}
+.icon.icon-issue-edit.issue-statuses::before{content: $issuestatuses; display: inline-block; vertical-align: -5%;}
+.icon.icon-projects.projects::before {content: $projects; display: inline-block; vertical-align: -5%;}
+.icon.icon-issue.trackers::before{content: $trackers; display: inline-block; vertical-align: -5%;}
+.icon.icon-workflows.workflows::before{content: $workflow; display: inline-block; vertical-align: -5%;}
+.icon.icon-custom-fields.custom-fields::before{content: $customfields; display: inline-block; vertical-align: -5%;}
+.icon.icon-list.enumerations::before{content: $enumerators; display: inline-block; vertical-align: -5%;}
+.icon.icon-settings.settings::before{content: $settings; display: inline-block; vertical-align: -5%;}
+.icon.icon-server-authentication.ldap-authentication::before{content: $LDAP; display: inline-block; vertical-align: -5%;}
+.icon.icon-plugins.plugins::before{content: $plugins; display: inline-block; vertical-align: -5%;}
+.icon.icon-help.info::before {content: $information; display: inline-block; vertical-align: -5%;}
+.icon.icon-add::before{content: $new; display: inline-block; vertical-align: -5%;}
+.icon.icon-save::before{content: $save; display: inline-block; vertical-align: -5%;}
+.icon.icon-reload::before{content: $clear; display: inline-block; vertical-align: -5%;}
+.icon.icon-lock::before, .icon-locked::before {content: $close; display: inline-block; vertical-align: -5%;}
+.icon.icon-unlock::before, .icon-unlocked::before {content: $open; display: inline-block; vertical-align: -5%;}
+.icon.icon-checked::before{content: $apply; display: inline-block; vertical-align: -5%;}
+
+.icon-edit {background-image: url(../images/icons/UI/edit.png);}
+.icon-copy {background-image: url(../images/icons/UI/copy.png);}
+.icon-duplicate {background-image: url(../images/icons/UI/duplicate.png);}
+.icon-del {background-image: url(../images/icons/UI/delete.png);}
+.icon-move {background-image: url(../images/icons/UI/move.png);}
+.icon-download {background-image: url(../images/icons/UI/download.png);}
+.icon-cancel {background-image: url(../images/icons/UI/cancel.png);}
+.icon-multiple {background-image: url(../images/icons/UI/table_multiple.png);}
+.icon-folder {background-image: url(../images/icons/UI/folder.png);}
+.open {.icon-folder {background-image: url(../images/icons/UI/folder_open.png);}}
+.icon-package {background-image: url(../images/icons/UI/package.png);}
+.icon-project {background-image: url(../images/icons/UI/projects.png);}
+.icon-attachment {background-image: url(../images/icons/UI/attachment.png);}
+.icon-history {background-image: url(../images/icons/UI/history.png);}
+.icon-time-entry {background-image: url(../images/icons/UI/time.png);}
+.icon-time {background-image: url(../images/icons/UI/time.png);}
+.icon-time-add {background-image: url(../images/icons/UI/time_add.png);}
+.icon-stats {background-image: url(../images/icons/UI/stats.png);}
+.icon-warning {background-image: url(../images/icons/UI/warning.png);}
+.icon-error {background-image: url(../images/icons/UI/exclamation.png);}
+.icon-fav {background-image: url(../images/icons/UI/fav.png);}
+.icon-fav-off {background-image: url(../images/icons/UI/fav_off.png);}
+.icon-report {background-image: url(../images/icons/UI/report.png);}
+.icon-comment {background-image: url(../images/icons/UI/comment.png);}
+.icon-comments {background-image: url(../images/icons/UI/comment.png);}
+.icon-summary {background-image: url(../images/icons/UI/lightning.png);}
+.icon-zoom-in {background-image: url(../images/icons/UI/zoom_in.png);}
+.icon-zoom-out {background-image: url(../images/icons/UI/zoom_out.png);}
+.icon-magnifier {background-image: url(../images/icons/UI/magnifier.png);}
+.icon-passwd {background-image: url(../images/icons/UI/textfield_key.png);}
+.icon-arrow-right {background-image: url(../images/icons/UI/bullet_go.png);}
+.icon-test {background-image: url(../images/icons/UI/bullet_go.png);}
+.icon-sticky {background-image: url(../images/icons/UI/bullet_go.png);}
+.icon-email {background-image: url(../images/icons/UI/email.png);}
+.icon-email-disabled {background-image: url(../images/icons/UI/email_disabled.png);}
+.icon-email-add {background-image: url(../images/icons/UI/email_add.png);}
+.icon-move-up {background-image: url(../images/icons/UI/1uparrow.png);}
+.icon-move-top {background-image: url(../images/icons/UI/2uparrow.png);}
+.icon-move-down {background-image: url(../images/icons/UI/1downarrow.png);}
+.icon-move-bottom {background-image: url(../images/icons/UI/2downarrow.png);}
+.icon-ok {background-image: url(../images/icons/UI/true.png);}
+.icon-not-ok {background-image: url(../images/icons/UI/false.png);}
+.icon-link-break {background-image: url(../images/icons/UI/link_break.png);}
+.icon-close {background-image: url(../images/icons/UI/close.png);
+&:hover {background-image: url(../images/icons/UI/close_hl.png);}}
+
+.icon-groupnonmember {background-image: url(../images/icons/UI/group.png);}
+.icon-groupanonymous {background-image: url(../images/icons/UI/group.png);}
+.icon-news {background-image: url(../images/icons/UI/news.png);}
+.icon-issue-closed {background-image: url(../images/icons/UI/ticket_checked.png);}
+.icon-issue-note {background-image: url(../images/icons/UI/ticket_note.png);}
+.icon-changeset {background-image: url(../images/icons/UI/changeset.png);}
+.icon-message {background-image: url(../images/icons/UI/message.png);}
+.icon-reply {background-image: url(../images/icons/UI/comments.png);}
+.icon-wiki-page {background-image: url(../images/icons/UI/wiki_edit.png);}
+.icon-document {background-image: url(../images/icons/UI/document.png);}
+.icon-add-bullet {background-image: url(../images/icons/UI/bullet_add.png);}
+.icon-shared {background-image: url(../images/icons/UI/link.png);}
+.icon-file {background-image: url(../images/icons/UI/files/default.png);}
+.icon-file.text-plain {background-image: url(../images/icons/UI/files/text.png);}
+.icon-file.text-x-c {background-image: url(../images/icons/UI/files/c.png);}
+.icon-file.text-x-csharp {background-image: url(../images/icons/UI/files/csharp.png);}
+.icon-file.text-x-java {background-image: url(../images/icons/UI/files/java.png);}
+.icon-file.text-x-javascript {background-image: url(../images/icons/UI/files/js.png);}
+.icon-file.text-x-php {background-image: url(../images/icons/UI/files/php.png);}
+.icon-file.text-x-ruby {background-image: url(../images/icons/UI/files/ruby.png);}
+.icon-file.text-xml {background-image: url(../images/icons/UI/files/xml.png);}
+.icon-file.text-css {background-image: url(../images/icons/UI/files/css.png);}
+.icon-file.text-html {background-image: url(../images/icons/UI/files/html.png);}
+.icon-file.image-gif {background-image: url(../images/icons/UI/files/image.png);}
+.icon-file.image-jpeg {background-image: url(../images/icons/UI/files/image.png);}
+.icon-file.image-png {background-image: url(../images/icons/UI/files/image.png);}
+.icon-file.image-tiff {background-image: url(../images/icons/UI/files/image.png);}
+.icon-file.application-pdf {background-image: url(../images/icons/UI/files/pdf.png);}
+.icon-file.application-zip {background-image: url(../images/icons/UI/files/zip.png);}
+.icon-file.application-x-gzip {background-image: url(../images/icons/UI/files/zip.png);}
+
+
 .sort-handle.ajax-loading {
 	background-image: url(../images/icons/UI/loading.gif);
 }
