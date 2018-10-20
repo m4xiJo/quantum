@@ -12,8 +12,6 @@
 			 url("../fonts/Material/entypo.svg#filename") format("svg");
 }
 
-
-
 @font-face {
 font-family: 'Roboto Thin', sans-serif;
 src: url("../fonts/Roboto/Roboto-Thin.ttf");
@@ -782,8 +780,8 @@ ul.flat {
 	}
 }
 #footer {
-    grid-row-start: 2;
-    grid-row-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 	clear: both;
 	font-size: 1em;
 	color: #fff;
