@@ -8,18 +8,14 @@ var emojiCodes = {
 var allScripts = document.getElementsByTagName('script'); //Get this script path
 var lastScript = allScripts[allScripts.length-1].src.split('?')[0].replace(/\/[^\/]+\/?$/, '').replace(/\/[^\/]+\/?$/, '');
 
-window.onload = function() {
-  document.getElementById('main').insertAdjacentElement('beforebegin', document.getElementById('quick-search')); //Move the quick search outside parent container
-  document.getElementById('main').insertAdjacentElement('beforebegin', document.getElementById('main-menu')); //Move main-menu outside parent container
-  document.getElementById('wrapper').insertAdjacentElement('afterend', document.getElementById('footer')); //Move the #footer outside #wrapper container
-  loopReplaceElements("wiki", "GoogleBlob", emojiCodes, lastScript);
-}
-
-
 //Fade in effect
 document.addEventListener("DOMContentLoaded", function(e) {
   document.getElementById("wrapper").classList.add('is-visible');
+  document.getElementById('wrapper').insertAdjacentElement('afterend', document.getElementById('footer'));
+  document.getElementById('main').insertAdjacentElement('beforebegin', document.getElementById('quick-search')); //Move the quick search outside parent container
+  document.getElementById('main').insertAdjacentElement('beforebegin', document.getElementById('main-menu')); //Move main-menu outside parent container
   //document.getElementById("wrapper").classList.remove('is-visible');
+  loopReplaceElements("wiki", "GoogleBlob", emojiCodes, lastScript);
 });
 
 //Fade out effect
