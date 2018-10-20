@@ -82,6 +82,7 @@
 /***** Media print specific styles *****/
 /* Accessibility specific styles */
 html {
+  height: 100%;
   overflow-y: scroll; }
   html > body #content {
     min-height: 600px; }
@@ -91,6 +92,9 @@ html {
     position: fixed; }
 
 body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
   font-family: Verdana, sans-serif;
   font-size: 12px;
   color: #333;
@@ -426,6 +430,8 @@ ul.flat {
   border-right: 0; }
 
 #footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
   clear: both;
   border-top: 1px solid #bbb;
   font-size: 0.9em;
