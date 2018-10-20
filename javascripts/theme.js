@@ -11,6 +11,7 @@ var lastScript = allScripts[allScripts.length-1].src.split('?')[0].replace(/\/[^
 window.onload = function() {
   document.getElementById('main').insertAdjacentElement('beforebegin', document.getElementById('quick-search')); //Move the quick search outside parent container
   document.getElementById('main').insertAdjacentElement('beforebegin', document.getElementById('main-menu')); //Move main-menu outside parent container
+  document.getElementById('wrapper').insertAdjacentElement('afterend', document.getElementById('footer')); //Move the #footer outside #wrapper container
   loopReplaceElements("wiki", "GoogleBlob", emojiCodes, lastScript);
 }
 
