@@ -385,7 +385,8 @@ h4 {
 	h1 {
 		color: $color_2;
 	}
-	width: 85.9%;
+    width: 88%;
+    box-sizing: border-box;
 	background-color: $background_color_3;
 	margin: 0px;
 	border-right: 1px solid #ddd;
@@ -679,6 +680,7 @@ code {
 #sidebar {
 	float: right;
 	width: 12%;
+    box-sizing: border-box;
 	position: relative;
 	z-index: 9;
 	padding: 0;
