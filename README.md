@@ -9,15 +9,20 @@ Visual apearance overhaul project for Redmine, initiated by one of the newly for
 6. [License](#license)
 
 ## Features
-coming soon
+1. Fixed top bar.  
+2. Sticky navigation bar.  
+3. Sticky search bar.  
+4. Togglable reverse contrast.  
+5. External link notifier.  
+6. Emoji codes are parsed to Google Blob emojis by default (installing custom emoji packs in also possible).  
 
 ___
 ## Installation
-coming soon
+Extract the master to `\public\themes\` of your Redmine folder.
 
 ___
 ## Customization
-coming soon
+The theme was developed using SASS/SCSS, which you can customize and recompile, in order to modify the colors.
 
 ___
 ## Contributing
@@ -25,6 +30,12 @@ Join us on our [Discord](https://discord.me/redmine) server if you would also li
 
 ___
 ## Credits
-coming soon
+Proudly contributed to by: [Maximus225](https://github.com/Maximus225/), [GianVizzielli](https://github.com/GianVizzielli), [cappuMuc](https://github.com/cappuMUC).
 
-## License
+## Licenses
+The theme is licensed under:
+
+The theme also uses:
+[Google Material Icons](https://github.com/google/material-design-icons/tree/master/iconfont) licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
+[Google Blob Emojis](https://github.com/googlei18n/noto-emoji) licensed under (https://github.com/googlei18n/noto-emoji/blob/master/fonts/LICENSE)
+[Roboto Font](https://fonts.google.com/specimen/Roboto) by Christian Robertson licenced under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
