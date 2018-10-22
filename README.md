@@ -36,6 +36,6 @@ Proudly contributed to by: [Maximus225](https://github.com/Maximus225/), [GianVi
 The theme is licensed under:
 
 The theme also uses:
-[Google Material Icons](https://github.com/google/material-design-icons/tree/master/iconfont) licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
-[Google Blob Emojis](https://github.com/googlei18n/noto-emoji) licensed under (https://github.com/googlei18n/noto-emoji/blob/master/fonts/LICENSE)
-[Roboto Font](https://fonts.google.com/specimen/Roboto) by Christian Robertson licenced under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
+[Google Material Icons](https://github.com/google/material-design-icons/tree/master/iconfont) licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt).  
+[Google Blob Emojis](https://github.com/googlei18n/noto-emoji) licensed under [SIL Open Font License](https://github.com/googlei18n/noto-emoji/blob/master/fonts/LICENSE).  
+[Roboto Font](https://fonts.google.com/specimen/Roboto) by Christian Robertson licenced under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt).  
