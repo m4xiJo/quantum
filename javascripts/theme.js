@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   toggleContrast();
   //topMenuFeedback();
   parseEmojis(localization["emojiCodes"]["GoogleBlob"], lastScript);
+  defaultGravatarInitials();
   //document.getElementById("wrapper").classList.add('is-visible');
 });
 
@@ -123,9 +124,9 @@ if (document.getElementById('emojiSelector') == null && document.getElementsByCl
       document.getElementsByClassName('wiki-edit')[0].focus();
 
       document.getElementById('emojiSelector').addEventListener('click', emojiChecks = function (emojiClicks) {
-        if (event.target.nodeName === "IMG") {
+        if (emojiClicks.target.tagName.toLowerCase() === "img") {
           document.getElementsByClassName('wiki-edit')[0].focus();
-          insertInTextarea(document.activeElement, event.target.title);
+          insertInTextarea(document.activeElement, emojiClicks.target.title);
         }
       }, false);
 }
@@ -135,6 +136,7 @@ if (document.getElementById('emojiSelector') == null && document.getElementsByCl
   }
 }
 
+//Function to insert text in the focused area
 function insertInTextarea(targetElement, textToInsert) {
   let start = targetElement.selectionStart;
   let end = targetElement.selectionEnd;
@@ -144,4 +146,37 @@ function insertInTextarea(targetElement, textToInsert) {
   targetElement.value = (before + textToInsert + after);
   targetElement.selectionStart = el.selectionEnd = start + textToInsert.length;
   targetElement.focus();
+}
+
+// Generate avatar initials with https://ui-avatars.com/ if user Gravatar is unset
+function defaultGravatarInitials() {
+  let messages;
+  //Forum page
+  if (document.getElementsByClassName('message reply') !== null) {
+    messages = document.getElementsByClassName('message reply');
+    for (let i = 0; i < messages.length; i++) {
+      messages[i].children[1].children[0].src = messages[i].children[1].children[0].src + "https%3A%2F%2Fui-avatars.com%2Fapi%2F/" + encodeURI(messages[i].children[1].children[2].innerText) + "/128/0D8ABC";
+    }
+  }
+  //Activity page
+  if (document.getElementById('activity') !== null) {
+
+  }
+  //Notes pages
+  //News page
+}
+
+
+//Self generate avatar initials with if user Gravatar is unset
+function defaultGravatarInitialsSG() {
+  let gravatars = document.getElementsByClassName('gravatar');
+  let usernames = document.getElementsByClassName('user active');
+  //alert(gravatars.length);
+  //alert(usernames.length);
+  for (let i = 0; i < gravatars.length; i++) {
+    //gravatars[i].remove();
+    //gravatars[i].innerHTML.replace(gravatars[i].nodeName.toLowerCase(), 'div');
+    //alert(gravatars[i].nodeName);
+    alert(gravatars[i].src + " " + usernames[i].innerText);
+  }
 }
