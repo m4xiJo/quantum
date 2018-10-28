@@ -12,7 +12,7 @@ Visual apearance overhaul project for Redmine, initiated by one of the newly for
 1. Fixed top bar.  
 2. Sticky navigation bar.  
 3. Sticky search bar.  
-4. Togglable reverse contrast.  
+4. Toggleable reverse contrast.  
 5. External link notifier.  
 6. Emoji support.  
 
