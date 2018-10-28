@@ -18,7 +18,9 @@ Visual apearance overhaul project for Redmine, initiated by one of the newly for
 
 ___
 ## Installation
-Extract the master to `\public\themes\` of your Redmine folder.
+1. Extract the master to `\public\themes\` of your Redmine folder.  
+2. The theme is yet in a prerelease state, which means, CSS isn't included in the master, and you will have to compile the CSS from `application.scss` file in `stylesheets` folder yourself, using any free SASS/SCSS compiling tool.
+
 
 ___
 ## Customization
