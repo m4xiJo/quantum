@@ -202,7 +202,6 @@ body {
   grid-template-rows: 1fr auto;
 	font-family: $globalFont;
 	font-size: 12px;
-	color: $color_1;
 	margin: 0;
 	padding: 0;
 	min-width: 900px;
@@ -215,7 +214,6 @@ h1 {
 	&:hover {
 		a.wiki-anchor {
 			display: inline;
-			color: $color_30;
 		}
 	}
 }
@@ -223,12 +221,10 @@ h2 {
 	font-family: $globalFontTitles;
 	padding: 2px 10px 1px 0px;
 	margin: 0 0 10px 0;
-	color: $color_2;
 	font-size: 20px;
 	&:hover {
 		a.wiki-anchor {
 			display: inline;
-			color: $color_30;
 		}
 	}
 	img.gravatar {
@@ -242,12 +238,10 @@ h3 {
 	font-family: $globalFontTitles;
 	padding: 2px 10px 1px 0px;
 	margin: 0 0 10px 0;
-	color: $color_2;
 	font-size: 16px;
 	&:hover {
 		a.wiki-anchor {
 			display: inline;
-			color: $color_30;
 		}
 	}
 	img.gravatar {
@@ -258,13 +252,11 @@ h4 {
 	font-family: $globalFontTitles;
 	padding: 2px 10px 1px 0px;
 	margin: 0 0 10px 0;
-	color: $color_2;
 	font-size: 13px;
 	border-bottom: 1px dotted #bbb;
 	&:hover {
 		a.wiki-anchor {
 			display: inline;
-			color: $color_30;
 		}
 	}
 	img.gravatar {
@@ -273,7 +265,6 @@ h4 {
 }
 #content {
 	h1 {
-		color: $color_2;
 	}
   width: 88%;
   box-sizing: border-box;
@@ -309,8 +300,6 @@ h4 {
 					padding: 4px 6px 4px 6px;
 					border: 1px solid #ccc;
 					border-bottom: 1px solid #bbbbbb;
-					background-color: $background_color_16;
-					color: $color_10;
 					font-weight: bold;
 					&:hover {
 						background-color: #d1e7ff;
@@ -319,12 +308,9 @@ h4 {
 					}
 				}
 				a.selected {
-					background-color: $background_color_3;
 					border: 1px solid #bbbbbb;
 					border-bottom: 1px solid #fff;
-					//color: $color_27;
 					&:hover {
-						background-color: $background_color_3;
 					}
 				}
 			}
@@ -343,10 +329,8 @@ h4 {
 	}
 }
 pre {
-	font-family: $font_family_3;
 }
 code {
-	font-family: $font_family_3;
 }
 
 #wrapper {
@@ -516,17 +500,7 @@ code {
   }
 }
 
-/*
-&::before {
-    font-family: $iconfont;
-    color: $iconcolor;
-    margin-right: $iconmargin;
-    font-size: $iconsize;
-    text-decoration: none !important;
-}
-*/
 #top-menu {
-	//background: $tbBgColor;
 	color: $tbTextColor;
 	height: $tbHeight;
 	font-size: $tbTextSize;
@@ -553,14 +527,12 @@ code {
 		white-space: nowrap;
 	}
 	a {
-		color: $color_3;
 		margin-right: 8px;
 		font-weight: bold;
 	}
 	#loggedas {
 		float: right;
 		margin-right: 0.5em;
-		color: $color_3;
 	}
   #contrastswitch {
     font-size: 16px;
@@ -603,7 +575,6 @@ code {
 	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 	box-shadow: $hdShadow;
 	a {
-		color: $color_4;
 	}
 	h1 {
 		font-size: 36px;
@@ -689,7 +660,7 @@ code {
 		display: inline-block;
 		a {
 			display: block;
-			//color: $color_3;
+
 			text-decoration: none;
 			font-weight: bold;
 			margin: 0;
@@ -697,7 +668,6 @@ code {
 			&:hover {
 				background: #759FCF;
 				border-bottom: 4px solid black;
-				color: $color_3;
 			}
 		}
 		&:hover {
@@ -710,16 +680,14 @@ code {
 		}
 		a.selected {
 			background: #fff;
-			//color: $color_2;
 			border-bottom: 4px solid black;
 			&:hover {
 				background: #fff;
-				color: $color_2;
 				border-bottom: 4px solid black;
 			}
 		}
 		a.new-object {
-			/*background-color: $background_color_2;*/
+
 		}
 	}
 	.menu-children {
@@ -727,7 +695,6 @@ code {
 		position: absolute;
 		width: inherit;
 		z-index: 45;
-		background-color: $background_color_3;
 		border-right: 1px solid #759FCF;
 		border-bottom: 1px solid #759FCF;
 		border-left: 1px solid #759FCF;
@@ -736,20 +703,14 @@ code {
 			clear: both;
 			width: 100%;
 			a {
-				color: $color_2;
-				background-color: $background_color_3;
 				font-weight: normal;
 				&:hover {
-					color: $color_3;
-					background-color: $background_color_2;
 				}
 			}
 		}
 	}
 	.tabs-buttons {
 		right: 6px;
-		background-color: $background_color_4;
-		border-bottom-color: $border_bottom_color_1;
 	}
 }
 #admin-menu {
@@ -771,7 +732,6 @@ code {
 	}
 }
 #main {
-	background-color: $background_color_5;
 }
 #sidebar {
 	float: right;
@@ -788,7 +748,6 @@ code {
 	h3 {
 		font-size: 14px;
 		margin-top: 14px;
-		color: $color_5;
 	}
 	hr {
 		width: 100%;
@@ -822,8 +781,6 @@ code {
 		line-height: 1.7em;
 		padding: 1px 3px 2px 2px;
 		margin-left: -2px;
-		background-color: $background_color_7;
-		//color: $color_3;
 		border-radius: 2px;
 		&:hover {
 			text-decoration: none;
@@ -838,7 +795,6 @@ code {
 				width: 95%;
 				position: relative;
 				left: -6px;
-				color: $color_6;
 			}
 		}
 		#content {
@@ -894,7 +850,6 @@ ul.flat {
 	padding: 20px;
 	width: 340px;
 	border: 1px solid #FDBF3B;
-	background-color: $background_color_6;
 	border-radius: 4px;
 	box-sizing: border-box;
 	label {
@@ -977,22 +932,17 @@ div.modal {
 	display: none;
 }
 a {
-	color: $color_8;
 	text-decoration: none;
 	&:link {
-		color: $color_8;
 		text-decoration: none;
 	}
 	&:visited {
-		color: $color_8;
 		text-decoration: none;
 	}
 	&:hover {
-		color: $color_9;
 		text-decoration: underline;
 	}
 	&:active {
-		color: $color_9;
 		text-decoration: underline;
 	}
 	img {
@@ -1000,33 +950,24 @@ a {
 	}
 }
 a.issue.closed {
-	color: $color_10;
 	text-decoration: line-through;
 	&:link {
-		color: $color_10;
 		text-decoration: line-through;
 	}
 	&:visited {
-		color: $color_10;
 		text-decoration: line-through;
 	}
 }
 a.project.closed {
-	color: $color_10;
 	&:link {
-		color: $color_10;
 	}
 	&:visited {
-		color: $color_10;
 	}
 }
 a.user.locked {
-	color: $color_10;
 	&:link {
-		color: $color_10;
 	}
 	&:visited {
-		color: $color_10;
 	}
 }
 a.collapsible {
@@ -1037,7 +978,6 @@ a.collapsible.collapsed {
 	background: url(../images/icons/UI/arrow_collapsed.png) no-repeat -5px 40%;
 }
 a#toggle-completed-versions {
-	color: $color_10;
 }
 .drdn {
 	position: relative;
@@ -1062,10 +1002,8 @@ a#toggle-completed-versions {
 	right: 0px;
 	top: 25px;
 	min-width: 100px;
-	background-color: $background_color_3;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	color: $color_2;
 	z-index: 99;
 	.quick-search {
 		margin: 8px;
@@ -1075,7 +1013,6 @@ a#toggle-completed-versions {
 		width: 100% !important;
 		height: 28px;
 		&:focus {
-			border-color: $border_color_1;
 		}
 	}
 }
@@ -1093,7 +1030,6 @@ a#toggle-completed-versions {
 	>* {
 		display: block;
 		border: 1px solid #fff;
-		color: $color_2 !important;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -1105,12 +1041,9 @@ a#toggle-completed-versions {
 	>a {
 		&:hover {
 			text-decoration: none;
-			background-color: $background_color_2;
-			color: $color_3 !important;
 		}
 	}
 	>span {
-		color: $color_10;
 	}
 }
 div {
@@ -1150,7 +1083,6 @@ div {
 		border: 1px solid #ccc;
 		margin: 0 !important;
 		vertical-align: middle;
-		color: $color_2;
 	}
 	.drdn-content {
 		width: 280px;
@@ -1162,7 +1094,6 @@ table.list {
 	width: 100%;
 	margin-bottom: 4px;
 	th {
-		background-color: $background_color_5;
 		padding: 4px;
 		white-space: nowrap;
 		font-weight: bold;
@@ -1234,12 +1165,10 @@ table.list {
 	tbody {
 		tr {
 			&:hover {
-				background-color: $background_color_9;
 			}
 		}
 		tr.group {
 			&:hover {
-				background-color: $background_color_10;
 			}
 		}
 	}
@@ -1247,10 +1176,8 @@ table.list {
 		tbody {
 			tr {
 				&:nth-child(odd) {
-					background-color: $background_color_11;
 				}
 				&:nth-child(even) {
-					background-color: $background_color_3;
 				}
 			}
 		}
@@ -1266,7 +1193,6 @@ table.list {
 	}
 }
 .table-list-header {
-	background-color: $background_color_5;
 	padding: 4px;
 	white-space: nowrap;
 	font-weight: bold;
@@ -1301,15 +1227,11 @@ tr.project {
 	}
 }
 tr.project.closed {
-	color: $color_7;
 	a {
-		color: $color_7;
 	}
 }
 tr.project.archived {
-	color: $color_7;
 	a {
-		color: $color_7;
 	}
 }
 tr.project.idnt {
@@ -1408,7 +1330,6 @@ td.last_updated_by {
 }
 table.issues {
 	td.description {
-		color: $color_11;
 		font-size: 90%;
 		padding: 4px 4px 4px 24px;
 		text-align: left;
@@ -1418,7 +1339,6 @@ table.issues {
 		}
 	}
 	td.last_notes {
-		color: $color_11;
 		font-size: 90%;
 		padding: 4px 4px 4px 24px;
 		text-align: left;
@@ -1553,7 +1473,6 @@ tr.changeset {
 	}
 	td.revision_graph {
 		width: 15%;
-		background-color: $background_color_8;
 	}
 	td.author {
 		text-align: center;
@@ -1612,9 +1531,7 @@ tr.message.sticky {
 	}
 }
 tr.version.closed {
-	color: $color_10;
 	a {
-		color: $color_10;
 	}
 }
 tr.version {
@@ -1665,20 +1582,20 @@ td.email {
 	text-align: left !important;
 }
 tr.user.locked {
-	color: $color_7;
+
 	a {
-		color: $color_7;
+
 	}
 }
 tr.user.registered {
-	color: $color_7;
+
 	a {
-		color: $color_7;
+
 	}
 }
 table.permissions {
 	td.role {
-		color: $color_10;
+
 		font-size: 90%;
 		font-weight: normal !important;
 		text-align: center;
@@ -1752,7 +1669,7 @@ tr.group {
 		padding: 0.8em 0 0.5em 0.3em;
 		border-bottom: 1px solid #ccc;
 		text-align: left;
-		background-color: $background_color_3;
+
 	}
 	span.name {
 		font-weight: bold;
@@ -1761,7 +1678,7 @@ tr.group {
 		font-weight: bold;
 		position: relative;
 		top: -1px;
-		color: $color_3;
+
 		font-size: 10px;
 		background: #9DB9D5;
 		padding: 0px 6px 1px 6px;
@@ -1769,15 +1686,15 @@ tr.group {
 		margin-left: 4px;
 	}
 	span.totals {
-		color: $color_7;
+
 		font-size: 80%;
 		.value {
 			font-weight: bold;
-			color: $color_11;
+
 		}
 	}
 	a.toggle-all {
-		color: $color_7;
+
 		font-size: 80%;
 		display: none;
 		float: right;
@@ -1803,20 +1720,20 @@ table {
 	}
 }
 .odd {
-	background-color: $background_color_11;
+
 }
 #issue-changesets {
 	div.changeset {
 		&:nth-child(odd) {
-			background-color: $background_color_11;
+
 		}
 		&:nth-child(even) {
-			background-color: $background_color_3;
+
 		}
 	}
 }
 .even {
-	background-color: $background_color_3;
+
 }
 tr.builtin {
 	td.name {
@@ -1925,22 +1842,22 @@ span.add_attachment {
 	}
 }
 .highlight {
-	background-color: $background_color_12;
+
 }
 .highlight.token-1 {
-	background-color: $background_color_13;
+
 }
 .highlight.token-2 {
-	background-color: $background_color_14;
+
 }
 .highlight.token-3 {
-	background-color: $background_color_15;
+
 }
 .box {
 	padding: 6px;
 	margin-bottom: 10px;
-	//background-color: $background_color_16;
-	//color: $color_12;
+
+
 	line-height: 1.5em;
 	//border: 1px solid #e4e4e4;
 	word-wrap: break-word;
@@ -2037,7 +1954,7 @@ fieldset {
 
 }
 legend {
-	color: $color_1;
+
   font-weight: bold;
 }
 hr {
@@ -2069,7 +1986,6 @@ textarea.wiki-edit {
 }
 body.textarea-monospace {
 	textarea.wiki-edit {
-		font-family: $font_family_3;
 		font-size: 12px;
 	}
 }
@@ -2100,7 +2016,7 @@ div.issue {
 			margin: 0;
 			margin-bottom: 0.1em;
 			font-size: 90%;
-			color: $color_10;
+
 		}
 		>div {
 			>p {
@@ -2120,7 +2036,7 @@ div.issue {
 		bottom: 2px;
 		text-transform: uppercase;
 		background: #d22;
-		color: $color_3;
+
 		font-weight: bold;
 		padding: 0px 2px 0px 2px;
 		font-size: 60%;
@@ -2128,7 +2044,7 @@ div.issue {
 		border-radius: 2px;
 	}
 	.next-prev-links {
-		color: $color_10;
+
 	}
 	.attributes {
 		margin-top: 2em;
@@ -2183,7 +2099,7 @@ div.journal {
 		bottom: 2px;
 		text-transform: uppercase;
 		background: #d22;
-		color: $color_3;
+
 		font-weight: bold;
 		padding: 0px 2px 0px 2px;
 		font-size: 60%;
@@ -2192,12 +2108,12 @@ div.journal {
 	}
 	overflow: auto;
 	ul.details {
-		color: $color_14;
+
 		margin-bottom: 1.5em;
 		a {
-			color: $color_15;
+
 			&:hover {
-				color: $color_16;
+
 			}
 		}
 	}
@@ -2205,7 +2121,7 @@ div.journal {
 div.issue.overdue {
 	.due-date {
 		.value {
-			color: $color_13;
+
 		}
 	}
 }
@@ -2333,12 +2249,12 @@ div.journal.private-notes {
 	margin-left: -6px;
 }
 ul.revision-info {
-	color: $color_14;
+
 	margin-bottom: 1.5em;
 	a {
-		color: $color_15;
+
 		&:hover {
-			color: $color_16;
+
 		}
 	}
 }
@@ -2355,7 +2271,7 @@ div#activity {
 		}
 		span.description {
 			display: block;
-			color: $color_17;
+
 		}
 	}
 	dt.me {
@@ -2365,7 +2281,7 @@ div#activity {
 	}
 	dt {
 		.time {
-			color: $color_11;
+
 			font-size: 80%;
 		}
 	}
@@ -2398,7 +2314,7 @@ div#activity {
 		}
 		span.description {
 			display: block;
-			color: $color_17;
+
 		}
 	}
 	span.project {
@@ -2449,7 +2365,7 @@ div#version-summary {
 	width: 28%;
 	margin-left: 16px;
 	margin-bottom: 16px;
-	background-color: $background_color_3;
+
 	fieldset {
 		margin-bottom: 1em;
 	}
@@ -2481,14 +2397,14 @@ table#time-report {
 	tbody {
 		tr.subtotal {
 			font-style: italic;
-			color: $color_11;
+
 			td.hours {
-				color: $color_18;
+
 			}
 		}
 		tr.total {
 			font-weight: bold;
-			background-color: $background_color_5;
+
 			border-top: 1px solid #e4e4e4;
 		}
 	}
@@ -2607,7 +2523,7 @@ ul.projects.root {
 ul.properties {
 	padding: 0;
 	font-size: 0.9em;
-	color: $color_11;
+
 	li {
 		list-style-type: none;
 		span {
@@ -2703,7 +2619,7 @@ input#content_comments {
 }
 span.pagination {
 	margin-left: 3px;
-	color: $color_19;
+
 	display: block;
 	>span {
 		white-space: nowrap;
@@ -2739,21 +2655,21 @@ span.pagination {
 			}
 		}
 		li.current {
-			color: $color_20;
-			background-color: $background_color_1;
-			border-color: $border_color_2;
+
+
+
 		}
 		li.page {
 			&:hover {
-				background-color: $background_color_17;
+
 			}
 			a {
 				&:hover {
-					color: $color_8;
+
 					text-decoration: inherit;
 				}
 				&:active {
-					color: $color_8;
+
 					text-decoration: inherit;
 				}
 			}
@@ -2869,7 +2785,7 @@ fieldset#notified_events {
 	}
 }
 span.required {
-	color: $color_21;
+
 }
 .summary {
 	font-style: italic;
@@ -2911,8 +2827,8 @@ span.required {
 	input.filename {
 		border: 0;
 		width: 250px;
-		color: $color_2;
-		background-color: $background_color_10;
+
+
 		height: 1.8em;
 	}
 	.ajax-waiting {
@@ -2944,8 +2860,8 @@ span.required {
 	.filename {
 		border: 0;
 		width: 250px;
-		color: $color_2;
-		background-color: $background_color_10;
+
+
 	}
 }
 a.remove-upload {
@@ -2956,11 +2872,11 @@ a.remove-upload {
 .existing-attachment.deleted {
 	.filename {
 		text-decoration: line-through;
-		color: $color_10 !important;
+
 	}
 }
 div.fileover {
-	background-color: $background_color_18;
+
 }
 div.attachments {
 	margin: 12px 0;
@@ -2972,7 +2888,7 @@ div.attachments {
 	}
 	span.author {
 		font-size: 0.9em;
-		color: $color_19;
+
 	}
 }
 div.thumbnails {
@@ -2995,7 +2911,7 @@ div.thumbnails {
 }
 p.other-formats {
 	text-align: right;
-	color: $color_5;
+
 }
 .other-formats {
 	span {
@@ -3030,7 +2946,7 @@ a.pdf::before {
 em.info {
 	font-style: normal;
 	font-size: 90%;
-	color: $color_19;
+
 	display: block;
 }
 em.info.error {
@@ -3150,9 +3066,9 @@ input.autocomplete.ajax-loading {
 	border: 1px solid;
 	border-radius: 3px;
 	background: url(../images/icons/UI/exclamation.png) 8px 50% no-repeat;
-	background-color: $background_color_19;
-	border-color: $border_color_3;
-	color: $color_22;
+
+
+
 	ul {
 		font-size: 0.9em;
 	}
@@ -3189,9 +3105,9 @@ div.flash {
 	border: 1px solid;
 	border-radius: 3px;
 	text-align: center;
-	background-color: $background_color_21;
-	border-color: $border_color_5;
-	color: $color_24;
+
+
+
 }
 .conflict {
 	padding: 6px 4px 6px 30px;
@@ -3200,28 +3116,28 @@ div.flash {
 	border: 1px solid;
 	border-radius: 3px;
 	background: url(../images/icons/UI/warning.png) 8px 5px no-repeat;
-	background-color: $background_color_21;
-	border-color: $border_color_5;
-	color: $color_24;
+
+
+
 	text-align: left;
 }
 div.flash.error {
 	background: url(../images/icons/UI/exclamation.png) 8px 50% no-repeat;
-	background-color: $background_color_19;
-	border-color: $border_color_3;
-	color: $color_22;
+
+
+
 }
 div.flash.notice {
 	background: url(../images/icons/UI/true.png) 8px 5px no-repeat;
-	background-color: $background_color_20;
-	border-color: $border_color_4;
-	color: $color_23;
+
+
+
 }
 div.flash.warning {
 	background: url(../images/icons/UI/warning.png) 8px 5px no-repeat;
-	background-color: $background_color_21;
-	border-color: $border_color_5;
-	color: $color_24;
+
+
+
 	text-align: left;
 }
 .conflict-details {
@@ -3229,7 +3145,7 @@ div.flash.warning {
 }
 #ajax-indicator {
 	position: absolute;
-	background-color: $background_color_22;
+
 	border: 1px solid #bbb;
 	top: 35%;
 	left: 40%;
@@ -3255,7 +3171,7 @@ table.cal {
 	thead {
 		th {
 			width: 14%;
-			background-color: $background_color_5;
+
 			padding: 4px;
 		}
 		th.week-number {
@@ -3281,14 +3197,14 @@ table.cal {
 		}
 	}
 	td.week-number {
-		background-color: $background_color_5;
+
 		padding: 4px;
 		border: none;
 		font-size: 1em;
 	}
 	td.odd {
 		p.day-num {
-			color: $color_25;
+
 		}
 	}
 	td.today {
@@ -3338,7 +3254,7 @@ p.cal.legend {
 	z-index: 24;
 	&:hover {
 		z-index: 25;
-		color: $color_26;
+
 	}
 	span.tip {
 		display: none;
@@ -3353,10 +3269,10 @@ div.tooltip {
 			top: 12px;
 			width: 270px;
 			border: 1px solid #555;
-			background-color: $background_color_3;
+
 			padding: 4px;
 			font-size: 0.8em;
-			color: $color_12;
+
 		}
 	}
 }
@@ -3394,7 +3310,7 @@ p.progress-info {
 	clear: left;
 	font-size: 80%;
 	margin-top: -4px;
-	color: $color_11;
+
 }
 .version-overview {
 	table.progress {
@@ -3427,7 +3343,7 @@ button.tab-left {
 	background: #eeeeee url(../images/icons/UI/bullet_arrow_left.png) no-repeat 50% 50%;
 	border-top-left-radius: 3px;
 	&:hover {
-		background-color: $background_color_23;
+
 	}
 	&:focus {
 		outline: 0;
@@ -3447,18 +3363,18 @@ button.tab-right {
 	background: #eeeeee url(../images/icons/UI/bullet_arrow_right.png) no-repeat 50% 50%;
 	border-top-right-radius: 3px;
 	&:hover {
-		background-color: $background_color_23;
+
 	}
 	&:focus {
 		outline: 0;
 	}
 }
 button.tab-left.disabled {
-	background-color: $background_color_24;
+
 	cursor: unset;
 }
 button.tab-right.disabled {
-	background-color: $background_color_24;
+
 	cursor: unset;
 }
 .diff_out {
@@ -3475,8 +3391,8 @@ button.tab-right.disabled {
 }
 .text-diff {
 	padding: 1em;
-	background-color: $background_color_16;
-	color: $color_12;
+
+
 	border: 1px solid #e4e4e4;
 }
 div.wiki {
@@ -3513,7 +3429,7 @@ div.wiki {
 		word-wrap: break-word;
 	}
 	a.new {
-		color: $color_28;
+
 	}
 	ul {
 		margin-bottom: 1em;
@@ -3532,7 +3448,7 @@ div.wiki {
 	pre {
 		margin: 1em 1em 1em 1.6em;
 		padding: 8px;
-		background-color: $background_color_25;
+
 		border: 1px solid #e2e2e2;
 		border-radius: 3px;
 		width: auto;
@@ -3540,7 +3456,7 @@ div.wiki {
 		overflow-y: hidden;
 	}
 	ul.toc {
-		background-color: $background_color_9;
+
 		border: 1px solid #e4e4e4;
 		padding: 4px;
 		line-height: 1.2em;
@@ -3564,16 +3480,16 @@ div.wiki {
 		>li {
 			&:first-child {
 				margin-bottom: .5em;
-				color: $color_11;
+
 			}
 		}
 		a {
 			font-size: 0.9em;
 			font-weight: normal;
 			text-decoration: none;
-			color: $color_29;
+
 			&:hover {
-				color: $color_9;
+
 				text-decoration: underline;
 			}
 		}
@@ -3600,7 +3516,7 @@ a.wiki-anchor {
 	margin-left: 6px;
 	text-decoration: none;
 	&:hover {
-		color: $color_7 !important;
+
 		text-decoration: none;
 	}
 }
@@ -3608,7 +3524,7 @@ h5 {
 	&:hover {
 		a.wiki-anchor {
 			display: inline;
-			color: $color_30;
+
 		}
 	}
 }
@@ -3616,7 +3532,7 @@ h6 {
 	&:hover {
 		a.wiki-anchor {
 			display: inline;
-			color: $color_30;
+
 		}
 	}
 }
@@ -3634,7 +3550,7 @@ h6 {
 	border: 1px solid #ddd;
 	padding: 8px;
 	margin: 0 0 20px 0;
-	color: $color_12;
+
 	line-height: 1.5em;
 	>.contextual {
 		opacity: 0;
@@ -3670,8 +3586,8 @@ h6 {
 	overflow: hidden;
 }
 .gantt_hdr.nwday {
-	background-color: $background_color_26;
-	color: $color_10;
+
+
 }
 .gantt_subjects {
 	font-size: 0.8em;
@@ -3692,7 +3608,7 @@ h6 {
 	position: absolute;
 	height: 8px;
 	font-size: 0.8em;
-	color: $color_19;
+
 	padding: 0;
 	margin: 0;
 	line-height: 16px;
@@ -3800,27 +3716,27 @@ h6 {
 }
 .version-behind-schedule {
 	a {
-		color: $color_31;
+
 	}
 }
 .issue-behind-schedule {
 	a {
-		color: $color_31;
+
 	}
 }
 .version-overdue {
 	a {
-		color: $color_32;
+
 	}
 }
 .issue-overdue {
 	a {
-		color: $color_32;
+
 	}
 }
 .project-overdue {
 	a {
-		color: $color_32;
+
 	}
 }
 .icon {
@@ -4032,12 +3948,12 @@ div.gravatar-with-child {
 .sample-data {
 	border: 1px solid #ccc;
 	border-collapse: collapse;
-	background-color: $background_color_3;
+
 	margin: 0.5em;
 	td {
 		border: 1px solid #ccc;
 		padding: 2px 4px;
-		font-family: $font_family_3;
+
 	}
 	tr {
 		&:first-child {
@@ -4056,7 +3972,7 @@ div.gravatar-with-child {
 	left: 50%;
 	top: 4px;
 	font-weight: bold;
-	color: $color_2;
+
 	text-shadow: 1px 1px 0 #fff;
 }
 .ui-datepicker-title {
@@ -4076,262 +3992,262 @@ div.gravatar-with-child {
 		}
 	}
 	.annotation {
-		color: $color_33;
+
 	}
 	.attribute-name {
-		color: $color_34;
+
 	}
 	.attribute-value {
-		color: $color_35;
+
 	}
 	.binary {
-		color: $color_36;
+
 		.char {
-			color: $color_37;
+
 		}
 		.delimiter {
-			color: $color_37;
+
 		}
 	}
 	.char {
-		color: $color_38;
+
 		.content {
-			color: $color_38;
+
 		}
 		.delimiter {
-			color: $color_39;
+
 		}
 	}
 	.class {
-		color: $color_40;
+
 		font-weight: bold;
 	}
 	.class-variable {
-		color: $color_41;
+
 	}
 	.color {
-		color: $color_42;
+
 	}
 	.comment {
-		color: $color_11;
+
 		.char {
-			color: $color_27;
+
 		}
 		.delimiter {
-			color: $color_27;
+
 		}
 	}
 	.constant {
-		color: $color_43;
+
 		font-weight: bold;
 	}
 	.decorator {
-		color: $color_44;
+
 	}
 	.definition {
-		color: $color_45;
+
 		font-weight: bold;
 	}
 	.delimiter {
-		color: $color_46;
+
 	}
 	.directive {
-		color: $color_47;
+
 		font-weight: bold;
 	}
 	.docstring {
-		color: $color_48;
+
 	}
 	.doctype {
-		color: $color_49;
+
 	}
 	.done {
 		text-decoration: line-through;
-		color: $color_50;
+
 	}
 	.entity {
-		color: $color_51;
+
 		font-weight: bold;
 	}
 	.error {
-		color: $color_52;
-		background-color: $background_color_27;
+
+
 	}
 	.escape {
-		color: $color_5;
+
 	}
 	.exception {
-		color: $color_53;
+
 		font-weight: bold;
 	}
 	.float {
-		color: $color_54;
+
 	}
 	.function {
-		color: $color_55;
+
 		font-weight: bold;
 		.delimiter {
-			color: $color_56;
+
 		}
 		.content {
-			color: $color_57;
+
 		}
 	}
 	.global-variable {
-		color: $color_58;
+
 	}
 	.hex {
-		color: $color_59;
+
 	}
 	.id {
-		color: $color_60;
+
 		font-weight: bold;
 	}
 	.include {
-		color: $color_61;
+
 		font-weight: bold;
 	}
 	.inline {
-		background-color: $background_color_28;
-		color: $color_46;
+
+
 	}
 	.inline-delimiter {
 		font-weight: bold;
-		color: $color_5;
+
 	}
 	.instance-variable {
-		color: $color_62;
+
 	}
 	.integer {
-		color: $color_63;
+
 	}
 	.imaginary {
-		color: $color_32;
+
 	}
 	.important {
-		color: $color_64;
+
 	}
 	.key {
-		color: $color_65;
+
 		.char {
-			color: $color_66;
+
 		}
 		.delimiter {
-			color: $color_67;
+
 		}
 	}
 	.keyword {
-		color: $color_68;
+
 		font-weight: bold;
 	}
 	.label {
-		color: $color_69;
+
 		font-weight: bold;
 	}
 	.local-variable {
-		color: $color_70;
+
 	}
 	.map {
 		.content {
-			color: $color_71;
+
 		}
 		.delimiter {
-			color: $color_72;
+
 		}
-		background-color: $background_color_29;
+
 	}
 	.namespace {
-		color: $color_73;
+
 		font-weight: bold;
 	}
 	.octal {
-		color: $color_74;
+
 	}
 	.predefined {
-		color: $color_41;
+
 		font-weight: bold;
 	}
 	.predefined-constant {
-		color: $color_75;
+
 	}
 	.predefined-type {
-		color: $color_76;
+
 		font-weight: bold;
 	}
 	.preprocessor {
-		color: $color_77;
+
 	}
 	.pseudo-class {
-		color: $color_78;
+
 		font-weight: bold;
 	}
 	.regexp {
-		background-color: $background_color_30;
+
 		.content {
-			color: $color_71;
+
 		}
 		.delimiter {
-			color: $color_67;
+
 		}
 		.modifier {
-			color: $color_79;
+
 		}
 	}
 	.reserved {
-		color: $color_68;
+
 		font-weight: bold;
 	}
 	.shell {
-		background-color: $background_color_31;
+
 		.content {
-			color: $color_80;
+
 		}
 		.delimiter {
-			color: $color_81;
+
 		}
 	}
 	.string {
-		background-color: $background_color_32;
+
 		.char {
-			color: $color_82;
+
 		}
 		.content {
-			color: $color_38;
+
 		}
 		.delimiter {
-			color: $color_39;
+
 		}
 		.modifier {
-			color: $color_83;
+
 		}
 	}
 	.symbol {
-		color: $color_84;
+
 		.content {
-			color: $color_84;
+
 		}
 		.delimiter {
-			color: $color_85;
+
 		}
 	}
 	.tag {
-		color: $color_86;
+
 		font-weight: bold;
 	}
 	.type {
-		color: $color_87;
+
 		font-weight: bold;
 	}
 	.value {
-		color: $color_47;
+
 	}
 	.variable {
-		color: $color_57;
+
 	}
 	.insert {
 		background: hsla(120,100%,50%,0.12);
 		.eyecatcher {
-			background-color: $background_color_34;
+
 			border: 1px solid hsla(120,100%,25%,0.5);
 			margin: -1px;
 			border-top: none;
@@ -4339,7 +4255,7 @@ div.gravatar-with-child {
 			border-bottom-right-radius: 5px;
 		}
 		.insert {
-			color: $color_90;
+
 			background: transparent;
 			font-weight: bold;
 		}
@@ -4347,7 +4263,7 @@ div.gravatar-with-child {
 	.delete {
 		background: hsla(0,100%,50%,0.12);
 		.eyecatcher {
-			background-color: $background_color_33;
+
 			border: 1px solid hsla(0,100%,45%,0.5);
 			margin: -1px;
 			border-bottom: none;
@@ -4355,26 +4271,26 @@ div.gravatar-with-child {
 			border-top-right-radius: 5px;
 		}
 		.delete {
-			color: $color_91;
+
 			background: transparent;
 			font-weight: bold;
 		}
 	}
 	.change {
-		color: $color_88;
+
 		background: #007;
 		.change {
-			color: $color_92;
+
 		}
 	}
 	.head {
-		color: $color_89;
+
 		background: #505;
 		.filename {
-			color: $color_20;
+
 		}
 		.head {
-			color: $color_93;
+
 		}
 	}
 }
