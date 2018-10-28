@@ -1,20 +1,20 @@
 # Project "Opal" :gem:
-Visual apearance overhaul project for Redmine, initiated by one of the newly formed Redmine communities.  
+Visual apearance overhaul project for Redmine, initiated by one of the newly formed [Redmine communities](https://discord.me/redmine).  
 #### Navigation
 1. [Features](#features)
 2. [Installation](#installation)
 3. [Customization](#customization)
 4. [Contributing](#contributing)
 5. [Credits](#credits)
-6. [License](#license)
+6. [License](#licenses--references)
 
 ## Features
 1. Fixed top bar.  
 2. Sticky navigation bar.  
 3. Sticky search bar.  
-4. Togglable reverse contrast.  
+4. Toggleable reverse contrast.  
 5. External link notifier.  
-6. Emoji codes are parsed to Google Blob emojis by default (installing custom emoji packs in also possible).  
+6. Emoji support.  
 
 ___
 ## Installation
@@ -32,8 +32,8 @@ ___
 ## Credits
 Proudly contributed to by: [Maximus225](https://github.com/Maximus225/), [GianVizzielli](https://github.com/GianVizzielli), [cappuMuc](https://github.com/cappuMUC).
 
-## Licenses
-The theme is licensed under:
+## Licenses & References
+The theme is licensed under [MIT](/README.md).
 
 The theme also uses:
 [Google Material Icons](https://github.com/google/material-design-icons/tree/master/iconfont) licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt).  
