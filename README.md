@@ -6,7 +6,7 @@ Visual apearance overhaul project for Redmine, initiated by one of the newly for
 3. [Customization](#customization)
 4. [Contributing](#contributing)
 5. [Credits](#credits)
-6. [License](#license)
+6. [License](#licenses--references)
 
 ## Features
 1. Fixed top bar.  
