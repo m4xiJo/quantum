@@ -14,7 +14,7 @@ Visual apearance overhaul project for Redmine, initiated by one of the newly for
 3. Sticky search bar.  
 4. Togglable reverse contrast.  
 5. External link notifier.  
-6. Emoji codes are parsed to Google Blob emojis by default (installing custom emoji packs in also possible).  
+6. Emoji support.  
 
 ___
 ## Installation
