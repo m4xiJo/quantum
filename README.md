@@ -1,12 +1,12 @@
 # Project "Opal" :gem:
 Visual apearance overhaul project for Redmine, initiated by one of the newly formed [Redmine communities](https://discord.me/redmine).  
 #### Navigation
-1. [Features](#features)
-2. [Installation](#installation)
-3. [Customization](#customization)
-4. [Contributing](#contributing)
-5. [Credits](#credits)
-6. [License](#licenses--references)
+[Features](#features) |
+[Installation](#installation) |
+[Customization](#customization) |
+[Contributing](#contributing) |
+[Credits](#credits) |
+[Licenses & References](#licenses--references) 
 
 ## Features
 1. Fixed top bar.  
