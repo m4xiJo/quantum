@@ -32,7 +32,7 @@ Join us on our [Discord](https://discord.me/redmine) server if you would also li
 
 ___
 ## Credits
-Proudly contributed to by: [Maximus225](https://github.com/Maximus225/), [GianVizzielli](https://github.com/GianVizzielli), [cappuMuc](https://github.com/cappuMUC).
+Proudly contributed to by: [m4xiJo](https://github.com/m4xiJo/), [GianVizzielli](https://github.com/GianVizzielli), [cappuMuc](https://github.com/cappuMUC).
 
 ## Licenses & References
 The theme is licensed under [MIT](/README.md).
