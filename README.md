@@ -4,7 +4,7 @@ Visual appearance overhaul project for Redmine, initiated by one of the newly fo
 [Features](#features) |
 [Installation](#installation) |
 [Customization](#customization) |
-[Contributing](#contributing) |
+[Contribution & Collaboration](#contribution--collaboration) |
 [Credits](#credits) |
 [Licenses & References](#licenses--references)
 
@@ -32,8 +32,10 @@ ___
 The theme was developed using SASS/SCSS, which you can customize and recompile, with tools like e.g. [Koala](http://koala-app.com/), in order to modify the colors.
 
 ___
-## Contributing
-Join us on our [Discord](https://discord.me/redmine) server if you would also like to contribute, as we use it for communication.
+## Contribution & Collaboration
+To contribute to this project, you may propose features or report bugs by heading over to [issues](/issues) page and submitting the respective feedback.
+
+If you wish to become a collaborator, please join us on our [Discord](https://discord.me/redmine) server, as we use it for communication.
 
 ___
 ## Credits
@@ -41,8 +43,8 @@ Proudly contributed to by: [m4xiJo](https://github.com/m4xiJo/), [GianVizzielli]
 
 ___
 ## Licenses & References
-The theme is licensed under [MIT](/README.md).
-The theme also uses:
+The theme is licensed under [MIT](/README.md).  
+The theme also uses:  
 [Google Material Icons](https://github.com/google/material-design-icons/tree/master/iconfont) licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt).  
 [Google Blob Emojis](https://github.com/googlei18n/noto-emoji) licensed under [SIL Open Font License](https://github.com/googlei18n/noto-emoji/blob/master/fonts/LICENSE).  
 [Roboto Font](https://fonts.google.com/specimen/Roboto) by Christian Robertson licenced under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt).  
