@@ -1,0 +1,1729 @@
+*
+	html
+		#sidebar
+			width: 22%
+			hr
+				width: 95%
+				position: relative
+				left: -6px
+		#content
+			width: 75%
+			padding-left: 0
+			margin-top: 0px
+			padding: 6px 10px 10px 10px
+		body
+			#content
+				height: 600px
+		div.wiki
+			ul.toc
+				width: 50%
+
+#wrapper
+	opacity: 1
+	background: white
+	&.day-mode
+		background: $contentContainerBgColor
+		.icon::before
+			font-family: Material Icons
+			color: black
+		#top-menu
+			#contrastswitch::before
+				content: '\e3a7'
+			a
+				color: $tbTextColor
+		#header
+			background-color: $hdBgColor
+			color: $hdTextColor
+		#main-menu
+			background-color: $mmBgColor
+			li a
+				color: $mmButtonTextColorIdle
+			li a.selected
+				color: black
+		#top-menu
+			background: $tbBgColor
+		#main
+			background-color: $contentContainerBgColor
+			#sidebar
+				background: #eee
+		.other-formats a
+			background: #dadada
+			padding: 3px
+			border: 1px solid #3e3e3e
+			padding: 3px 4px 1px 3px
+			&:hover
+					background: white
+		.contextual a
+			border: 1px solid #ccc
+			background: #dadada
+			padding: 3px 7px 3px 5px !important
+			&:hover
+				background: white
+		.message, .message.reply
+			background: #dadada
+			padding: 7px
+			margin-bottom: 10px
+
+	&.night-mode
+		background: $contentContainerBgColorNight
+		.icon::before
+			font-family: Material Icons
+			color: white
+		#top-menu
+			#contrastswitch::before
+				content: '\e3ac'
+			a
+				color: #ccc
+		#header
+			background-color: $hdBgColorNight
+			color: $hdTextColorNight
+		#main-menu
+			background-color: $mmBgColorNight
+			li a
+				color: $mmButtonTextColorIdleNight
+			li a.selected
+				background: #0a223c
+				border-bottom: 4px solid #86c0ff
+		#top-menu
+			background: $tbBgColorNight
+			.tmbActive
+				border-bottom: 2px solid #86c0ff
+		#main
+			background-color: $contentContainerBgColorNight
+			#content h2
+				color: #FFF
+			#sidebar
+				background: #636363
+		input, select, textarea, select
+			background: #636363
+			color: #ccc
+			border: 0
+		a:link
+			color: #5798bf
+		body
+			color: #ccc
+		#filters legend
+		color: #ccc
+		.box
+		background: #444
+		color: white
+		table.list, table.list th
+			background-color: #636363
+			border: 1px solid #4e4e4e
+			color: white
+		table.list:not(.odd-even) tbody tr:nth-child(2n+1)
+			background-color: #363636
+		table.list:not(.odd-even) tbody tr:nth-child(2n)
+			background-color: #595959
+		.other-formats a
+			background: #1d1d1d
+			padding: 3px
+			border: 1px solid #3e3e3e
+			padding: 3px 4px 1px 3px
+			&:hover
+					background: white
+		.contextual a
+			border: 1px solid #3e3e3e
+			background: #1d1d1d
+			padding: 3px 7px 3px 5px !important
+			&:hover
+				background: white
+	.message, .message.reply
+		background: #444
+		color: white
+		padding: 7px
+		margin-bottom: 10px
+
+#top-menu
+	color: $tbTextColor
+	height: $tbHeight
+	font-size: $tbTextSize
+	padding: 5px 2px 0px 4px
+	position: fixed
+	width: 100%
+	z-index: 9999
+	-webkit-touch-callout: none /* iOS Safari */
+	-webkit-user-select: none /* Safari */
+	-khtml-user-select: none /* Konqueror HTML */
+	-moz-user-select: none /* Firefox */
+	-ms-user-select: none /* Internet Explorer/Edge */
+	user-select: none /* Non-prefixed version, currently supported by Chrome and Opera */
+	box-shadow: $tbShadow
+	ul
+		margin: 0
+		padding: 0
+	li
+		float: left
+		list-style-type: none
+		margin: 0px 0px 0px 0px
+		padding: 0px 0px 0px 0px
+		white-space: nowrap
+	a
+		margin-right: 8px
+		font-weight: bold
+	#loggedas
+		float: right
+		margin-right: 0.5em
+	#contrastswitch
+		font-size: 16px
+		margin-right: 14px
+		font-family: $iconfont
+		vertical-align: -1px
+		float: right
+		transition: 1s fade
+		-webkit-transition: text-shadow 3s ease
+		-moz-transition: text-shadow 3s ease
+		-o-transition: text-shadow 3s ease
+		transition: text-shadow 0.5s ease
+		&:hover
+			color:white
+			text-shadow: 0px 0px 14px white
+			cursor: pointer
+#header
+	min-height: 5.3em
+	margin: 0
+	padding: 24px 6px 1px 0px
+	position: relative
+	-webkit-touch-callout: none /* iOS Safari */
+	-webkit-user-select: none /* Safari */
+	-khtml-user-select: none /* Konqueror HTML */
+	-moz-user-select: none /* Firefox */
+	-ms-user-select: none /* Internet Explorer/Edge */
+	user-select: none /* Non-prefixed version, currently supported by Chrome and Opera */
+	box-shadow: $hdShadow
+	h1
+		font-size: 36px
+		margin-top: 10px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		.breadcrumbs
+			display: block
+			font-size: .5em
+			font-weight: normal
+	h1::before
+		content: ""
+		background-image: url($hdLogotype)
+		background-size: 37px
+		display: inline-block
+		width: 58px
+		height: 26px
+		background-repeat: no-repeat
+		background-position: center
+
+#quick-search
+	float: right
+	float: right
+	position: sticky
+	top: 23px
+	z-index: 9999
+	right: 6px
+	padding-top: 4px
+	#q
+		width: 130px
+		height: 24px
+		box-sizing: border-box
+		vertical-align: middle
+		border: 1px solid #ccc
+		border-radius: 3px
+
+#main-menu
+	&.day-mode
+		background-color: $mmBgColor
+		a
+			color: $mmButtonTextColorIdle
+	&.night-mode
+		background-color: $mmBgColorNight
+		a
+			color: $mmButtonTextColorIdleNight
+		position: sticky
+		top: $mmHeight
+		width: 100%
+		z-index: 9998
+		font-size: $mmTextSize
+		-webkit-touch-callout: none /* iOS Safari */
+		-webkit-user-select: none /* Safari */
+		-khtml-user-select: none /* Konqueror HTML */
+		-moz-user-select: none /* Firefox */
+		-ms-user-select: none /* Internet Explorer/Edge */
+		user-select: none /* Non-prefixed version, currently supported by Chrome and Opera */
+		box-shadow: $mmShadow
+		transition: $mmTransition
+
+	ul
+		margin: 0
+		padding: 0
+		width: 100%
+		white-space: nowrap
+
+	li
+		float: none
+		list-style-type: none
+		margin: 0px 2px 0px 0px
+		padding: 0px 0px 0px 0px
+		white-space: nowrap
+		display: inline-block
+		a
+			display: block
+			text-decoration: none
+			font-weight: bold
+			margin: 0
+			padding: 8px 8px 6px 10px
+			&:hover
+				background: #759FCF
+				border-bottom: 4px solid black
+
+		&:hover
+			ul.menu-children
+				display: block
+		ul.menu-children.visible
+			display: block
+		a.selected
+			background: #fff
+			border-bottom: 4px solid black
+			&:hover
+				background: #fff
+				border-bottom: 4px solid black
+
+		a.new-object
+	.menu-children
+		display: none
+		position: absolute
+		width: inherit
+		z-index: 45
+		border-right: 1px solid #759FCF
+		border-bottom: 1px solid #759FCF
+		border-left: 1px solid #759FCF
+		li
+			float: left
+			clear: both
+			width: 100%
+			a
+				font-weight: normal
+				&:hover
+	.tabs-buttons
+		right: 6px
+
+#main
+ul.flat
+	margin: 0
+	padding: 0
+	li
+		list-style-type: none
+		margin: 0px 2px 0px 0px
+		padding: 0px 0px 0px 0px
+#main.nosidebar
+	#sidebar
+		display: none
+	#content
+		width: auto
+		border-right: 0
+
+#content
+	h1
+	width: 88%
+	box-sizing: border-box
+	margin: 0px
+	//border-right: 1px solid #ddd
+	padding: 6px 10px 10px 10px
+	z-index: 10
+	.tabs
+		height: 2.6em
+		margin-bottom: 1.2em
+		position: relative
+		overflow: hidden
+		ul
+			margin: 0
+			position: absolute
+			bottom: 0
+			padding-left: 0.5em
+			width: 2000px
+			border-bottom: 1px solid #bbbbbb
+			li
+				float: left
+				list-style-type: none
+				white-space: nowrap
+				margin-right: 4px
+				background: #fff
+				position: relative
+				margin-bottom: -1px
+				a
+					display: block
+					font-size: 1.1em
+					text-decoration: none
+					line-height: 1.3em
+					padding: 4px 6px 4px 6px
+					border: 1px solid #ccc
+					border-bottom: 1px solid #bbbbbb
+					font-weight: bold
+					&:hover
+						background-color: #d1e7ff
+						text-decoration: none
+						color: black
+				a.selected
+					border: 1px solid #bbbbbb
+					border-bottom: 1px solid #fff
+					&:hover
+#sidebar
+	float: right
+	width: 12%
+	box-sizing: border-box
+	position: relative
+	z-index: 9
+	padding: 0
+	margin: 0
+	background: #eee
+	padding: 10px 0px 20px 20px
+	position: sticky
+	top: 56px
+	h3
+		font-size: 14px
+		margin-top: 14px
+
+	hr
+		width: 100%
+		margin: 0 auto
+		height: 1px
+		background: #ccc
+		border: 0
+
+	.contextual
+		margin-right: 1em
+
+	ul
+		margin: 0
+		padding: 0
+		li
+			list-style-type: none
+			margin: 0px 2px 0px 0px
+			padding: 0px 0px 0px 0px
+
+
+	div.wiki
+		ul
+			margin: inherit
+			padding-left: 40px
+			li
+				list-style-type: inherit
+
+	a.selected
+		line-height: 1.7em
+		padding: 1px 3px 2px 2px
+		margin-left: -2px
+		border-radius: 2px
+		&:hover
+			text-decoration: none
+
+#footer
+	grid-row-start: 2
+	grid-row-end: 3
+	clear: both
+	font-size: 1em
+	color: #fff
+	padding: 5px
+	text-align: center
+	background: #214d7e
+	box-shadow: 0px 0px 8px black
+	font-weight: bold
+
+div.tabs-buttons
+	position: absolute
+	right: 0
+	width: 54px
+	height: 24px
+	background: white
+	bottom: 0
+	border-bottom: 1px solid #bbbbbb
+button.tab-left
+	font-size: 0.9em
+	cursor: pointer
+	height: 24px
+	border: 1px solid #ccc
+	border-bottom: 1px solid #bbbbbb
+	position: absolute
+	padding: 4px
+	width: 20px
+	bottom: -1px
+	right: 20px
+	background: #eeeeee url(../images/icons/UI/bullet_arrow_left.png) no-repeat 50% 50%
+	border-top-left-radius: 3px
+	&:hover
+	&:focus
+		outline: 0
+button.tab-right
+	font-size: 0.9em
+	cursor: pointer
+	height: 24px
+	border: 1px solid #ccc
+	border-bottom: 1px solid #bbbbbb
+	position: absolute
+	padding: 4px
+	width: 20px
+	bottom: -1px
+	right: 0
+	background: #eeeeee url(../images/icons/UI/bullet_arrow_right.png) no-repeat 50% 50%
+	border-top-right-radius: 3px
+	&:hover
+	&:focus
+		outline: 0
+button.tab-left.disabled
+	cursor: unset
+button.tab-right.disabled
+	cursor: unset
+.diff_out
+	background: #fcc
+	span
+		background: #faa
+.diff_in
+	background: #cfc
+	span
+		background: #afa
+.text-diff
+	padding: 1em
+	border: 1px solid #e4e4e4
+.block-receiver
+	border: 1px dashed #fff
+	padding: 15px 0 0 0
+.dragging
+	.block-receiver
+		border: 1px dashed #777
+		margin-bottom: 20px
+.mypage-box
+	border: 1px solid #ddd
+	padding: 8px
+	margin: 0 0 20px 0
+	line-height: 1.5em
+	>.contextual
+		opacity: 0
+		transition: opacity 0.2s
+	&:hover
+		>.contextual
+			opacity: 1
+.handle
+	cursor: move
+#my-page
+	.list
+		th.checkbox
+			display: none
+		td.checkbox
+			display: none
+
+tr.ui-sortable-helper
+	border: 1px solid #e4e4e4
+img.gravatar
+	vertical-align: middle
+	border: 1px solid black
+	height: 37px
+div.gravatar-with-child
+	position: relative
+	>img.gravatar
+		&:nth-child(2)
+			position: absolute
+			top: 30px
+			left: 30px
+			border-radius: 20%
+			border: 2px solid rgba(255, 255, 255, 0.9)
+
+.attachments_fields
+	input.description
+		margin-left: 4px
+		width: 340px
+	>span
+		display: block
+		white-space: nowrap
+	input.filename
+		border: 0
+		width: 250px
+		height: 1.8em
+	.ajax-waiting
+		input.filename
+			background: url(../images/icons/UI/hourglass.png) no-repeat 0px 50%
+	.ajax-loading
+		input.filename
+			background: url(../images/icons/UI/loading.gif) no-repeat 0px 50%
+	div.ui-progressbar
+		width: 100px
+		height: 14px
+		margin: 2px 0 -5px 8px
+		display: inline-block
+#existing-attachments
+	input.description
+		margin-left: 4px
+		width: 340px
+	>span
+		display: block
+		white-space: nowrap
+	.filename
+		border: 0
+		width: 250px
+a.remove-upload
+	&:hover
+		text-decoration: none !important
+.existing-attachment.deleted
+	.filename
+		text-decoration: line-through
+div.fileover
+div.attachments
+	margin: 12px 0
+	p
+		margin: 4px 0 2px 0
+	img
+		vertical-align: middle
+	span.author
+		font-size: 0.9em
+
+#search-form
+	fieldset
+		p
+			margin: 0.2em 0
+.tabular
+	p
+		margin: 0
+		padding: 3px 0 3px 0
+		padding-left: 180px
+		min-height: 2em
+		clear: left
+	input
+		max-width: 95%
+	select
+		max-width: 95%
+	textarea
+		width: 95%
+		resize: vertical
+	label
+		font-weight: bold
+		float: left
+		text-align: right
+		margin-left: -180px
+		width: 175px
+	label.floating
+		font-weight: normal
+		margin-left: 0px
+		text-align: left
+		width: 270px
+	label.block
+		font-weight: normal
+		margin-left: 0px !important
+		text-align: left
+		float: none
+	label.inline
+		font-weight: normal
+		float: none
+		margin-left: 5px !important
+		width: auto
+	input.filename
+		max-width: 75% !important
+label.block
+	display: block
+	width: auto !important
+label.no-css
+	font-weight: inherit
+	float: none
+	text-align: left
+	margin-left: 0px
+	width: auto
+input#time_entry_comments
+	width: 90%
+fieldset.preview
+	margin-top: 1em
+	min-width: inherit
+	background: url(../images/icons/UI/draft.png)
+.tabular.settings
+	p
+		padding-left: 300px
+	label
+		margin-left: -300px
+		width: 295px
+	textarea
+		width: 99%
+.settings.enabled_scm
+	table
+		width: 100%
+	td.scm_name
+		font-weight: bold
+fieldset.settings
+	label
+		display: block
+fieldset#notified_events
+	.parent
+		padding-left: 20px
+span.required
+.summary
+	font-style: italic
+.check_box_group
+	display: block
+	width: 95%
+	max-height: 300px
+	overflow-y: auto
+	padding: 2px 4px 4px 2px
+	background: #fff
+	border: 1px solid #9EB1C2
+	border-radius: 2px
+	label
+		font-weight: normal
+		margin-left: 0px !important
+		text-align: left
+		float: none
+		display: block
+		width: auto
+.check_box_group.bool_cf
+	border: 0
+	background: inherit
+	label
+		display: inline
+
+div.thumbnails
+	margin: 0.6em
+	div
+		background: #fff
+		border: 2px solid #ddd
+		display: inline-block
+		margin-right: 2px
+	img
+		margin: 3px
+		vertical-align: middle
+#history
+	div.thumbnails
+		margin-left: 2em
+p.other-formats
+	text-align: right
+
+.other-formats
+	span
+		&+span
+			&:before
+				content: "| "
+a.atom::before
+	content: $atom
+	display: inline-block
+	font-family: $iconfont
+	vertical-align: -6%
+a.csv::before
+	content: $csv
+	display: inline-block
+	font-family: $iconfont
+	vertical-align: -6%
+a.pdf::before
+	content: $pdf
+	display: inline-block
+	font-family: $iconfont
+	vertical-align: -6%
+em.info
+	font-style: normal
+	font-size: 90%
+	display: block
+em.info.error
+	padding-left: 20px
+	background: url(../images/icons/UI/exclamation.png) no-repeat 0 50%
+textarea.text_cf
+	width: 95%
+	resize: vertical
+input.string_cf
+	width: 95%
+input.link_cf
+	width: 95%
+select.bool_cf
+	width: auto !important
+#tab-content-modules
+	fieldset
+		p
+			margin: 3px 0 4px 0
+#tab-content-users
+	.splitcontentleft
+		width: 64%
+	.splitcontentright
+		width: 34%
+	fieldset
+		padding: 1em
+		margin-bottom: 1em
+		legend
+			font-weight: bold
+		label
+			display: block
+	#principals
+		max-height: 400px
+		overflow: auto
+#users_for_watcher
+	height: 200px
+	overflow: auto
+	label
+		display: block
+input#principal_search
+	width: 90%
+input#user_search
+	width: 90%
+.roles-selection
+	label
+		display: inline-block
+		width: 210px
+input.autocomplete
+	background: #fff url(../images/icons/UI/magnifier.png) no-repeat 2px 50%
+	padding-left: 20px !important
+	border: 1px solid #9EB1C2
+	border-radius: 2px
+	height: 1.5em
+input.autocomplete.ajax-loading
+	background-image: url(../images/icons/UI/loading.gif)
+.role-visibility
+	padding-left: 2em
+.objects-selection
+	height: 300px
+	overflow: auto
+	margin-bottom: 1em
+	label
+		display: block
+	>div
+		column-count: auto
+		column-width: 200px
+		-webkit-column-count: auto
+		-webkit-column-width: 200px
+		-webkit-column-gap: 0.5rem
+		-webkit-column-rule: 1px solid #ccc
+		-moz-column-count: auto
+		-moz-column-width: 200px
+		-moz-column-gap: 0.5rem
+		-moz-column-rule: 1px solid #ccc
+#user_group_ids
+	column-count: auto
+	column-width: 200px
+	-webkit-column-count: auto
+	-webkit-column-width: 200px
+	-webkit-column-gap: 0.5rem
+	-webkit-column-rule: 1px solid #ccc
+	-moz-column-count: auto
+	-moz-column-width: 200px
+	-moz-column-gap: 0.5rem
+	-moz-column-rule: 1px solid #ccc
+
+img.ui-datepicker-trigger
+	cursor: pointer
+	vertical-align: middle
+	margin-left: 4px
+
+.hidden-for-sighted
+	position: absolute
+	left: -10000px
+	top: auto
+	width: 1px
+	height: 1px
+	overflow: hidden
+
+#account
+	float: right
+#admin-menu
+	ul
+		margin: 0
+		padding: 0
+	li
+		margin: 0
+		padding: 0 0 6px 0
+		list-style-type: none
+	a
+		line-height: 1.7em
+	a.selected
+		//padding-left: 20px !important
+		background-position: 2px 40%
+
+.ui-corner-all
+	//border: 0 !important
+	border-bottom-right-radius: 0 !important
+	border-top-right-radius: 0 !important
+	border-top-left-radius: 0 !important
+	border-bottom-left-radius: 0 !important
+
+div.modal
+	background: #fff
+	z-index: 50
+	h3.title
+		display: none
+
+	p.buttons
+		text-align: right
+		margin-bottom: 0
+
+	.box
+		p
+			margin: 0.3em 0
+
+.clear
+	&:after
+		content: "."
+		display: block
+		height: 0
+		clear: both
+		visibility: hidden
+
+.mobile-show
+	display: none
+
+a.issue.closed
+	text-decoration: line-through
+	&:link
+		text-decoration: line-through
+
+	&:visited
+		text-decoration: line-through
+
+a.project.closed
+	&:link
+	&:visited
+
+a.user.locked
+	&:link
+	&:visited
+
+a.collapsible
+	padding-left: 12px
+	background: url(../images/icons/UI/arrow_expanded.png) no-repeat -3px 40%
+
+a.collapsible.collapsed
+	background: url(../images/icons/UI/arrow_collapsed.png) no-repeat -5px 40%
+
+a#toggle-completed-versions
+
+.drdn
+	position: relative
+.drdn-trigger
+	width: 100%
+	height: 24px
+	box-sizing: border-box
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+	padding: 3px 18px 3px 6px
+	background: #fff url(../images/icons/UI/sort_desc.png) no-repeat 97% 50%
+	cursor: pointer
+	user-select: none
+	-moz-user-select: none
+	-webkit-user-select: none
+
+.drdn-content
+	display: none
+	position: absolute
+	right: 0px
+	top: 25px
+	min-width: 100px
+	border: 1px solid #ccc
+	border-radius: 4px
+	z-index: 99
+	.quick-search
+		margin: 8px
+
+	.autocomplete
+		box-sizing: border-box
+		width: 100% !important
+		height: 28px
+		&:focus
+
+.drdn.expanded
+	.drdn-trigger
+		background-image: url(../images/icons/UI/sort_asc.png)
+	.drdn-content
+		display: block
+
+.drdn-items
+	max-height: 400px
+	overflow: auto
+	>*
+		display: block
+		border: 1px solid #fff
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		padding: 4px 8px
+		&:focus
+			border: 1px dotted #bbb
+	>a
+		&:hover
+			text-decoration: none
+	>span
+div
+	&+.drdn-items
+		border-top: 1px solid #ccc
+.drdn-items.selection
+	>*
+		&:before
+			content: ' '
+			display: inline-block
+			line-height: 1em
+			width: 1em
+			height: 1em
+			margin-right: 4px
+			font-weight: bold
+	>*.selected
+		&:before
+			content: "\2713 "
+	&:empty
+		border: none
+#project-jump.drdn
+	width: 200px
+	display: inline-block
+
+#project-jump
+	.drdn-trigger
+		display: inline-block
+		border-radius: 3px
+		border: 1px solid #ccc
+		margin: 0 !important
+		vertical-align: middle
+	.drdn-content
+		width: 280px
+
+table.list
+	border: 1px solid #e4e4e4
+	border-collapse: collapse
+	width: 100%
+	margin-bottom: 4px
+	th
+		padding: 4px
+		white-space: nowrap
+		font-weight: bold
+
+	td
+		text-align: center
+		vertical-align: middle
+		padding-right: 10px
+
+	td.id
+		width: 2%
+		text-align: center
+
+	td.name
+		text-align: left
+
+	td.description
+		text-align: left
+
+	td.subject
+		text-align: left
+
+	td.comments
+		text-align: left
+
+	td.roles
+		text-align: left
+
+	td.attachments
+		text-align: left
+		a
+			display: block
+
+	td.tick
+		width: 15%
+
+	td.checkbox
+		width: 15px
+		padding: 2px 0 0 0
+		input
+			padding: 0px
+
+	td.buttons
+		white-space: nowrap
+		text-align: right
+		a
+			margin-right: 0.6em
+		img
+			vertical-align: middle
+
+	td.reorder
+		width: 15%
+		white-space: nowrap
+		text-align: center
+
+	table.progress
+		td
+			padding-right: 0px
+	caption
+		text-align: left
+		padding: 0.5em 0.5em 0.5em 0
+	tbody
+		tr
+			&:hover
+		tr.group
+			&:hover
+	&:not(.odd-even)
+		tbody
+			tr
+				&:nth-child(odd)
+				&:nth-child(even)
+.table-list
+	border: 1px solid #e4e4e4
+	border-collapse: collapse
+	width: 100%
+	margin-bottom: 4px
+	div.buttons
+		width: 15%
+
+.table-list-header
+	padding: 4px
+	white-space: nowrap
+	font-weight: bold
+
+div.buttons
+	white-space: nowrap
+	text-align: right
+	a
+		margin-right: 0.6em
+	img
+		vertical-align: middle
+
+#role-permissions-trackers
+	table.list
+		th
+			white-space: normal
+.table-list-cell
+	display: table-cell
+	vertical-align: top
+	padding: 2px
+
+
+tr.entry
+	border: 1px solid #f8f8f8
+	td
+		white-space: nowrap
+	td.filename
+		width: 30%
+		text-align: left
+	td.filename_no_report
+		width: 70%
+		text-align: left
+	td.size
+		text-align: right
+		font-size: 90%
+	td.revision
+		text-align: center
+	td.author
+		text-align: center
+	td.age
+		text-align: right
+tr.entry.file
+	td.filename
+		a
+			margin-left: 16px
+	td.filename_no_report
+		a
+			margin-left: 16px
+tr
+	span.expander
+		background-image: url(../images/icons/UI/bullet_toggle_plus.png)
+		padding-left: 8px
+		margin-left: 0
+		cursor: pointer
+tr.open
+	span.expander
+		background-image: url(../images/icons/UI/bullet_toggle_minus.png)
+tr.changeset
+	height: 20px
+	ul
+		margin-top: 0px
+		margin-bottom: 0px
+	td.revision_graph
+		width: 15%
+	td.author
+		text-align: center
+		width: 15%
+		white-space: nowrap
+	td.committed_on
+		text-align: center
+		width: 15%
+		white-space: nowrap
+ol
+	margin-top: 0px
+	margin-bottom: 0px
+table.files
+	tbody
+		th
+			text-align: left
+	tr.file
+		td.filename
+			text-align: left
+			padding-left: 24px
+		td.digest
+			font-size: 80%
+table.members
+	td.roles
+		width: 45%
+table.memberships
+	td.roles
+		width: 45%
+tr.message
+	height: 2.6em
+	td.created_on
+		white-space: nowrap
+	td.last_message
+		font-size: 80%
+		white-space: nowrap
+tr.message.sticky
+	td.subject
+		font-weight: bold
+tr.version.closed
+	a
+tr.version
+	td.name
+		padding-left: 20px
+	td.date
+		text-align: center
+		white-space: nowrap
+	td.status
+		text-align: center
+		white-space: nowrap
+	td.sharing
+		text-align: center
+		white-space: nowrap
+tr.member
+	td.icon-user
+		background: transparent
+tr.user
+	td
+		width: 13%
+		white-space: nowrap
+	td.email
+		width: 18%
+td.username
+	text-align: left !important
+	img.gravatar
+		margin: 0 0.5em 0 0
+		vertical-align: top
+td.firstname
+	text-align: left !important
+td.lastname
+	text-align: left !important
+td.email
+	text-align: left !important
+tr.user.locked
+	a
+tr.user.registered
+	a
+table.permissions
+	td.role
+		font-size: 90%
+		font-weight: normal !important
+		text-align: center
+		vertical-align: bottom
+tr.time-entry
+	text-align: center
+	white-space: nowrap
+	td.issue
+		text-align: left
+		white-space: normal
+	td.comments
+		text-align: left
+		white-space: normal
+	td.subject
+		text-align: left
+		white-space: normal
+	td.activity
+		text-align: left
+		white-space: normal
+td.hours
+	text-align: right
+	font-weight: bold
+	padding-right: 0.5em
+	.hours-dec
+		font-size: 0.9em
+table.plugins
+	td
+		vertical-align: middle
+	td.configure
+		text-align: right
+		padding-right: 1em
+	span.name
+		font-weight: bold
+		display: block
+		margin-bottom: 6px
+	span.description
+		display: block
+		font-size: 0.9em
+	span.url
+		display: block
+		font-size: 0.9em
+
+table.list.enumerations
+	table-layout: fixed
+	margin-bottom: 2em
+tr.group
+	td
+		padding: 0.8em 0 0.5em 0.3em
+		border-bottom: 1px solid #ccc
+		text-align: left
+	span.name
+		font-weight: bold
+	span.count
+		font-weight: bold
+		position: relative
+		top: -1px
+		font-size: 10px
+		background: #9DB9D5
+		padding: 0px 6px 1px 6px
+		border-radius: 3px
+		margin-left: 4px
+	span.totals
+		font-size: 80%
+		.value
+			font-weight: bold
+	a.toggle-all
+		font-size: 80%
+		display: none
+		float: right
+		margin-right: 4px
+	&:hover
+		a.toggle-all
+			display: inline
+a.toggle-all
+	&:hover
+		text-decoration: none
+table
+	td
+		padding: 2px
+	p
+		margin: 0
+.odd
+#issue-changesets
+	div.changeset
+		&:nth-child(odd)
+		&:nth-child(even)
+.even
+tr.builtin
+	td.name
+		font-style: italic
+a.sort
+	padding-right: 16px
+	background-position: 100% 50%
+	background-repeat: no-repeat
+a.sort.asc
+	background-image: url(../images/icons/UI/sort_asc.png)
+a.sort.desc
+	background-image: url(../images/icons/UI/sort_desc.png)
+table.boards
+	a.board
+		background: url(../images/icons/UI/comment.png) no-repeat 0% 50%
+		padding-left: 20px
+	td.last-message
+		text-align: left
+		font-size: 80%
+div.table-list.boards
+	.table-list-cell.name
+		width: 30%
+table.messages
+	td.last_message
+		text-align: left
+#query_form_content
+	font-size: 90%
+.query_sort_criteria_count
+	display: inline-block
+	min-width: 1em
+table.query-columns
+	border-collapse: collapse
+	border: 0
+	td.buttons
+		vertical-align: middle
+		text-align: center
+		input[type=button]
+			width: 35px
+.query-totals
+	text-align: right
+	>span
+		&:not(:first-child)
+			margin-left: 0.6em
+	.value
+		font-weight: bold
+body.controller-issues
+	.query-totals
+		margin-top: -2.3em
+td.center
+	text-align: center
+#watchers
+	select
+		width: 95%
+		display: block
+	a.delete
+		opacity: 0.4
+		margin-left: 5px
+		&:hover
+			opacity: 1
+	img.gravatar
+		margin: 0 4px 2px 0
+
+span#watchers_inputs
+	overflow: auto
+	display: block
+span.search_for_watchers
+	display: block
+	font-size: 80%
+	line-height: 2.5em
+span.add_attachment
+	font-size: 80%
+	line-height: 2.5em
+	a
+		padding-left: 16px
+		background: url(../images/icons/UI/bullet_add.png) no-repeat 0 50%
+.highlight
+.highlight.token-1
+.highlight.token-2
+.highlight.token-3
+.box
+	padding: 6px
+	margin-bottom: 10px
+	line-height: 1.5em
+	//border: 1px solid #e4e4e4
+	word-wrap: break-word
+	//border-radius: 3px
+div.square
+	border: 1px solid #999
+	float: left
+	margin: .3em .4em 0 .4em
+	overflow: hidden
+	width: .6em
+	height: .6em
+.contextual
+	float: right
+	white-space: nowrap
+	line-height: 1.4em
+	margin: 5px 0px
+	font-size: 0.9em
+	padding: 2px
+	.icon
+		padding-top: 2px
+		padding-bottom: 3px
+	input
+		font-size: 0.9em
+	select
+		font-size: 0.9em
+	>*
+		&:not(:first-child)
+			margin-left: 5px
+
+.splitcontent
+	overflow: auto
+.splitcontentleft
+	float: left
+	width: 49%
+#list-left
+	float: left
+	width: 49%
+.splitcontentright
+	float: right
+	width: 49%
+#list-right
+	float: right
+	width: 49%
+
+div#activity
+	dl
+		margin-left: 2em
+	dd
+		margin-bottom: 1em
+		padding-left: 18px
+		font-size: 0.9em
+		.description
+			font-style: italic
+		span.description
+			display: block
+	dt.me
+		.time
+			border-bottom: 1px solid #999
+	dt
+		.time
+			font-size: 80%
+	span.project
+		&:after
+			content: " -"
+	dt.grouped
+		margin-left: 5em
+	dd.grouped
+		margin-left: 9em
+	dt.icon
+		background-position: 0 0px !important
+#search-results
+	margin-left: 2em
+	dd
+		margin-bottom: 1em
+		padding-left: 18px
+		font-size: 0.9em
+		margin-bottom: 1em
+		padding-left: 20px
+		margin-left: 0px
+		.description
+			font-style: italic
+		span.description
+			display: block
+	span.project
+		&:after
+			content: " -"
+div#search-results-counts
+	float: right
+	ul
+		margin-top: 0.5em
+	li
+		list-style-type: none
+		float: left
+		margin-left: 1em
+div#roadmap
+	.related-issues
+		margin-bottom: 1em
+		td.checkbox
+			display: none
+	.wiki
+		h1
+			&:first-child
+				display: none
+			font-size: 120%
+		h2
+			font-size: 110%
+body.controller-versions.action-show
+	div#roadmap
+		.related-issues
+			width: 70%
+div#version-summary
+	float: right
+	width: 28%
+	margin-left: 16px
+	margin-bottom: 16px
+	fieldset
+		margin-bottom: 1em
+	fieldset.time-tracking
+		table
+			width: 100%
+	th
+		text-align: right
+	td.total-hours
+		text-align: right
+table#time-report
+	td.hours
+		text-align: right
+		padding-right: 0.5em
+	th.period
+		text-align: right
+		padding-right: 0.5em
+	th.total
+		text-align: right
+		padding-right: 0.5em
+	tbody
+		tr.subtotal
+			font-style: italic
+			td.hours
+		tr.total
+			font-weight: bold
+			border-top: 1px solid #e4e4e4
+	.hours-dec
+		font-size: 0.9em
+input#issue_subject
+	width: 99%
+input#document_title
+	width: 99%
+select#issue_done_ratio
+	width: 95px
+ul.projects
+	margin: 0
+	padding-left: 1em
+	ul
+		padding-left: 1.6em
+	li
+		list-style-type: none
+ul.projects.root
+	margin: 0
+	padding: 0
+.project.root.leaf::before
+		font-family: $iconfont
+		content: $projects
+		margin-right: 5px
+		text-decoration: none !important
+		display: inline-block
+		vertical-align: -10%
+#projects-index
+	column-count: auto
+	column-width: 400px
+	-webkit-column-count: auto
+	-webkit-column-width: 400px
+	-webkit-column-gap: 0.5rem
+	-moz-column-count: auto
+	-moz-column-width: 400px
+	-moz-column-gap: 0.5rem
+	ul.projects
+		li.root
+			>ul.projects
+				border-left: 3px solid #e0e0e0
+				padding-left: 1em
+
+			padding: 10px
+			background: #e7e7e7
+			height: 50px
+		li.child
+			margin-top: 1em
+		div.root
+			a.project
+				font-family:	$globalFontTitles
+				font-weight: bold
+				font-size: 16px
+				margin: 0 0 10px 0
+				border-bottom: 1px dashed #aaa
+				width: 100%
+				display: block
+	a.icon-fav
+		padding-left: 0
+		padding-right: 20px
+		background-position: 98% 50%
+#notified-projects
+	>ul
+		max-height: 250px
+		overflow-y: auto
+#tracker_project_ids
+	>ul
+		max-height: 250px
+		overflow-y: auto
+#custom_field_project_ids
+	>ul
+		max-height: 250px
+		overflow-y: auto
+#related-issues
+	li
+		img
+			vertical-align: middle
+ul.properties
+	padding: 0
+	font-size: 0.9em
+	li
+		list-style-type: none
+		span
+			font-style: italic
+.total-hours
+	font-size: 110%
+	font-weight: bold
+	span.hours-int
+		font-size: 120%
+.autoscroll
+	overflow-x: auto
+	padding: 1px
+	margin-bottom: 1.2em
+	position: relative
+#user_login
+	width: 90%
+#user_firstname
+	width: 90%
+#user_lastname
+	width: 90%
+#user_mail
+	width: 90%
+#my_account_form
+	select
+		width: 90%
+#user_form
+	select
+		width: 90%
+#user_identity_url
+	width: 90%
+#workflow_copy_form
+	select
+		width: 200px
+table.transitions
+	td.enabled
+		background: #bfb
+#workflow_form
+	table
+		select
+			font-size: 90%
+			max-width: 100px
+table.fields_permissions
+	td.readonly
+		background: #ddd
+	td.required
+		background: #d88
+select.expandable
+	vertical-align: top
+textarea#custom_field_possible_values
+	width: 95%
+	resize: vertical
+textarea#custom_field_default_value
+	width: 95%
+	resize: vertical
+.sort-handle
+	display: inline-block
+	vertical-align: middle
+	width: 16px
+	height: 16px
+	background: url(../images/icons/UI/reorder.png) no-repeat 0 50%
+	cursor: move
+input#content_comments
+	width: 99%
+span.pagination
+	margin-left: 3px
+	display: block
+	>span
+		white-space: nowrap
+.pagination
+	ul.pages
+		margin: 0 5px 0 0
+		padding: 0
+		display: inline
+		li
+			display: inline-block
+			padding: 0
+			border: 1px solid #ddd
+			margin-left: -1px
+			line-height: 2em
+			margin-bottom: 1em
+			white-space: nowrap
+			text-align: center
+			a
+				padding: 3px 8px
+			span
+				padding: 3px 8px
+			&:first-child
+				border-top-left-radius: 4px
+				border-bottom-left-radius: 4px
+			&:last-child
+				border-top-right-radius: 4px
+				border-bottom-right-radius: 4px
+		li.current
+		li.page
+			&:hover
+			a
+				&:hover
+					text-decoration: inherit
+				&:active
+					text-decoration: inherit
+	.per-page
+		span.selected
+			font-weight: bold
+
+@media print
+	#top-menu
+		display: none
+	#header
+		display: none
+	#main-menu
+		display: none
+	#sidebar
+		display: none
+	#footer
+		display: none
+	.contextual
+		display: none
+	.other-formats
+		display: none
+	#main
+		background: #fff
+	#content
+		width: 99%
+		margin: 0
+		padding: 0
+		border: 0
+		background: #fff
+		overflow: visible !important
+	#wiki_add_attachment
+		display: none
+	.hide-when-print
+		display: none !important
+	.pagination
+		ul.pages
+			display: none !important
+		.per-page
+			display: none !important
+	.autoscroll
+		overflow-x: visible
+	table.list
+		margin-top: 0.5em
+		th
+			border: 1px solid #aaa
+		td
+			border: 1px solid #aaa

@@ -1,0 +1,83 @@
+#errorExplanation
+	padding: 6px 4px 6px 30px
+	margin-bottom: 12px
+	font-size: 1.1em
+	border: 1px solid
+	border-radius: 3px
+	background: url(../images/icons/UI/exclamation.png) 8px 50% no-repeat
+	ul
+		font-size: 0.9em
+	h2
+		display: none
+	p
+		display: none
+
+div.flash
+	padding: 6px 4px 6px 30px
+	margin-bottom: 12px
+	font-size: 1.1em
+	border: 1px solid
+	border-radius: 3px
+	margin-top: 8px
+.nodata
+	padding: 6px 4px 6px 30px
+	margin-bottom: 12px
+	font-size: 1.1em
+	border: 1px solid
+	text-align: center
+	font-weight: bold
+	background-color: $noDataMSGBgColor
+	border-color: $noDataMSGBorderColor
+	color: $noDataMSGTextColor
+.warning
+	padding: 6px 4px 6px 30px
+	margin-bottom: 12px
+	font-size: 1.1em
+	border: 1px solid
+	border-radius: 3px
+	text-align: center
+.conflict
+	padding: 6px 4px 6px 30px
+	margin-bottom: 12px
+	font-size: 1.1em
+	border: 1px solid
+	border-radius: 3px
+	background: url(../images/icons/UI/warning.png) 8px 5px no-repeat
+	text-align: left
+div.flash.error
+	background: url(../images/icons/UI/exclamation.png) 8px 50% no-repeat
+div.flash.notice
+	background: url(../images/icons/UI/true.png) 8px 5px no-repeat
+div.flash.warning
+	background: url(../images/icons/UI/warning.png) 8px 5px no-repeat
+	text-align: left
+.conflict-details
+	font-size: 80%
+#ajax-indicator
+	position: absolute
+	border: 1px solid #bbb
+	top: 35%
+	left: 40%
+	width: 20%
+	font-weight: bold
+	text-align: center
+	padding: 0.6em
+	z-index: 100
+	opacity: 0.5
+	span
+		background-position: 0% 40%
+		background-repeat: no-repeat
+		background-image: url(../images/icons/UI/loading.gif)
+		padding-left: 26px
+		vertical-align: bottom
+
+div.tooltip
+	&:hover
+		span.tip
+			display: block
+			position: absolute
+			top: 12px
+			width: 270px
+			border: 1px solid #555
+			padding: 4px
+			font-size: 0.8em

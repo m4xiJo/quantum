@@ -1,0 +1,66 @@
+table.cal
+	border-collapse: collapse
+	width: 100%
+	margin: 0px 0 6px 0
+	border: 1px solid #d7d7d7
+	thead
+		th
+			width: 14%
+			padding: 4px
+		th.week-number
+			width: auto
+	tbody
+		tr
+			height: 100px
+	td
+		.icon
+			padding-top: 2px
+			padding-bottom: 3px
+		border: 1px solid #d7d7d7
+		vertical-align: top
+		font-size: 0.9em
+		p.day-num
+			font-size: 1.1em
+			text-align: right
+	td.week-number
+		padding: 4px
+		border: none
+		font-size: 1em
+	td.odd
+		p.day-num
+	td.today
+		background: #ffffdd
+		p.day-num
+			font-weight: bold
+	.starting
+		a.issue
+			background: url(../images/icons/UI/bullet_go.png) no-repeat -1px -2px
+			padding-left: 16px
+	.ending
+		a.issue
+			background: url(../images/icons/UI/bullet_end.png) no-repeat -1px -2px
+			padding-left: 16px
+	.starting.ending
+		a.issue
+			background: url(../images/icons/UI/bullet_diamond.png) no-repeat -1px -2px
+			padding-left: 16px
+p.cal.legend
+	.starting
+		background: url(../images/icons/UI/bullet_go.png) no-repeat -1px -2px
+		padding-left: 16px
+	.ending
+		background: url(../images/icons/UI/bullet_end.png) no-repeat -1px -2px
+		padding-left: 16px
+	.starting.ending
+		background: url(../images/icons/UI/bullet_diamond.png) no-repeat -1px -2px
+		padding-left: 16px
+	span
+		display: block
+.tooltip
+	position: relative
+	z-index: 24
+	&:hover
+		z-index: 25
+	span.tip
+		display: none
+		text-align: left

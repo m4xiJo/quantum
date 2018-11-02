@@ -1249,8 +1249,8 @@ String.prototype.replaceAll = function(search, replacement) {
 //Execute things once page loaded...
 document.addEventListener("DOMContentLoaded", function(e) {
   moveDivsAround();
-  parseEmojis(data["emojiMap"]["GoogleBlob"], lastScript);
   toggleContrast();
+  parseEmojis(data["emojiMap"]["GoogleBlob"], lastScript);
   listenToRedirectClicks();
   topMenuFeedback();
   //defaultGravatarInitialsSG();

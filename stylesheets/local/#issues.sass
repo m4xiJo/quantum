@@ -1,0 +1,264 @@
+div.issue
+	background: #ffffdd
+	padding: 6px
+	margin-bottom: 6px
+	border: 1px solid #d7d7d7
+	border-radius: 3px
+	div.subject
+		div
+			div
+				padding-left: 16px
+		p
+			margin: 0
+			margin-bottom: 0.1em
+			font-size: 90%
+
+
+		>div
+			>p
+				margin-top: 0.5em
+		h3
+			margin: 0
+			margin-bottom: 0.1em
+	p.author
+		margin-top: 0.5em
+	span.private
+		position: relative
+		bottom: 2px
+		text-transform: uppercase
+		background: #d22
+		font-weight: bold
+		padding: 0px 2px 0px 2px
+		font-size: 60%
+		margin-right: 2px
+		border-radius: 2px
+	.next-prev-links
+	.attributes
+		margin-top: 2em
+		.attribute
+			padding-left: 180px
+			clear: left
+			min-height: 1.8em
+			.label
+				width: 170px
+				margin-left: -180px
+				font-weight: bold
+				float: left
+				overflow: hidden
+				text-overflow: ellipsis
+	.attribute
+		.value
+			overflow: auto
+			text-overflow: ellipsis
+	img.gravatar
+		float: left
+		margin: 0 12px 6px 0
+p.breadcrumb
+	font-size: 0.9em
+	margin: 4px 0 4px 0
+p.subtitle
+	font-size: 0.9em
+	margin: -6px 0 12px 0
+	font-style: italic
+p.footnote
+	font-size: 0.9em
+	margin-top: 0px
+	margin-bottom: 0px
+div.journal
+	span.private
+		position: relative
+		bottom: 2px
+		text-transform: uppercase
+		background: #d22
+		font-weight: bold
+		padding: 0px 2px 0px 2px
+		font-size: 60%
+		margin-right: 2px
+		border-radius: 2px
+	overflow: auto
+	ul.details
+		margin-bottom: 1.5em
+		a
+			&:hover
+div.issue.overdue
+	.due-date
+		.value
+#issue_tree
+	table.issues
+		border: 0
+	td.checkbox
+		display: none
+#relations
+	table.issues
+		border: 0
+	td.checkbox
+		display: none
+	td.buttons
+		padding: 0
+fieldset.collapsible
+	border-width: 1px 0 0 0
+	>legend
+		padding-left: 16px
+		background: url(../images/icons/UI/arrow_expanded.png) no-repeat 0% 40%
+		cursor: pointer
+fieldset.collapsible.collapsed
+	>legend
+		background-image: url(../images/icons/UI/arrow_collapsed.png)
+fieldset#date-range
+	p
+		margin: 2px 0 2px 0
+fieldset#filters
+	table
+		border-collapse: collapse
+		td
+			padding: 0
+			vertical-align: middle
+	tr.filter
+		height: 2.1em
+	td.field
+		width: 230px
+	td.operator
+		width: 130px
+		select
+			max-width: 120px
+	td.values
+		white-space: nowrap
+		select
+			min-width: 130px
+		input
+			height: 1em
+#filters-table
+	width: 60%
+	float: left
+.add-filter
+	width: 35%
+	float: right
+	text-align: right
+	vertical-align: top
+#issue_is_private_wrap
+	float: right
+	margin-right: 1em
+.toggle-multiselect
+	background: url(../images/icons/UI/bullet_toggle_plus.png) no-repeat 0% 40%
+	padding-left: 16px
+	margin-left: 0
+	margin-right: 5px
+	cursor: pointer
+.buttons
+	font-size: 0.9em
+	margin-bottom: 1.4em
+	margin-top: 1em
+	>.icon
+		&:not(:first-child)
+			margin-left: 5px
+div#issue-changesets
+	float: right
+	width: 45%
+	margin-left: 1em
+	margin-bottom: 1em
+	background: #fff
+	padding-left: 1em
+	font-size: 90%
+	div.changeset
+		padding: 4px
+		border-bottom: 1px solid #ddd
+	p
+		margin-top: 0
+		margin-bottom: 1em
+.changeset-comments
+	margin-bottom: 1em
+div.journal.private-notes
+	border-left: 2px solid #d22
+	padding-left: 4px
+	margin-left: -6px
+ul.revision-info
+	margin-bottom: 1.5em
+	a
+		&:hover
+
+tr.issue
+	text-align: center
+	white-space: nowrap
+	td.subject
+		white-space: normal
+	td.category
+		white-space: normal
+	td.string
+		white-space: normal
+	td.text
+		white-space: normal
+	td.list
+		white-space: normal
+	td.relations
+		white-space: normal
+		text-align: left
+		span
+			white-space: nowrap
+	td.parent
+		white-space: normal
+	td.done_ratio
+		table.progress
+			margin-left: auto
+			margin-right: auto
+td.assigned_to
+	white-space: normal
+td.last_updated_by
+	white-space: normal
+table.issues
+	td.description
+		font-size: 90%
+		padding: 4px 4px 4px 24px
+		text-align: left
+		white-space: normal
+		pre
+			white-space: normal
+	td.last_notes
+		font-size: 90%
+		padding: 4px 4px 4px 24px
+		text-align: left
+		white-space: normal
+		pre
+			white-space: normal
+tr.issue.idnt
+	td.subject
+		background: url(../images/icons/UI/bullet_arrow_right.png) no-repeat 0 50%
+tr.issue.idnt-1
+	td.subject
+		padding-left: 24px
+		background-position: 8px 50%
+tr.issue.idnt-2
+	td.subject
+		padding-left: 40px
+		background-position: 24px 50%
+tr.issue.idnt-3
+	td.subject
+		padding-left: 56px
+		background-position: 40px 50%
+tr.issue.idnt-4
+	td.subject
+		padding-left: 72px
+		background-position: 56px 50%
+tr.issue.idnt-5
+	td.subject
+		padding-left: 88px
+		background-position: 72px 50%
+tr.issue.idnt-6
+	td.subject
+		padding-left: 104px
+		background-position: 88px 50%
+tr.issue.idnt-7
+	td.subject
+		padding-left: 120px
+		background-position: 104px 50%
+tr.issue.idnt-8
+	td.subject
+		padding-left: 136px
+		background-position: 120px 50%
+tr.issue.idnt-9
+	td.subject
+		padding-left: 152px
+		background-position: 136px 50%
+table.issue-report
+	table-layout: fixed
+	th
+		white-space: normal
