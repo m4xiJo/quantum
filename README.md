@@ -1,7 +1,7 @@
 # Project "Opal"
-[![Travis CI](https://img.shields.io/travis/Maximus225/Project-Opal/master.svg?style=flat-square&logo=travis&label=Last Travis CI Build)](https://travis-ci.org/Maximus225/Project-Opal/builds/)
-[![GitHub issues](https://img.shields.io/github/issues-raw/redmine-cp/project-opal.svg?style=flat-square&logo=github&label=Issues Open)](https://github.com/redmine-cp/project-opal/issues)
-[![GitHub issues](https://img.shields.io/github/issues-closed-raw/redmine-cp/project-opal.svg?style=flat-square&logo=github&label=Issues Closed)](https://github.com/redmine-cp/project-opal/issues)
+[![Travis CI](https://img.shields.io/travis/Maximus225/Project-Opal/master.svg?style=flat-square&logo=travis&label=Last%20Travis%20CI%20Build)](https://travis-ci.org/Maximus225/Project-Opal/builds/)
+[![GitHub issues](https://img.shields.io/github/issues-raw/redmine-cp/project-opal.svg?style=flat-square&logo=github&label=Issues%20Open)](https://github.com/redmine-cp/project-opal/issues)
+[![GitHub issues](https://img.shields.io/github/issues-closed-raw/redmine-cp/project-opal.svg?style=flat-square&logo=github&label=Issues%20Closed)](https://github.com/redmine-cp/project-opal/issues)
 [![GitHub stars](https://img.shields.io/github/stars/redmine-cp/project-opal.svg?style=flat-square&logo=github&label=Stars)](https://github.com/redmine-cp/project-opal/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/redmine-cp/project-opal.svg?style=flat-square&logo=github&label=Forks)](https://github.com/redmine-cp/project-opal/network)
 [![GitHub license](https://img.shields.io/github/license/redmine-cp/project-opal.svg?style=flat-square&label=License)](https://github.com/redmine-cp/project-opal/blob/master/LICENSE)
