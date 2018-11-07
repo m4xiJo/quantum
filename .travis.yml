@@ -9,7 +9,7 @@ before_install:
   - rvm install 2.2
   - rvm use 2.2 --fuzzy
 install:
-  - gem install sass_lint
+  - gem install scss_lint
   - npm install
 script:
 - npm run lint --silent

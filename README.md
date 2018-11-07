@@ -1,11 +1,12 @@
 # Project "Opal"
-[![Travis CI](https://img.shields.io/travis/Maximus225/Project-Opal/master.svg?style=flat-square&logo=travis&label=Last%20Travis%20CI%20Build)](https://travis-ci.org/Maximus225/Project-Opal/builds/)
-[![GitHub issues](https://img.shields.io/github/issues-raw/redmine-cp/project-opal.svg?style=flat-square&logo=github&label=Issues%20Open)](https://github.com/redmine-cp/project-opal/issues)
-[![GitHub issues](https://img.shields.io/github/issues-closed-raw/redmine-cp/project-opal.svg?style=flat-square&logo=github&label=Issues%20Closed)](https://github.com/redmine-cp/project-opal/issues)
-[![GitHub stars](https://img.shields.io/github/stars/redmine-cp/project-opal.svg?style=flat-square&logo=github&label=Stars)](https://github.com/redmine-cp/project-opal/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/redmine-cp/project-opal.svg?style=flat-square&logo=github&label=Forks)](https://github.com/redmine-cp/project-opal/network)
-[![GitHub license](https://img.shields.io/github/license/redmine-cp/project-opal.svg?style=flat-square&label=License)](https://github.com/redmine-cp/project-opal/blob/master/LICENSE)
-[![Discord](https://img.shields.io/discord/467920054797860865.svg?style=flat-square&logo=discord&label=Discord&colorB=7289da)](https://discord.gg/Jm6rej7)
+[![](https://img.shields.io/travis/Maximus225/Project-Opal/master.svg?style=flat-square&logo=travis&label=Latest%20Travis%20CI%20build)](https://travis-ci.org/Maximus225/Project-Opal/builds/)
+[![](https://img.shields.io/github/issues-raw/redmine-cp/project-opal.svg?style=flat-square&label=Issues%20open)](https://github.com/redmine-cp/project-opal/issues)
+[![](https://img.shields.io/github/issues-closed-raw/redmine-cp/project-opal.svg?style=flat-square&label=Issues%20closed)](https://github.com/redmine-cp/project-opal/issues)
+[![](https://img.shields.io/github/release-pre/redmine-cp/project-opal.svg?style=flat-square&label=Latest%20pre-release)](https://github.com/redmine-cp/project-opal/releases)
+[![](https://img.shields.io/github/release/redmine-cp/project-opal.svg?style=flat-square&label=Latest%20release)](https://github.com/redmine-cp/project-opal/releases)
+[![](https://img.shields.io/github/tag/redmine-cp/project-opal.svg?style=flat-square&label=Leatest%20tag)](https://github.com/redmine-cp/project-opal/tags)
+[![](https://img.shields.io/github/license/redmine-cp/project-opal.svg?style=flat-square&label=License)](https://github.com/redmine-cp/project-opal/blob/master/LICENSE)
+[![](https://img.shields.io/discord/467920054797860865.svg?style=flat-square&logo=discord&label=Discord%20chat&colorB=7289da)](https://discord.gg/Jm6rej7)
 
 Visual appearance overhaul project for Redmine, initiated by one of the newly formed [Redmine communities](https://discord.me/redmine).  
 #### Navigation

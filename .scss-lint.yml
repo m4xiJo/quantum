@@ -1,4 +1,6 @@
-sass_files: "stylesheets/**/*.sass"
+scss_files: "stylesheets/**/*.sass"
+
+exclude: "stylesheets/plugins/**"
 
 linters:
   BangFormat:
