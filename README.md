@@ -1,5 +1,13 @@
 # Project "Opal"
 Visual appearance overhaul project for Redmine, initiated by one of the newly formed [Redmine communities](https://discord.me/redmine).  
+
+**Status:**
+[![Travis (.org)](https://img.shields.io/travis/:user/:repo.svg?style=flat-square)](https://github.com/redmine-cp/project-opal)
+[![GitHub issues](https://img.shields.io/github/issues/redmine-cp/project-opal.svg?style=flat-square)](https://github.com/redmine-cp/project-opal/issues)
+[![GitHub stars](https://img.shields.io/github/stars/redmine-cp/project-opal.svg?style=flat-square)](https://github.com/redmine-cp/project-opal/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/redmine-cp/project-opal.svg?style=flat-square)](https://github.com/redmine-cp/project-opal/network)
+[![GitHub license](https://img.shields.io/github/license/redmine-cp/project-opal.svg?style=flat-square)](https://github.com/redmine-cp/project-opal/blob/master/LICENSE)
+
 #### Navigation
 [Features](#features) |
 [Installation](#installation) |
