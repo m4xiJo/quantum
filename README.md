@@ -1,11 +1,10 @@
 # Project "Opal"
-[![](https://img.shields.io/travis/Maximus225/Project-Opal/master.svg?style=flat-square&logo=travis&label=Latest%20Travis%20CI%20build)](https://travis-ci.org/Maximus225/Project-Opal/builds/)
-[![](https://img.shields.io/github/issues-raw/redmine-cp/project-opal.svg?style=flat-square&label=Issues%20open)](https://github.com/redmine-cp/project-opal/issues)
-[![](https://img.shields.io/github/issues-closed-raw/redmine-cp/project-opal.svg?style=flat-square&label=Issues%20closed)](https://github.com/redmine-cp/project-opal/issues)
-[![](https://img.shields.io/github/release-pre/redmine-cp/project-opal.svg?style=flat-square&label=Latest%20pre-release)](https://github.com/redmine-cp/project-opal/releases)
+[![](https://img.shields.io/travis/redmine-cp/project-opal/master.svg?style=flat-square&logo=travis&label=Travis%20CI%20build)](https://travis-ci.org/Maximus225/Project-Opal/builds/)
+[![](https://img.shields.io/github/issues-raw/redmine-cp/project-opal.svg?style=flat-square&label=Issues%20open&colorB=28a745)](https://github.com/redmine-cp/project-opal/issues)
+[![](https://img.shields.io/github/issues-closed-raw/redmine-cp/project-opal.svg?style=flat-square&label=Issues%20closed&colorB=d50016)](https://github.com/redmine-cp/project-opal/issues?q=is%3Aissue+is%3Aclosed)
 [![](https://img.shields.io/github/release/redmine-cp/project-opal.svg?style=flat-square&label=Latest%20release)](https://github.com/redmine-cp/project-opal/releases)
-[![](https://img.shields.io/github/tag/redmine-cp/project-opal.svg?style=flat-square&label=Leatest%20tag)](https://github.com/redmine-cp/project-opal/tags)
-[![](https://img.shields.io/github/license/redmine-cp/project-opal.svg?style=flat-square&label=License)](https://github.com/redmine-cp/project-opal/blob/master/LICENSE)
+[![](https://img.shields.io/github/release-pre/redmine-cp/project-opal.svg?style=flat-square&label=Latest%20pre-release)](https://github.com/redmine-cp/project-opal/releases)
+[![](https://img.shields.io/github/tag/redmine-cp/project-opal.svg?style=flat-square&label=Latest%20tag)](https://github.com/redmine-cp/project-opal/tags)
 [![](https://img.shields.io/discord/467920054797860865.svg?style=flat-square&logo=discord&label=Discord%20chat&colorB=7289da)](https://discord.gg/Jm6rej7)
 
 Visual appearance overhaul project for Redmine, initiated by one of the newly formed [Redmine communities](https://discord.me/redmine).  
