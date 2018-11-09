@@ -41,18 +41,23 @@ To do so, you will need to navigate to `stylesheets/global/#config-map.sass` and
 
 ___
 ## Contribution & Collaboration
-##### If you wish to contribute as a *user* or a *tester*
-You may head over to [issues](https://github.com/redmine-cp/project-opal/issues) page and submit the respective feedback, like:
+#### If you wish to contribute as a *user* or a *tester*
+1. You may head over to [issues](https://github.com/redmine-cp/project-opal/issues) page and submit the respective feedback, like:
   * Ideas for new features related to design.
   * Bug reports or design imperfections you spotted.
+2. Redmine installation guides on different platforms can be found on [Redmine.org](https://www.redmine.org/projects/redmine/wiki/HowTos) or [here (work in progress)](https://gist.github.com/m4xiJo/d624ac456048c6f6f5b479c850239fdd).
 
-##### If you wish to contribute as a *collaborator*
+#### If you wish to contribute as an *internal collaborator*
 1. You need to be skilled in:
-  * CSS, SCSS, SASS or LESS for just the design solutions (stylesheet structure is in the `application.sass` file inside `stylesheets` folder).
-  * Front-end JavaScript (jQuery or Vanilla) for additional interface expansions (theme JS related code is in the `theme.js` file inside `javascripts` folder).
+  * CSS, SCSS, SASS or LESS for just the design solutions.
+  * Front-end JavaScript (jQuery or Vanilla) for additional interface expansions.
   * Knowledge in both of the above points is also welcome.
+2. Request to be added as an internal collaborator:
+  * Contact [m4xiJo](https://github.com/m4xiJo/) via e-mail or join affiliated [Discord](https://discord.me/redmine) server and request to become a collaborator once you are there.
+  * You will then be added to the respective development team on GitHub.
 
-2. Contact [m4xiJo](https://github.com/m4xiJo/) via e-mail or join affiliated [Discord](https://discord.me/redmine) server and request to become enlisted to [Team Opal](https://github.com/orgs/redmine-cp/teams/opal-team) once you are there.
+#### If you wish to contribute as an *external collaborator*
+Feel free to *fork* / open *pull requests*.
 
 ___
 ## Credits
