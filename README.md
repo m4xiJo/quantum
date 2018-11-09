@@ -49,8 +49,8 @@ ___
 
 #### If you wish to contribute as an *internal collaborator*
 1. You need to be skilled in:
-  * CSS, SCSS, SASS or LESS for just the design solutions.
-  * Front-end JavaScript (jQuery or Vanilla) for additional interface expansions.
+  * CSS, SCSS, SASS or LESS for the styling and solutions.
+  * Front-end JavaScript (jQuery or Vanilla) for additional interactability, expansions and features.
   * Knowledge in both of the above points is also welcome.
 2. Request to be added as an internal collaborator:
   * Contact [m4xiJo](https://github.com/m4xiJo/) via e-mail or join affiliated [Discord](https://discord.me/redmine) server and request to become a collaborator once you are there.
