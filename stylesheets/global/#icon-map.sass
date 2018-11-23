@@ -5,22 +5,28 @@
 	padding-left: 9px
 	font-size: 16px
 	&::before
-		padding-right: 8px
+		padding-right: 6px
 
 .icon-only
 	background-position: 0% 50%
 	background-repeat: no-repeat
 	padding-left: 16px
 	display: inline-block
-	width: 0
+	width: 12px
 	height: 16px
 	overflow: hidden
 	padding-top: 0
 	padding-bottom: 0
-	font-size: 8px
+	font-size: 12px
 	vertical-align: middle
-	&::after
-		content: "&nbsp;"
+
+.icon-only.icon-settings::before
+	font-family: $iconfont
+	content: $settings
+
+.icon-only.icon-close::before
+	font-family: $iconfont
+	content: $delete
 
 .icon.icon-user.users::before
 	content: $users
@@ -76,6 +82,8 @@
 	content: $LDAP
 	display: inline-block
 	vertical-align: -5%
+
+
 
 .icon.icon-plugins.plugins::before
 	content: $plugins
