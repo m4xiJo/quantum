@@ -1,3 +1,4 @@
+//General rules
 table.progress
 	border-collapse: collapse
 	border-spacing: 0pt
@@ -8,12 +9,7 @@ table.progress
 	width: 80px
 	td
 		height: 1em
-	td.closed
-		background: #BAE0BA none repeat scroll 0%
-	td.done
-		background: #D3EDD3 none repeat scroll 0%
-	td.todo
-		background: #eee none repeat scroll 0%
+
 p.percent
 	font-size: 80%
 	margin: 0
@@ -34,9 +30,29 @@ p.progress-info
 	left: 50%
 	top: 4px
 	font-weight: bold
-	text-shadow: 1px 1px 0 #fff
+
 .ui-datepicker-title
 	select
 		width: 70px !important
 		margin-top: -2px !important
 		margin-right: 4px !important
+
+//Day/night mode affected rules
+.day-mode
+	#progress-label
+		text-shadow: 1px 1px 0 #fff
+	td.closed
+		background: #BAE0BA none repeat scroll 0%
+	td.done
+		background: #D3EDD3 none repeat scroll 0%
+	td.todo
+		background: #eee none repeat scroll 0%
+.night-mode
+	#progress-label
+		text-shadow: 1px 1px 0 #fff
+	td.closed
+		background: #007A00 none repeat scroll 0%
+	td.done
+		background: #6b4f6b none repeat scroll 0%
+	td.todo
+		background: #787878 none repeat scroll 0%
