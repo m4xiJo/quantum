@@ -23,11 +23,11 @@ html
 	background: $contentContainerBgColor
 	#main
 		a
-			color: red
+			color: $textColor
 		a:visited
-			color: green
+			color: $visitedLinkColor
 		a:hover
-			color: blue
+			color: $hoverLinkColor
 
 		.icon::before
 			color: black
@@ -51,6 +51,8 @@ html
 
 	#top-menu
 		background: $tbBgColor
+		.tmbActive
+			border-bottom: 2px solid #86c0ff
 
 	#main
 		background-color: $contentContainerBgColor
@@ -81,11 +83,11 @@ html
 	background: $contentContainerBgColorNight
 	#main
 		a
-			color: red
+			color: $textColorNight
 		a:visited
-			color: green
+			color: $visitedLinkColorNight
 		a:hover
-			color: blue
+			color: $hoverLinkColorNight
 
 		.icon::before
 			color: black
@@ -1394,7 +1396,7 @@ div.square
 	white-space: nowrap
 	line-height: 1.4em
 	font-size: 0.9em
-	padding: 2px
+	padding: 8px
 	.icon
 		padding-top: 2px
 		padding-bottom: 3px
