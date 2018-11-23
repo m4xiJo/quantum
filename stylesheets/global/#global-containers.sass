@@ -1,138 +1,166 @@
-*
-	html
-		#sidebar
-			width: 22%
-			hr
-				width: 95%
-				position: relative
-				left: -6px
-		#content
-			width: 75%
-			padding-left: 0
-			margin-top: 0px
-			padding: 6px 10px 10px 10px
-		body
-			#content
-				height: 600px
-		div.wiki
-			ul.toc
-				width: 50%
+//General rules
+html
+	hr
+		width: 95%
+		position: relative
+		left: -6px
 
-#wrapper
-	opacity: 1
-	background: white
-	&.day-mode
-		background: $contentContainerBgColor
+	#content
+		width: 88%
+		padding-left: 0
+		margin-top: 0px
+		padding: 6px 10px 10px 10px
+
+	div.wiki
+		ul.toc
+			width: 50%
+
+	.icon::before
+		font-family: Material Icons
+
+//Day/night mode affected rules
+.day-mode
+	background: $contentContainerBgColor
+	#main
+		a
+			color: red
+		a:visited
+			color: green
+		a:hover
+			color: blue
+
 		.icon::before
-			font-family: Material Icons
 			color: black
-		#top-menu
-			#contrastswitch::before
-				content: '\e3a7'
-			a
-				color: $tbTextColor
-		#header
-			background-color: $hdBgColor
-			color: $hdTextColor
-		#main-menu
-			background-color: $mmBgColor
-			li a
-				color: $mmButtonTextColorIdle
-			li a.selected
-				color: black
-		#top-menu
-			background: $tbBgColor
-		#main
-			background-color: $contentContainerBgColor
-			#sidebar
-				background: #eee
-		.other-formats a
-			background: #dadada
-			padding: 3px
-			border: 1px solid #3e3e3e
-			padding: 3px 4px 1px 3px
-			&:hover
-					background: white
-		.contextual a
-			border: 1px solid #ccc
-			background: #dadada
-			padding: 3px 7px 3px 5px !important
-			&:hover
-				background: white
-		.message, .message.reply
-			background: #dadada
-			padding: 7px
-			margin-bottom: 10px
 
-	&.night-mode
-		background: $contentContainerBgColorNight
-		.icon::before
-			font-family: Material Icons
-			color: white
-		#top-menu
-			#contrastswitch::before
-				content: '\e3ac'
-			a
-				color: #ccc
-		#header
-			background-color: $hdBgColorNight
-			color: $hdTextColorNight
-		#main-menu
-			background-color: $mmBgColorNight
-			li a
-				color: $mmButtonTextColorIdleNight
-			li a.selected
-				background: #0a223c
-				border-bottom: 4px solid #86c0ff
-		#top-menu
-			background: $tbBgColorNight
-			.tmbActive
-				border-bottom: 2px solid #86c0ff
-		#main
-			background-color: $contentContainerBgColorNight
-			#content h2
-				color: #FFF
-			#sidebar
-				background: #636363
-		input, select, textarea, select
-			background: #636363
-			color: #ccc
-			border: 0
-		a:link
-			color: #5798bf
-		body
-			color: #ccc
-		#filters legend
-		color: #ccc
-		.box
-		background: #444
-		color: white
-		table.list, table.list th
-			background-color: #636363
-			border: 1px solid #4e4e4e
-			color: white
-		table.list:not(.odd-even) tbody tr:nth-child(2n+1)
-			background-color: #363636
-		table.list:not(.odd-even) tbody tr:nth-child(2n)
-			background-color: #595959
-		.other-formats a
-			background: #1d1d1d
-			padding: 3px
-			border: 1px solid #3e3e3e
-			padding: 3px 4px 1px 3px
-			&:hover
-					background: white
-		.contextual a
-			border: 1px solid #3e3e3e
-			background: #1d1d1d
-			padding: 3px 7px 3px 5px !important
-			&:hover
+	#top-menu
+		#contrastswitch::before
+			content: '\e3a7'
+		a
+			color: $tbTextColor
+
+	#header
+		background-color: $hdBgColor
+		color: $hdTextColor
+
+	#main-menu
+		background-color: $mmBgColor
+		li a
+			color: $mmButtonTextColorIdle
+		li a.selected
+			color: black
+
+	#top-menu
+		background: $tbBgColor
+
+	#main
+		background-color: $contentContainerBgColor
+
+		#sidebar
+			background: #eee
+
+	.other-formats a
+		background: #dadada
+		padding: 3px
+		border: 1px solid #3e3e3e
+		padding: 3px 4px 1px 3px
+
+		&:hover
 				background: white
+	.contextual a
+		border: 1px solid #ccc
+		background: #dadada
+		padding: 3px 7px 3px 5px !important
+		&:hover
+			background: white
 	.message, .message.reply
-		background: #444
-		color: white
+		background: #dadada
 		padding: 7px
 		margin-bottom: 10px
+
+.night-mode
+	background: $contentContainerBgColorNight
+	#main
+		a
+			color: red
+		a:visited
+			color: green
+		a:hover
+			color: blue
+
+		.icon::before
+			color: black
+		.icon::before
+			color: white
+
+	#top-menu
+		#contrastswitch::before
+			content: '\e3ac'
+		a
+			color: #ccc
+
+	#header
+		background-color: $hdBgColorNight
+		color: $hdTextColorNight
+
+	#main-menu
+		background-color: $mmBgColorNight
+		li a
+			color: $mmButtonTextColorIdleNight
+		li a.selected
+			background: #0a223c
+			border-bottom: 4px solid #86c0ff
+
+	#top-menu
+		background: $tbBgColorNight
+		.tmbActive
+			border-bottom: 2px solid #86c0ff
+
+	#main
+
+		#content h2
+			color: #FFF
+		#sidebar
+			background: #636363
+
+	input, select, textarea, select
+		background: #636363
+		color: #ccc
+		border: 0
+	a:link
+		color: #5798bf
+	body
+		color: #ccc
+	#filters legend
+	color: #ccc
+	.box
+	background: #444
+	color: white
+	table.list, table.list th
+		background-color: #636363
+		border: 1px solid #4e4e4e
+		color: white
+	table.list:not(.odd-even) tbody tr:nth-child(2n+1)
+		background-color: #363636
+	table.list:not(.odd-even) tbody tr:nth-child(2n)
+		background-color: #595959
+	.other-formats a
+		background: #1d1d1d
+		padding: 3px
+		border: 1px solid #3e3e3e
+		padding: 3px 4px 1px 3px
+		&:hover
+				background: white
+	.contextual a
+		border: 1px solid #3e3e3e
+		background: #1d1d1d
+		padding: 3px 7px 3px 5px !important
+		&:hover
+			background: white
+.message, .message.reply
+	background: #444
+	color: white
+	padding: 7px
+	margin-bottom: 10px
 
 #top-menu
 	color: $tbTextColor
@@ -180,6 +208,7 @@
 			text-shadow: 0px 0px 14px white
 			cursor: pointer
 #header
+	z-index: 2
 	min-height: 5.3em
 	margin: 0
 	padding: 24px 6px 1px 0px
@@ -215,13 +244,13 @@
 	float: right
 	float: right
 	position: sticky
-	top: 23px
+	top: 16px
 	z-index: 9999
 	right: 6px
-	padding-top: 4px
+	padding-right: 12px
 	#q
 		width: 130px
-		height: 24px
+		height: 16px
 		box-sizing: border-box
 		vertical-align: middle
 		border: 1px solid #ccc
@@ -370,7 +399,7 @@ ul.flat
 	width: 12%
 	box-sizing: border-box
 	position: relative
-	z-index: 9
+	z-index: 1
 	padding: 0
 	margin: 0
 	background: #eee
@@ -482,24 +511,7 @@ button.tab-right.disabled
 .text-diff
 	padding: 1em
 	border: 1px solid #e4e4e4
-.block-receiver
-	border: 1px dashed #fff
-	padding: 15px 0 0 0
-.dragging
-	.block-receiver
-		border: 1px dashed #777
-		margin-bottom: 20px
-.mypage-box
-	border: 1px solid #ddd
-	padding: 8px
-	margin: 0 0 20px 0
-	line-height: 1.5em
-	>.contextual
-		opacity: 0
-		transition: opacity 0.2s
-	&:hover
-		>.contextual
-			opacity: 1
+
 .handle
 	cursor: move
 #my-page
@@ -962,6 +974,7 @@ div
 
 #project-jump
 	.drdn-trigger
+		height: 16px
 		display: inline-block
 		border-radius: 3px
 		border: 1px solid #ccc
@@ -1380,7 +1393,6 @@ div.square
 	float: right
 	white-space: nowrap
 	line-height: 1.4em
-	margin: 5px 0px
 	font-size: 0.9em
 	padding: 2px
 	.icon
@@ -1398,15 +1410,6 @@ div.square
 	overflow: auto
 .splitcontentleft
 	float: left
-	width: 49%
-#list-left
-	float: left
-	width: 49%
-.splitcontentright
-	float: right
-	width: 49%
-#list-right
-	float: right
 	width: 49%
 
 div#activity

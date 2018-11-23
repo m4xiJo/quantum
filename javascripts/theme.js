@@ -1260,9 +1260,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
 //Move some containers out to achieve stickiness
 function moveDivsAround() {
   if (document.getElementById('footer') !== null) document.getElementById('wrapper').insertAdjacentElement('afterend', document.getElementById('footer'));
-  if (document.getElementById('quick-search') !== null) document.getElementById('main').insertAdjacentElement('beforebegin', document.getElementById('quick-search')); //Move the quick search outside parent container
   if (document.getElementById('main-menu') !== null) document.getElementById('main').insertAdjacentElement('beforebegin', document.getElementById('main-menu')); //Move main-menu outside parent container
   if (document.getElementById('top-menu') !== null) document.getElementById('top-menu').insertAdjacentHTML('beforeend', '<div id="contrastswitch" onclick="toggleContrast(true)"></div>'); //Place the contrast switcher
+	if (document.getElementById('quick-search') !== null) document.getElementById('top-menu').insertAdjacentElement('beforeend', document.getElementById('quick-search')); //Move the quick search outside parent container
   if (document.getElementsByClassName('jstElements')[0]) document.getElementsByClassName('jstElements')[0].insertAdjacentHTML('beforeend', '<button type="button" tabindex="200" class="jstb_emoji" title="Emoji" onclick="showHideEmojiPicker()"><span>Emoji</span></button>'); //Place emoji selector button
 }
 
@@ -1300,7 +1300,7 @@ function parseEmojis(emojiPack, themeRoot) {
 
 //Dark light mode switcher
 function toggleContrast(set) {
-    let targetElements = document.querySelectorAll("#wrapper");
+    let targetElements = document.querySelectorAll("body");
     if (set && localStorage.getItem("isNight") === "false") localStorage.setItem("isNight", true);
     else if (set && localStorage.getItem("isNight") === "true") localStorage.setItem("isNight", false);
 
@@ -1320,7 +1320,6 @@ function toggleContrast(set) {
 //Adds emoji picker container above weiki-edit class container
 function showHideEmojiPicker() {
 let emojiChecks;
-
 if (document.getElementById('emojiSelector') == null && document.getElementsByClassName('jstElements')[0] !== null) {
   let buildEmojicontent = '<div id="emojiSelector"><input id="emojiSearch" placeholder="Find emoji by tag..."><hr style="box-shadow:0px 0px 5px black;margin:3px 0px 0px 0px;"><div id="allEmoji" style="height:154px;overflow-x:auto;padding:3px;width:99%;">';
       for (let category in data["emojiMap"]["GoogleBlob"]) { //for each emoji category
@@ -1384,25 +1383,26 @@ function insertInTextarea(targetElement, textToInsert) {
 
 //Adds a bar to active buttons in the top menu, note that it's designed to match contents of buttons. For plugins, consider having button names to be identical to their location URL.
 function topMenuFeedback() {
-  let tbTargetElements = document.querySelectorAll(".home, .my-page, .projects, .administration, .user.active, .my-account, .register, .login");
-    if (window.location.toString().match("(\/admin)|(\/admin\/projects)|(\/users)|(\/groups)|(\/roles)|(\/trackers)|(\/admin\/plugins)|(\/admin\/info)|(\/issue_statuses)|(\/workflows)|(\/custom_fields)|(\/enumerations)|(\/auth_sources)|(\/admin\/plugins)|(\/admin\/info)")) {
-      //tbTargetElements[3].classList.add('tmbActive');
+    if (window.location.href.match("(\/admin)|(\/admin\/projects)|(\/users)|(\/groups)|(\/roles)|(\/trackers)|(\/admin\/plugins)|(\/admin\/info)|(\/issue_statuses)|(\/workflows)|(\/custom_fields)|(\/enumerations)|(\/auth_sources)|(\/admin\/plugins)|(\/admin\/info)")) {
       document.getElementsByClassName("administration")[0].classList.add('tmbActive');
     }
-    if (window.location.toString().match("(\/projects)|(\/activity)|(\/issues)|(\/time_entries)|(\/gantt)|(\/calendar)|(\/news)|(\/documents)|(\/wiki)|(\/boards)|(\/files)|(\/settings)")) {
+    if (window.location.href.match("(\/projects)|(\/activity)|(\/issues)|(\/time_entries)|(\/gantt)|(\/calendar)|(\/news)|(\/documents)|(\/wiki)|(\/boards)|(\/files)|(\/settings)")) {
       document.getElementsByClassName("projects")[0].classList.add('tmbActive');
     }
-    if (window.location.toString().match("(\/my\/page)")) {
+    if (window.location.href.match("(\/my\/page)")) {
       document.getElementsByClassName("my-page")[0].classList.add('tmbActive');
     }
-    if (window.location.toString().match("(\/my\/account)")) {
+    if (window.location.href.match("(\/my\/account)")) {
       document.getElementsByClassName("my-account")[0].classList.add('tmbActive');
     }
-    if (window.location.toString().match("(\/account\/register)")) {
+    if (window.location.href.match("(\/account\/register)")) {
       document.getElementsByClassName("register")[0].classList.add('tmbActive');
     }
-    if (window.location.toString().match("(\/login)")) {
+    if (window.location.href.match("(\/login)")) {
       document.getElementsByClassName("login")[0].classList.add('tmbActive');
+    }
+    if (window.location.href.match("(\/)") == false) {
+      document.getElementsByClassName("home")[0].classList.add('tmbActive');
     }
   }
 
@@ -1433,12 +1433,12 @@ function defaultGravatarInitialsSG() {
   let buffer = {};
   var getFile = function(url, callback) { //AJAX Http Request to check user's gravatar status code
       var request = new XMLHttpRequest();
+      request.open('GET', url);
       request.onreadystatechange = function() {
           if (request.readyState == 4) {
               callback(request.status);
           }
       };
-      request.open('GET', url);
       request.send();
   }
 
