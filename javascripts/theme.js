@@ -1259,11 +1259,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 //Move some containers out to achieve stickiness
 function moveDivsAround() {
-  if (document.getElementById('footer') !== null) document.getElementById('wrapper').insertAdjacentElement('afterend', document.getElementById('footer'));
-  if (document.getElementById('main-menu') !== null) document.getElementById('main').insertAdjacentElement('beforebegin', document.getElementById('main-menu')); //Move main-menu outside parent container
-	if (document.getElementsByClassName('breadcrumbs')[0] !== null) document.getElementById('content').insertAdjacentElement('afterbegin', document.getElementsByClassName('breadcrumbs')[0]); //Move project/subproject breadcrumbs
-  if (document.getElementById('top-menu') !== null) document.getElementById('top-menu').insertAdjacentHTML('beforeend', '<div id="contrastswitch" onclick="toggleContrast(true)"></div>'); //Place the contrast switcher
-	if (document.getElementById('quick-search') !== null) document.getElementById('top-menu').insertAdjacentElement('beforeend', document.getElementById('quick-search')); //Move the quick search outside parent container
+  if (document.getElementById('footer')) document.getElementById('wrapper').insertAdjacentElement('afterend', document.getElementById('footer'));
+  if (document.getElementById('main-menu')) document.getElementById('main').insertAdjacentElement('beforebegin', document.getElementById('main-menu')); //Move main-menu outside parent container
+	if (document.getElementsByClassName('breadcrumbs')[0]) document.getElementById('content').insertAdjacentElement('afterbegin', document.getElementsByClassName('breadcrumbs')[0]); //Move project/subproject breadcrumbs
+  if (document.getElementById('top-menu')) document.getElementById('top-menu').insertAdjacentHTML('beforeend', '<div id="contrastswitch" onclick="toggleContrast(true)"></div>'); //Place the contrast switcher
+	if (document.getElementById('quick-search')) document.getElementById('top-menu').insertAdjacentElement('beforeend', document.getElementById('quick-search')); //Move the quick search outside parent container
   if (document.getElementsByClassName('jstElements')[0]) document.getElementsByClassName('jstElements')[0].insertAdjacentHTML('beforeend', '<button type="button" tabindex="200" class="jstb_emoji" title="Emoji" onclick="showHideEmojiPicker()"><span>Emoji</span></button>'); //Place emoji selector button
 }
 
