@@ -18,6 +18,38 @@ html
 	.icon::before
 		font-family: Material Icons
 
+//Breadcrumbs
+p.breadcrumb
+	font-size: 0.9em
+	margin: 0 0 4px 0
+
+.breadcrumb::before
+	font-family: 'Material Icons'
+	content: '\e8f0'
+	position: relative
+	font-size: 14px
+	top: 3px
+	padding-right: 4px
+
+.breadcrumbs::before
+	font-family: 'Material Icons'
+	content: '\e2c8'
+	position: relative
+	top: 3px
+	padding-right: 6px
+	font-size: 16px
+
+.separator
+	visibility: hidden
+
+.separator::before
+	content: "\e5cc"
+	visibility: visible
+	font-family: "Material Icons"
+	font-size: medium
+	top: 4px
+	position: relative
+
 //Day/night mode affected rules
 .day-mode
 	background: $contentContainerBgColor
@@ -53,9 +85,6 @@ html
 		background: $tbBgColor
 		.tmbActive
 			border-bottom: 2px solid #86c0ff
-
-	#main
-		background-color: $contentContainerBgColor
 
 		#sidebar
 			background: #eee
@@ -137,7 +166,7 @@ html
 	.box
 	background: #444
 	color: white
-	table.list, table.list th, table.list td
+	table.list, table.list th
 		background-color: #636363
 		border: 1px solid #4e4e4e
 		color: white
@@ -159,7 +188,7 @@ html
 		&:hover
 			background: white
 .message, .message.reply
-	background: #444
+	background: #2d2d2d
 	color: white
 	padding: 7px
 	margin-bottom: 10px
