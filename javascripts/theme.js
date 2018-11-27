@@ -1253,6 +1253,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   parseEmojis(data["emojiMap"]["GoogleBlob"], lastScript);
   listenToRedirectClicks();
   topMenuFeedback();
+	insertLabels();
   //defaultGravatarInitialsSG();
   //document.getElementById("wrapper").classList.add('is-visible');
 });
@@ -1265,6 +1266,17 @@ function moveDivsAround() {
   if (document.getElementById('top-menu')) document.getElementById('top-menu').insertAdjacentHTML('beforeend', '<div id="contrastswitch" onclick="toggleContrast(true)"></div>'); //Place the contrast switcher
 	if (document.getElementById('quick-search')) document.getElementById('top-menu').insertAdjacentElement('beforeend', document.getElementById('quick-search')); //Move the quick search outside parent container
   if (document.getElementsByClassName('jstElements')[0]) document.getElementsByClassName('jstElements')[0].insertAdjacentHTML('beforeend', '<button type="button" tabindex="200" class="jstb_emoji" title="Emoji" onclick="showHideEmojiPicker()"><span>Emoji</span></button>'); //Place emoji selector button
+	//debugging
+	//document.getElementById('content').insertAdjacentHTML('afterbegin','<input type="radio" name="dude"><label></label><input type="radio" name="dude"><label></label>')
+}
+
+function insertLabels() {
+	let checkboxes = document.querySelectorAll("#content input[type='checkbox']");
+	for (checkbox in checkboxes) {
+		if (checkboxes[checkbox].nextElementSibling == null) {
+			checkboxes[checkbox].insertAdjacentHTML('afterend', '<label></label>');
+		}
+	}
 }
 
 //Inform users that they are about to go to Redmine.org from their Redmine page
