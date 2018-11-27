@@ -1,0 +1,57 @@
+#sidebar
+	float: right
+	width: 12%
+	box-sizing: border-box
+	position: relative
+	z-index: 1
+	padding: 0
+	margin: 0
+	background: #eee
+	padding: 10px 0px 20px 20px
+	position: sticky
+	top: 56px
+	h3
+		font-size: 14px
+		margin-top: 14px
+
+	hr
+		width: 100%
+		margin: 0 auto
+		height: 1px
+		background: #ccc
+		border: 0
+
+	.contextual
+		margin-right: 1em
+
+	ul
+		margin: 0
+		padding: 0
+		li
+			list-style-type: none
+			margin: 0px 2px 0px 0px
+			padding: 0px 0px 0px 0px
+
+
+	div.wiki
+		ul
+			margin: inherit
+			padding-left: 40px
+			li
+				list-style-type: inherit
+
+	a.selected
+		line-height: 1.7em
+		padding: 1px 3px 2px 2px
+		margin-left: -2px
+		border-radius: 2px
+		&:hover
+			text-decoration: none
+
+//Day mode night mode
+.day-mode
+	#sidebar
+		background: #eee
+.night-mode
+	#sidebar
+		background: #636363

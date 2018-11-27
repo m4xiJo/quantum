@@ -1,0 +1,98 @@
+#main-menu
+	position: sticky
+	top: $mmHeight
+	width: 100%
+	z-index: 9998
+	font-size: $mmTextSize
+	-webkit-touch-callout: none /* iOS Safari */
+	-webkit-user-select: none /* Safari */
+	-khtml-user-select: none /* Konqueror HTML */
+	-moz-user-select: none /* Firefox */
+	-ms-user-select: none /* Internet Explorer/Edge */
+	user-select: none /* Non-prefixed version, currently supported by Chrome and Opera */
+	box-shadow: $mmShadow
+	transition: $mmTransition
+	&.day-mode
+		background-color: $mmBgColor
+		a
+			color: $mmButtonTextColorIdle
+	&.night-mode
+		background-color: $mmBgColorNight
+		a
+			color: $mmButtonTextColorIdleNight
+
+
+	ul
+		margin: 0
+		padding: 0
+		width: 100%
+		white-space: nowrap
+
+	li
+		float: none
+		list-style-type: none
+		margin: 0px 2px 0px 0px
+		padding: 0px 0px 0px 0px
+		white-space: nowrap
+		display: inline-block
+		a
+			display: block
+			text-decoration: none
+			font-weight: bold
+			margin: 0
+			padding: 8px 8px 6px 10px
+			&:hover
+				background: #759FCF
+				border-bottom: 4px solid black
+		&:active
+			//background: rgba(0, 0, 0, 0.67) radial-gradient(circle, transparent 1%, #000000 1.5%) center/15000%
+			transition: background 0.8s
+		&:hover
+			ul.menu-children
+				display: block
+		ul.menu-children.visible
+			display: block
+		a.selected
+			background: #fff
+			border-bottom: 4px solid black
+			&:hover
+				background: #fff
+				border-bottom: 4px solid black
+
+
+		a.new-object
+	.menu-children
+		display: none
+		position: absolute
+		width: inherit
+		z-index: 45
+		border-right: 1px solid #759FCF
+		border-bottom: 1px solid #759FCF
+		border-left: 1px solid #759FCF
+		li
+			float: left
+			clear: both
+			width: 100%
+			a
+				font-weight: normal
+				&:hover
+	.tabs-buttons
+		right: 6px
+
+//Day/night mode affected rules
+.day-mode
+	#main-menu
+		background-color: $mmBgColor
+		li a
+			color: $mmButtonTextColorIdle
+		li a.selected
+			color: black
+
+.night-mode
+	#main-menu
+		background-color: $mmBgColorNight
+		li a
+			color: $mmButtonTextColorIdleNight
+		li a.selected
+			background: #0a223c
+			border-bottom: 4px solid #86c0ff

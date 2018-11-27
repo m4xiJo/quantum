@@ -18,6 +18,20 @@ html
 	.icon::before
 		font-family: Material Icons
 
+
+.toggle-multiselect
+	padding-left: 16px
+	margin-left: 0
+	margin-right: 5px
+	cursor: pointer
+.buttons
+	font-size: 0.9em
+	margin-bottom: 1.4em
+	margin-top: 1em
+	>.icon
+		&:not(:first-child)
+			margin-left: 5px
+
 //Breadcrumbs
 p.breadcrumb
 	font-size: 0.9em
@@ -50,6 +64,9 @@ p.breadcrumb
 	top: 4px
 	position: relative
 
+
+
+
 //Day/night mode affected rules
 .day-mode
 	background: $contentContainerBgColor
@@ -64,30 +81,7 @@ p.breadcrumb
 		.icon::before
 			color: black
 
-	#top-menu
-		#contrastswitch::before
-			content: '\e3a7'
-		a
-			color: $tbTextColor
 
-	#header
-		background-color: $hdBgColor
-		color: $hdTextColor
-
-	#main-menu
-		background-color: $mmBgColor
-		li a
-			color: $mmButtonTextColorIdle
-		li a.selected
-			color: black
-
-	#top-menu
-		background: $tbBgColor
-		.tmbActive
-			border-bottom: 2px solid #86c0ff
-
-		#sidebar
-			background: #eee
 
 	.other-formats a
 		background: #dadada
@@ -123,35 +117,11 @@ p.breadcrumb
 		.icon::before
 			color: white
 
-	#top-menu
-		#contrastswitch::before
-			content: '\e3ac'
-		a
-			color: #ccc
-
-	#header
-		background-color: $hdBgColorNight
-		color: $hdTextColorNight
-
-	#main-menu
-		background-color: $mmBgColorNight
-		li a
-			color: $mmButtonTextColorIdleNight
-		li a.selected
-			background: #0a223c
-			border-bottom: 4px solid #86c0ff
-
-	#top-menu
-		background: $tbBgColorNight
-		.tmbActive
-			border-bottom: 2px solid #86c0ff
-
 	#main
 
 		#content h2
 			color: #FFF
-		#sidebar
-			background: #636363
+
 
 	input, select, textarea, select
 		background: #636363
@@ -193,83 +163,6 @@ p.breadcrumb
 	padding: 7px
 	margin-bottom: 10px
 
-#top-menu
-	color: $tbTextColor
-	height: $tbHeight
-	font-size: $tbTextSize
-	padding: 5px 2px 0px 4px
-	position: fixed
-	width: 100%
-	z-index: 9999
-	-webkit-touch-callout: none /* iOS Safari */
-	-webkit-user-select: none /* Safari */
-	-khtml-user-select: none /* Konqueror HTML */
-	-moz-user-select: none /* Firefox */
-	-ms-user-select: none /* Internet Explorer/Edge */
-	user-select: none /* Non-prefixed version, currently supported by Chrome and Opera */
-	box-shadow: $tbShadow
-	ul
-		margin: 0
-		padding: 0
-	li
-		float: left
-		list-style-type: none
-		margin: 0px 0px 0px 0px
-		padding: 0px 0px 0px 0px
-		white-space: nowrap
-	a
-		margin-right: 8px
-		font-weight: bold
-	#loggedas
-		float: right
-		margin-right: 0.5em
-	#contrastswitch
-		font-size: 16px
-		margin-right: 14px
-		font-family: $iconfont
-		vertical-align: -1px
-		float: right
-		transition: 1s fade
-		-webkit-transition: text-shadow 3s ease
-		-moz-transition: text-shadow 3s ease
-		-o-transition: text-shadow 3s ease
-		transition: text-shadow 0.5s ease
-		&:hover
-			color:white
-			text-shadow: 0px 0px 14px white
-			cursor: pointer
-#header
-	z-index: 2
-	min-height: 5.3em
-	margin: 0
-	padding: 24px 6px 1px 0px
-	position: relative
-	-webkit-touch-callout: none /* iOS Safari */
-	-webkit-user-select: none /* Safari */
-	-khtml-user-select: none /* Konqueror HTML */
-	-moz-user-select: none /* Firefox */
-	-ms-user-select: none /* Internet Explorer/Edge */
-	user-select: none /* Non-prefixed version, currently supported by Chrome and Opera */
-	box-shadow: $hdShadow
-	h1
-		font-size: 36px
-		margin-top: 10px
-		overflow: hidden
-		text-overflow: ellipsis
-		white-space: nowrap
-		.breadcrumbs
-			display: block
-			font-size: .5em
-			font-weight: normal
-	h1::before
-		content: ""
-		background-image: url($hdLogotype)
-		background-size: 37px
-		display: inline-block
-		width: 58px
-		height: 26px
-		background-repeat: no-repeat
-		background-position: center
 
 #quick-search
 	float: right
@@ -287,83 +180,6 @@ p.breadcrumb
 		border: 1px solid #ccc
 		border-radius: 3px
 
-#main-menu
-	position: sticky
-	top: $mmHeight
-	width: 100%
-	z-index: 9998
-	font-size: $mmTextSize
-	-webkit-touch-callout: none /* iOS Safari */
-	-webkit-user-select: none /* Safari */
-	-khtml-user-select: none /* Konqueror HTML */
-	-moz-user-select: none /* Firefox */
-	-ms-user-select: none /* Internet Explorer/Edge */
-	user-select: none /* Non-prefixed version, currently supported by Chrome and Opera */
-	box-shadow: $mmShadow
-	transition: $mmTransition
-	&.day-mode
-		background-color: $mmBgColor
-		a
-			color: $mmButtonTextColorIdle
-	&.night-mode
-		background-color: $mmBgColorNight
-		a
-			color: $mmButtonTextColorIdleNight
-
-
-	ul
-		margin: 0
-		padding: 0
-		width: 100%
-		white-space: nowrap
-
-	li
-		float: none
-		list-style-type: none
-		margin: 0px 2px 0px 0px
-		padding: 0px 0px 0px 0px
-		white-space: nowrap
-		display: inline-block
-		a
-			display: block
-			text-decoration: none
-			font-weight: bold
-			margin: 0
-			padding: 8px 8px 6px 10px
-			&:hover
-				background: #759FCF
-				border-bottom: 4px solid black
-
-		&:hover
-			ul.menu-children
-				display: block
-		ul.menu-children.visible
-			display: block
-		a.selected
-			background: #fff
-			border-bottom: 4px solid black
-			&:hover
-				background: #fff
-				border-bottom: 4px solid black
-
-		a.new-object
-	.menu-children
-		display: none
-		position: absolute
-		width: inherit
-		z-index: 45
-		border-right: 1px solid #759FCF
-		border-bottom: 1px solid #759FCF
-		border-left: 1px solid #759FCF
-		li
-			float: left
-			clear: both
-			width: 100%
-			a
-				font-weight: normal
-				&:hover
-	.tabs-buttons
-		right: 6px
 
 #main
 ul.flat
@@ -425,55 +241,6 @@ ul.flat
 					border: 1px solid #bbbbbb
 					border-bottom: 1px solid #fff
 					&:hover
-#sidebar
-	float: right
-	width: 12%
-	box-sizing: border-box
-	position: relative
-	z-index: 1
-	padding: 0
-	margin: 0
-	background: #eee
-	padding: 10px 0px 20px 20px
-	position: sticky
-	top: 56px
-	h3
-		font-size: 14px
-		margin-top: 14px
-
-	hr
-		width: 100%
-		margin: 0 auto
-		height: 1px
-		background: #ccc
-		border: 0
-
-	.contextual
-		margin-right: 1em
-
-	ul
-		margin: 0
-		padding: 0
-		li
-			list-style-type: none
-			margin: 0px 2px 0px 0px
-			padding: 0px 0px 0px 0px
-
-
-	div.wiki
-		ul
-			margin: inherit
-			padding-left: 40px
-			li
-				list-style-type: inherit
-
-	a.selected
-		line-height: 1.7em
-		padding: 1px 3px 2px 2px
-		margin-left: -2px
-		border-radius: 2px
-		&:hover
-			text-decoration: none
 
 #footer
 	grid-row-start: 2
@@ -668,29 +435,7 @@ label.no-css
 	width: auto
 input#time_entry_comments
 	width: 90%
-fieldset.preview
-	margin-top: 1em
-	min-width: inherit
-	background: url(../images/icons/UI/draft.png)
-.tabular.settings
-	p
-		padding-left: 300px
-	label
-		margin-left: -300px
-		width: 295px
-	textarea
-		width: 99%
-.settings.enabled_scm
-	table
-		width: 100%
-	td.scm_name
-		font-weight: bold
-fieldset.settings
-	label
-		display: block
-fieldset#notified_events
-	.parent
-		padding-left: 20px
+
 span.required
 .summary
 	font-style: italic
@@ -1120,7 +865,6 @@ div.buttons
 	display: table-cell
 	vertical-align: top
 	padding: 2px
-
 
 tr.entry
 	border: 1px solid #f8f8f8

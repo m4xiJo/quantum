@@ -87,8 +87,6 @@
 	display: inline-block
 	vertical-align: -5%
 
-
-
 .icon.icon-plugins.plugins::before
 	content: $plugins
 	display: inline-block
@@ -255,8 +253,11 @@
 .icon-warning
 	background-image: url(../images/icons/UI/warning.png)
 
-.icon-error
-	background-image: url(../images/icons/UI/exclamation.png)
+.icon.icon-error::before
+	content: "\e002"
+	position: relative
+	top: 4px
+	color: red !important
 
 //.icon-fav
 	background-image: url(../images/icons/UI/fav.png)
@@ -368,8 +369,14 @@
 .icon-move-bottom
 	background-image: url(../images/icons/UI/2downarrow.png)
 
-.icon-ok
-	background-image: url(../images/icons/UI/true.png)
+.icon.icon-ok::before
+	//background-image: url(../images/icons/UI/true.png)
+	content: '\e86c'
+	position: relative
+	top: 4px
+	color: green !important
+
+
 
 .icon-not-ok
 	background-image: url(../images/icons/UI/false.png)
@@ -555,3 +562,19 @@
 
 .jstb_code::before
 	content: $format-inline
+
+//other
+fieldset.collapsible legend::before
+	font-family: 'Material Icons'
+	content: '\e5db'
+
+fieldset.collapsible.collapsed legend::before
+	font-family: 'Material Icons'
+	content: '\e5c8'
+
+.toggle-multiselect::before
+	font-family: 'Material Icons'
+	content: '\e146'
+	font-size: 20px
+	position: relative
+	top: 6px

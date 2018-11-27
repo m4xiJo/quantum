@@ -1,0 +1,45 @@
+#header
+	z-index: 2
+	min-height: 5.3em
+	margin: 0
+	padding: 24px 6px 1px 0px
+	position: relative
+	-webkit-touch-callout: none /* iOS Safari */
+	-webkit-user-select: none /* Safari */
+	-khtml-user-select: none /* Konqueror HTML */
+	-moz-user-select: none /* Firefox */
+	-ms-user-select: none /* Internet Explorer/Edge */
+	user-select: none /* Non-prefixed version, currently supported by Chrome and Opera */
+	box-shadow: $hdShadow
+	h1
+		font-size: 36px
+		margin-top: 10px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		.breadcrumbs
+			display: block
+			font-size: .5em
+			font-weight: normal
+	h1::before
+		content: ""
+		background-image: url($hdLogotype)
+		background-size: 37px
+		display: inline-block
+		width: 58px
+		height: 26px
+		background-repeat: no-repeat
+		background-position: center
+
+.day-mode
+	#header
+		background-color: $hdBgColor
+		color: $hdTextColor
+.night-mode
+	#header
+		background-color: $hdBgColorNight
+		color: $hdTextColorNight
+
+//#header
+		background-color: $hdBgColor
+		color: $hdTextColor

@@ -1,0 +1,57 @@
+// Fieldsets
+fieldset div
+	transition: 0.5s
+
+fieldset.collapsible
+	&.collapsed
+		border-width: 1px 0 0 0
+	legend
+		cursor: pointer
+fieldset#date-range
+	p
+		margin: 2px 0 2px 0
+fieldset#filters
+	table
+		border-collapse: collapse
+		td
+			padding: 0
+			vertical-align: middle
+	tr.filter
+		height: 2.1em
+	td.field
+		width: 230px
+	td.operator
+		width: 130px
+		select
+			max-width: 120px
+	td.values
+		white-space: nowrap
+		select
+			min-width: 130px
+		input
+			height: 1em
+
+
+fieldset.preview
+	margin-top: 1em
+	min-width: inherit
+	background: url(../images/icons/UI/draft.png)
+.tabular.settings
+	p
+		padding-left: 300px
+	label
+		margin-left: -300px
+		width: 295px
+	textarea
+		width: 99%
+.settings.enabled_scm
+	table
+		width: 100%
+	td.scm_name
+		font-weight: bold
+fieldset.settings
+	label
+		display: block
+fieldset#notified_events
+	.parent
+		padding-left: 20px
