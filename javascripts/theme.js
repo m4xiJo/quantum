@@ -1414,7 +1414,7 @@ function topMenuFeedback() {
     if (window.location.href.match("(\/login)")) {
       document.getElementsByClassName("login")[0].classList.add('tmbActive');
     }
-    if (window.location.href.match("(\/)") == false) {
+    if (!window.location.href.match("[\.\:]+[a-z0-9]+\/+[a-z0-9]")) {
       document.getElementsByClassName("home")[0].classList.add('tmbActive');
     }
   }
