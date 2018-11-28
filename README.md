@@ -1,14 +1,12 @@
 # Project "Opal"
 [![](https://img.shields.io/travis/redmine-cp/project-opal/master.svg?style=flat-square&logo=travis&label=Travis%20CI%20build)](https://travis-ci.org/Maximus225/Project-Opal/builds/)
 [![](https://img.shields.io/github/issues-raw/redmine-cp/project-opal.svg?style=flat-square&label=Issues%20open&colorB=28a745)](https://github.com/redmine-cp/project-opal/issues)
-[![](https://img.shields.io/github/issues-closed-raw/redmine-cp/project-opal.svg?style=flat-square&label=Issues%20closed&colorB=d50016)](https://github.com/redmine-cp/project-opal/issues?q=is%3Aissue+is%3Aclosed)
 [![](https://img.shields.io/github/release/redmine-cp/project-opal.svg?style=flat-square&label=Latest%20stable)](https://github.com/redmine-cp/project-opal/releases)
 [![](https://img.shields.io/github/release-pre/redmine-cp/project-opal.svg?style=flat-square&label=Latest%20pre)](https://github.com/redmine-cp/project-opal/releases)
 [![](https://img.shields.io/github/tag/redmine-cp/project-opal.svg?style=flat-square&label=Latest%20tag)](https://github.com/redmine-cp/project-opal/tags)
 [![](https://img.shields.io/discord/467920054797860865.svg?style=flat-square&logo=discord&label=Discord%20chat&colorB=7289da)](https://discord.gg/Jm6rej7)
 
 Visual appearance modernization project for Redmine, initiated by one of the newly formed Redmine communities. It aims to achieve a more flat and clean look, as well as introduce additional expansions with help of front-end features for additional use convenience.
-
 #### Navigation
 [Features](#features) |
 [Installation](#installation) |
@@ -16,7 +14,6 @@ Visual appearance modernization project for Redmine, initiated by one of the new
 [Contribution & Collaboration](#contribution--collaboration) |
 [Credits](#credits) |
 [Licenses & References](#licenses--references)
-
 ___
 ## Features
 1. Fixed top bar.
@@ -29,8 +26,7 @@ ___
 8. Emoji support, with emoji picker and ability to quick search (experimental feature).
 9. The bar on the top now has navigation feedback.
 
-___
-## Screenshots (early preview)
+*These screenshots demonstrate the state as of 28 Nov 2018*
 <table cellspacing="0" border="0">
   <td><img width="176" src="https://screenshotscdn.firefoxusercontent.com/images/63d0c927-f7c6-44f5-acd5-5b96ea1748be.png"></td>
   <td><img width="176" src="https://screenshotscdn.firefoxusercontent.com/images/1b2d4b50-6959-44ce-b3cd-5ae197c157e7.png"></td>
@@ -38,17 +34,14 @@ ___
   <td><img width="176" src="https://screenshotscdn.firefoxusercontent.com/images/a031e480-90bf-4f51-97fd-18ffa44ebc8b.png"></td>
   <td><img width="176" src="https://screenshotscdn.firefoxusercontent.com/images/458f9e49-3377-457e-8550-2378b4bf3f75.png"></td>
 </table>
-
 ___
 ## Installation
 1. Extract the master to `\public\themes\` of your Redmine folder.  
 2. The theme is yet in a **pre-release state**, which means, currently precompiled CSS isn't included in the master, and you will have to compile the CSS from `application.sass` file in `stylesheets` folder yourself, using any SASS compilation tool.
-
 ___
 ## Customization
 The theme was developed using SASS, which you can customize and recompile, with tools like e.g. [Koala](http://koala-app.com/), in order to modify the colours and general style.
 To do so, you will need to navigate to `stylesheets/global/#config-map.sass` and edit the variable values to your preference. Once that is done, recompile `application.sass` in the `stylesheets` folder.
-
 ___
 ## Contribution & Collaboration
 #### If you wish to contribute as a *user* or a *tester*
@@ -68,11 +61,9 @@ ___
 
 #### If you wish to contribute as an *external collaborator*
 Feel free to *fork* / open *pull requests*.
-
 ___
 ## Credits
 Proudly contributed to by: [m4xiJo](https://github.com/m4xiJo/), [GianVizzielli](https://github.com/GianVizzielli), [cappuMuc](https://github.com/cappuMUC).
-
 ___
 ## Licenses & References
 The theme is licensed under [MIT](/README.md).  
