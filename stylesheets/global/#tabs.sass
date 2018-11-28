@@ -1,0 +1,91 @@
+#content
+	h1
+	width: 88%
+	box-sizing: border-box
+	margin: 0px
+	//border-right: 1px solid #ddd
+	padding: 6px 10px 10px 10px
+	z-index: 10
+	.tabs
+		height: 2.6em
+		margin-bottom: 1.2em
+		position: relative
+		overflow: hidden
+		ul
+			margin: 0
+			position: absolute
+			bottom: 0
+			padding-left: 0.5em
+			width: 2000px
+			border-bottom: 1px solid #bbbbbb
+			li
+				float: left
+				list-style-type: none
+				white-space: nowrap
+				margin-right: 4px
+				background: #fff
+				position: relative
+				margin-bottom: -1px
+				a
+					display: block
+					font-size: 1.1em
+					text-decoration: none
+					line-height: 1.3em
+					padding: 4px 6px 4px 6px
+					border: 1px solid #ccc
+					border-bottom: 1px solid #bbbbbb
+					font-weight: bold
+					&:hover
+						background-color: #d1e7ff
+						text-decoration: none
+						color: black
+				a.selected
+					border: 1px solid #bbbbbb
+					border-bottom: 1px solid #fff
+					&:hover
+
+
+div.tabs-buttons
+	position: absolute
+	right: 0
+	width: 54px
+	height: 24px
+	background: white
+	bottom: 0
+	border-bottom: 1px solid #bbbbbb
+button.tab-left
+	font-size: 0.9em
+	cursor: pointer
+	height: 24px
+	border: 1px solid #ccc
+	border-bottom: 1px solid #bbbbbb
+	position: absolute
+	padding: 4px
+	width: 20px
+	bottom: -1px
+	right: 20px
+	background: #eeeeee url(../images/icons/UI/bullet_arrow_left.png) no-repeat 50% 50%
+	border-top-left-radius: 3px
+	&:hover
+	&:focus
+		outline: 0
+button.tab-right
+	font-size: 0.9em
+	cursor: pointer
+	height: 24px
+	border: 1px solid #ccc
+	border-bottom: 1px solid #bbbbbb
+	position: absolute
+	padding: 4px
+	width: 20px
+	bottom: -1px
+	right: 0
+	background: #eeeeee url(../images/icons/UI/bullet_arrow_right.png) no-repeat 50% 50%
+	border-top-right-radius: 3px
+	&:hover
+	&:focus
+		outline: 0
+button.tab-left.disabled
+	cursor: unset
+button.tab-right.disabled
+	cursor: unset
