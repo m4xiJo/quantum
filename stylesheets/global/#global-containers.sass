@@ -18,7 +18,6 @@ html
 	.icon::before
 		font-family: Material Icons
 
-
 .toggle-multiselect
 	padding-left: 16px
 	margin-left: 0
@@ -31,41 +30,6 @@ html
 	>.icon
 		&:not(:first-child)
 			margin-left: 5px
-
-//Breadcrumbs
-p.breadcrumb
-	font-size: 0.9em
-	margin: 0 0 4px 0
-
-.breadcrumb::before
-	font-family: 'Material Icons'
-	content: '\e8f0'
-	position: relative
-	font-size: 14px
-	top: 3px
-	padding-right: 4px
-
-.breadcrumbs::before
-	font-family: 'Material Icons'
-	content: '\e2c8'
-	position: relative
-	top: 3px
-	padding-right: 6px
-	font-size: 16px
-
-.separator
-	visibility: hidden
-
-.separator::before
-	content: "\e5cc"
-	visibility: visible
-	font-family: "Material Icons"
-	font-size: medium
-	top: 4px
-	position: relative
-
-
-
 
 //Day/night mode affected rules
 .day-mode
@@ -80,8 +44,6 @@ p.breadcrumb
 
 		.icon::before
 			color: black
-
-
 
 	.other-formats a
 		background: #dadada
@@ -121,7 +83,6 @@ p.breadcrumb
 
 		#content h2
 			color: #FFF
-
 
 	input, select, textarea, select
 		background: #636363
@@ -163,7 +124,6 @@ p.breadcrumb
 	padding: 7px
 	margin-bottom: 10px
 
-
 #quick-search
 	float: right
 	float: right
@@ -180,7 +140,6 @@ p.breadcrumb
 		border: 1px solid #ccc
 		border-radius: 3px
 
-
 #main
 ul.flat
 	margin: 0
@@ -195,7 +154,6 @@ ul.flat
 	#content
 		width: auto
 		border-right: 0
-
 
 .diff_out
 	background: #fcc
@@ -569,94 +527,6 @@ a.collapsible.collapsed
 
 a#toggle-completed-versions
 
-.drdn
-	position: relative
-.drdn-trigger
-	width: 100%
-	height: 24px
-	box-sizing: border-box
-	overflow: hidden
-	text-overflow: ellipsis
-	white-space: nowrap
-	padding: 3px 18px 3px 6px
-	background: #fff url(../images/icons/UI/sort_desc.png) no-repeat 97% 50%
-	cursor: pointer
-	user-select: none
-	-moz-user-select: none
-	-webkit-user-select: none
-
-.drdn-content
-	display: none
-	position: absolute
-	right: 0px
-	top: 25px
-	min-width: 100px
-	border: 1px solid #ccc
-	border-radius: 4px
-	z-index: 99
-	.quick-search
-		margin: 8px
-
-	.autocomplete
-		box-sizing: border-box
-		width: 100% !important
-		height: 28px
-		&:focus
-
-.drdn.expanded
-	.drdn-trigger
-		background-image: url(../images/icons/UI/sort_asc.png)
-	.drdn-content
-		display: block
-
-.drdn-items
-	max-height: 400px
-	overflow: auto
-	>*
-		display: block
-		border: 1px solid #fff
-		overflow: hidden
-		text-overflow: ellipsis
-		white-space: nowrap
-		padding: 4px 8px
-		&:focus
-			border: 1px dotted #bbb
-	>a
-		&:hover
-			text-decoration: none
-	>span
-div
-	&+.drdn-items
-		border-top: 1px solid #ccc
-.drdn-items.selection
-	>*
-		&:before
-			content: ' '
-			display: inline-block
-			line-height: 1em
-			width: 1em
-			height: 1em
-			margin-right: 4px
-			font-weight: bold
-	>*.selected
-		&:before
-			content: "\2713 "
-	&:empty
-		border: none
-#project-jump.drdn
-	width: 200px
-	display: inline-block
-
-#project-jump
-	.drdn-trigger
-		height: 16px
-		display: inline-block
-		border-radius: 3px
-		border: 1px solid #ccc
-		margin: 0 !important
-		vertical-align: middle
-	.drdn-content
-		width: 280px
 
 table.list
 	border: 1px solid #e4e4e4
@@ -1363,45 +1233,3 @@ span.pagination
 	.per-page
 		span.selected
 			font-weight: bold
-
-@media print
-	#top-menu
-		display: none
-	#header
-		display: none
-	#main-menu
-		display: none
-	#sidebar
-		display: none
-	#footer
-		display: none
-	.contextual
-		display: none
-	.other-formats
-		display: none
-	#main
-		background: #fff
-	#content
-		width: 99%
-		margin: 0
-		padding: 0
-		border: 0
-		background: #fff
-		overflow: visible !important
-	#wiki_add_attachment
-		display: none
-	.hide-when-print
-		display: none !important
-	.pagination
-		ul.pages
-			display: none !important
-		.per-page
-			display: none !important
-	.autoscroll
-		overflow-x: visible
-	table.list
-		margin-top: 0.5em
-		th
-			border: 1px solid #aaa
-		td
-			border: 1px solid #aaa

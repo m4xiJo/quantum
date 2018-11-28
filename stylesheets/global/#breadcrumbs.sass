@@ -1,0 +1,31 @@
+//Breadcrumbs
+p.breadcrumb
+	font-size: 0.9em
+	margin: 0 0 4px 0
+
+.breadcrumb::before
+	font-family: 'Material Icons'
+	content: '\e8f0'
+	position: relative
+	font-size: 14px
+	top: 3px
+	padding-right: 4px
+
+.breadcrumbs::before
+	font-family: 'Material Icons'
+	content: '\e2c8'
+	position: relative
+	top: 3px
+	padding-right: 6px
+	font-size: 16px
+
+.separator
+	visibility: hidden
+
+.separator::before
+	content: "\e5cc"
+	visibility: visible
+	font-family: "Material Icons"
+	font-size: medium
+	top: 4px
+	position: relative
