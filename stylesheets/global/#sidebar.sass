@@ -69,7 +69,14 @@
 #sidebar.shown
 	margin-left: 10px
 	padding: 10px 0px 20px 20px
-	animation: slide 0.2s normal forwards
+	animation: slide 0.1s normal forwards
+
+#main.nosidebar #sidebar.shown + #content
+	width: 100% !important
+
+#sidebar.shown + #content
+	width: 88% !important
+	transition: 0.1s
 
 #sidebar #sbartoggle::before
 	font-family: 'Material Icons'
@@ -81,6 +88,8 @@
 #sidebar.shown #sbartoggle::before
 	font-family: 'Material Icons'
 	content: '\e8f4'
+
+
 
 @keyframes slide
 	0%
