@@ -30,6 +30,16 @@ ___
 9. The bar on the top now has navigation feedback.
 
 ___
+## Screenshots (early preview)
+<table cellspacing="0" border="0">
+  <td><img width="176" src="https://screenshotscdn.firefoxusercontent.com/images/63d0c927-f7c6-44f5-acd5-5b96ea1748be.png"></td>
+  <td><img width="176" src="https://screenshotscdn.firefoxusercontent.com/images/1b2d4b50-6959-44ce-b3cd-5ae197c157e7.png"></td>
+  <td><img width="176" src="https://screenshotscdn.firefoxusercontent.com/images/2e4f19a0-0600-466b-adf3-9d36d03df00c.png"></td>
+  <td><img width="176" src="https://screenshotscdn.firefoxusercontent.com/images/a031e480-90bf-4f51-97fd-18ffa44ebc8b.png"></td>
+  <td><img width="176" src="https://screenshotscdn.firefoxusercontent.com/images/458f9e49-3377-457e-8550-2378b4bf3f75.png"></td>
+</table>
+
+___
 ## Installation
 1. Extract the master to `\public\themes\` of your Redmine folder.  
 2. The theme is yet in a **pre-release state**, which means, currently precompiled CSS isn't included in the master, and you will have to compile the CSS from `application.sass` file in `stylesheets` folder yourself, using any SASS compilation tool.
