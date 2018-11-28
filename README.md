@@ -35,6 +35,7 @@ ___
   <td><img width="176" src="https://screenshotscdn.firefoxusercontent.com/images/458f9e49-3377-457e-8550-2378b4bf3f75.png"></td>
 </table>
 ___
+
 ## Installation
 1. Extract the master to `\public\themes\` of your Redmine folder.  
 2. The theme is yet in a **pre-release state**, which means, currently precompiled CSS isn't included in the master, and you will have to compile the CSS from `application.sass` file in `stylesheets` folder yourself, using any SASS compilation tool.
