@@ -1253,7 +1253,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
   parseEmojis(data["emojiMap"]["GoogleBlob"], lastScript);
   listenToRedirectClicks();
   topMenuFeedback();
+	toggleSidebar();
 	insertLabels();
+
   //defaultGravatarInitialsSG();
   //document.getElementById("wrapper").classList.add('is-visible');
 });
@@ -1266,10 +1268,11 @@ function moveDivsAround() {
   if (document.getElementById('top-menu')) document.getElementById('top-menu').insertAdjacentHTML('beforeend', '<div id="contrastswitch" onclick="toggleContrast(true)"></div>'); //Place the contrast switcher
 	if (document.getElementById('quick-search')) document.getElementById('top-menu').insertAdjacentElement('beforeend', document.getElementById('quick-search')); //Move the quick search outside parent container
   if (document.getElementsByClassName('jstElements')[0]) document.getElementsByClassName('jstElements')[0].insertAdjacentHTML('beforeend', '<button type="button" tabindex="200" class="jstb_emoji" title="Emoji" onclick="showHideEmojiPicker()"><span>Emoji</span></button>'); //Place emoji selector button
-	//debugging
-	//document.getElementById('content').insertAdjacentHTML('afterbegin','<input type="radio" name="dude"><label></label><input type="radio" name="dude"><label></label>')
+	if (document.getElementById('sidebar')) document.getElementById('sidebar').insertAdjacentHTML('afterbegin', '<div id="sbartoggle" onclick="toggleSidebar(true)"><div>'); //Insert a toggle for sidebar
+	document.getElementsByClassName('bgr')[0].innerHTML = "Powered by Jean-Philippe Lang &#x26A1";
 }
 
+//A fix for custom check/radio boxes
 function insertLabels() {
 	let checkboxes = document.querySelectorAll("#content input[type='checkbox']");
 	for (checkbox in checkboxes) {
@@ -1277,6 +1280,17 @@ function insertLabels() {
 			checkboxes[checkbox].insertAdjacentHTML('afterend', '<label></label>');
 		}
 	}
+}
+
+//Sidebar toggle
+function toggleSidebar(set) {
+	let sidebar = document.getElementById('sidebar');
+	if (set && localStorage.getItem("isSidebar") === "false") localStorage.setItem("isSidebar", true);
+	else if (set && localStorage.getItem("isSidebar") === "true") localStorage.setItem("isSidebar", false);
+
+	if (localStorage.getItem("isSidebar") === null) localStorage.setItem("isSidebar", false);
+	if (localStorage.getItem("isSidebar") === "false") document.getElementById('sidebar').classList.remove("shown");
+	else if (localStorage.getItem("isSidebar") === "true") document.getElementById('sidebar').classList.add("shown");
 }
 
 //Inform users that they are about to go to Redmine.org from their Redmine page

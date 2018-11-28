@@ -1,15 +1,17 @@
 #sidebar
+	//transition: 0.2s
 	float: right
-	width: 12%
+	width: 0
 	box-sizing: border-box
 	position: relative
 	z-index: 1
 	padding: 0
 	margin: 0
+	animation: slide 0s reverse paused
 	background: #eee
-	padding: 10px 0px 20px 20px
 	position: sticky
 	top: 56px
+	min-height: 300px
 	h3
 		font-size: 14px
 		margin-top: 14px
@@ -55,3 +57,59 @@
 .night-mode
 	#sidebar
 		background: #636363
+
+
+//Toggle view/hide
+#sbartoggle
+	display: block
+	position: absolute
+	left: -18px
+	top: 4px
+
+#sidebar.shown
+	margin-left: 10px
+	padding: 10px 0px 20px 20px
+	animation: slide 0.2s normal forwards
+
+#sidebar #sbartoggle::before
+	font-family: 'Material Icons'
+	content: '\e8f5'
+	opacity: 1
+	cursor: pointer
+	font-size: 16px
+
+#sidebar.shown #sbartoggle::before
+	font-family: 'Material Icons'
+	content: '\e8f4'
+
+@keyframes slide
+	0%
+		display: none
+		width: 0
+	100%
+		width: 12%
+		display: block
+
+@-moz-keyframes slide
+	0%
+		display: none
+		width: 0
+	100%
+		width: 12%
+		display: block
+
+@-webkit-keyframes slide
+	0%
+		display: none
+		width: 0
+	100%
+		width: 12%
+		display: block
+
+@-ms-keyframes slide
+	0%
+		display: none
+		width: 0
+	100%
+		width: 12%
+		display: block

@@ -22,7 +22,7 @@
 	top: 25px
 	min-width: 100px
 	border: 1px solid #ccc
-	border-radius: 4px
+	background: white
 	z-index: 99
 	.quick-search
 		margin: 8px
@@ -87,3 +87,15 @@ div
 		vertical-align: middle
 	.drdn-content
 		width: 280px
+
+div.tooltip
+	&:hover
+		span.tip
+			display: block
+			position: absolute
+			top: 12px
+			width: 270px
+			border: 1px solid #555
+			padding: 4px
+			font-size: 0.8em
+			background: white
