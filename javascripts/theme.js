@@ -1274,7 +1274,7 @@ function moveDivsAround() {
 
 //A fix for custom check/radio boxes
 function insertLabels() {
-	let checkboxes = document.querySelectorAll("#content input[type='checkbox']");
+	let checkboxes = document.querySelectorAll("#content input[type='checkbox'], #content input[type='radio']");
 	for (checkbox in checkboxes) {
 		if (checkboxes[checkbox].nextElementSibling == null) {
 			checkboxes[checkbox].insertAdjacentHTML('afterend', '<label></label>');
