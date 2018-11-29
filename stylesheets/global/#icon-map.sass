@@ -578,10 +578,13 @@
 fieldset.collapsible legend::before
 	font-family: 'Material Icons'
 	content: '\e5db'
+	transition: 0.5s
+	display: inline-block
 
 fieldset.collapsible.collapsed legend::before
-	font-family: 'Material Icons'
-	content: '\e5c8'
+	transform: rotate(-90deg)
+	//font-family: 'Material Icons'
+	//content: '\e5c8'
 
 .toggle-multiselect::before
 	font-family: 'Material Icons'
