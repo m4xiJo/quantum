@@ -13,12 +13,13 @@
 		display: none
 
 div.flash
-	padding: 6px 4px 6px 30px
+	padding: 0px 20px 0px 20px
 	margin-bottom: 12px
-	font-size: 1.1em
+
 	border: 1px solid
-	border-radius: 3px
 	margin-top: 8px
+	font-weight: bold
+	color: white
 .nodata
 	padding: 6px 4px 6px 30px
 	margin-bottom: 12px
@@ -45,12 +46,14 @@ div.flash
 	background: url(../images/icons/UI/warning.png) 8px 5px no-repeat
 	text-align: left
 div.flash.error
-	background: url(../images/icons/UI/exclamation.png) 8px 50% no-repeat
+	background: red
+	animation: slideFlash 3s forwards
 div.flash.notice
-	background: url(../images/icons/UI/true.png) 8px 5px no-repeat
+	background: green
+	animation: slideFlash 3s forwards
 div.flash.warning
-	background: url(../images/icons/UI/warning.png) 8px 5px no-repeat
 	text-align: left
+	animation: slideFlash 3s forwards
 .conflict-details
 	font-size: 80%
 #ajax-indicator
@@ -70,3 +73,29 @@ div.flash.warning
 		background-image: url(../images/icons/UI/loading.gif)
 		padding-left: 26px
 		vertical-align: bottom
+
+@keyframes slideFlash
+	0%
+		font-size: 0
+		padding-top: 0
+		border: 0
+		display: none
+		height: 0px
+	10%
+		font-size: 1.1em
+		padding-top: 5px
+		border: 1px solid #515151
+		height: 20px
+		display: block
+	90%
+		font-size: 1.1em
+		padding-top: 5px
+		border: 1px solid #515151
+		height: 20px
+		display: block
+	100%
+		font-size: 0
+		padding-top: 0
+		border: 0
+		display: none
+		height: 0px
