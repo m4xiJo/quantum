@@ -1254,9 +1254,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
   listenToRedirectClicks();
   topMenuFeedback();
 	toggleSidebar();
+	defaultGravatarInitialsSG();
 	insertLabels();
-
-  //defaultGravatarInitialsSG();
   //document.getElementById("wrapper").classList.add('is-visible');
 });
 
@@ -1435,7 +1434,7 @@ function topMenuFeedback() {
 
 //WORK IN PROGRESS SECTION
 
-// Generate avatar initials with https://ui-avatars.com/ if user Gravatar is unset (OBSOLETE)
+// Generate avatar initials with https://ui-avatars.com/ if user Gravatar is unset
 function defaultGravatarInitials() {
   let messages;
   if (document.getElementsByClassName('message reply') !== null) { // DOM selection stuff bla bla bla... too tedious...
@@ -1456,55 +1455,50 @@ function defaultGravatarInitials() {
 
 //Self generate avatar initials if user's Gravatar is unset
 function defaultGravatarInitialsSG() {
-  let messages;
-  let buffer = {};
-  var getFile = function(url, callback) { //AJAX Http Request to check user's gravatar status code
-      var request = new XMLHttpRequest();
-      request.open('GET', url);
-      request.onreadystatechange = function() {
-          if (request.readyState == 4) {
-              callback(request.status);
-          }
-      };
-      request.send();
-  }
+	let objects = document.querySelectorAll("#content .gravatar, #content .user.active");
+	let buffer = {}; //Create a sorted JSON array
+	for (let i = 0; i < objects.length; i++) {
+		if (objects[i].tagName.toLowerCase() === "img") {
+			if (buffer[objects[i+1].innerText] == null) buffer[objects[i+1].innerText] = [objects[i]]; //Declare the index type array inside JSON if one is null
+			else buffer[objects[i+1].innerText].push(objects[i]); //Else append objects if already declared
+		}
+	}
 
-  function swapBlock(response, avatar, username, hexcolor) { // Will modify the IMG block only in case if response was anything but OK (200)
-    if (response != 200) {
-      //avatar.src += ("https%3A%2F%2Fui-avatars.com%2Fapi%2F/" + username + "/GoogleBlob/" + hexcolor);
-    }
-  }
+	for (let i = 0; i < Object.keys(buffer).length; i++) { //Get the avatar URL from the first stored block and append it to sored JSON array
+		buffer[Object.keys(buffer)[i]].avatarURL = buffer[Object.keys(buffer)[i]][0].src;
+		if (!buffer[Object.keys(buffer)[i]].avatarURL.match("(identicon)|(wavatar)|(monsterid)|(retro)|(mm)")) { //Only check if not identicon, wavatar, monsterid, retro or mystery man
+			checkFile(buffer[Object.keys(buffer)[i]][0].src, function(error, response) {
+				if (error) swapBlocks(Object.keys(buffer)[i], buffer[Object.keys(buffer)[i]], colorManager(buffer[Object.keys(buffer)[i]].avatarURL));
+			});
+		}
+	}
 
-  if (document.getElementsByClassName('message reply') !== null) { // DOM selection stuff bla bla bla... too tedious...
-      messages = document.getElementsByClassName('message reply');
-      for (let i = 0; i < messages.length; i++) {
-        let imgBlock = messages[i].children[1].children[0];
-        if (!imgBlock.src.match("(identicon)|(wavatar)|(monsterid)|(retro)|(mm)")) {
-          let userName = encodeURI(messages[i].children[1].children[2].innerText);
-          let grabAvatarURL = messages[i].children[1].children[0].src;
-          let extractedMD5 = grabAvatarURL.substring(grabAvatarURL.lastIndexOf("/") + 1, grabAvatarURL.lastIndexOf("?"));
-          let stringToHex = (parseInt(parseInt(extractedMD5, 36).toExponential().slice(2,-5), 10) & 0xFFFFFF).toString(16).toUpperCase();
-          let linkToCheck = messages[i].children[1].children[0].src + "404";
-          buffer[userName] = {md5: extractedMD5, colorHEX: stringToHex, targetBlocks: {1: imgBlock}};
-        }
-            //buffer[userName].targetBlock.src = "LUL!";
-            //alert(JSON.stringify(buffer[userName].targetBlocks));
-            //getFile(linkToCheck, statusCode => swapBlock(statusCode, imgBlock, userName, stringToHex));
+	function checkFile(url, callback) { //HTTP request to check if Gravatar is at home :)
+		let request = new XMLHttpRequest();
+		request.open('GET', url + "404");
+		request.onload = function () {
+			if (request.status < 200 || request.status > 299) callback("Error: Status " + request.status + " on resource " + url);
+			else callback(null, request);
+		}
+		request.send();
+	}
 
-      }
-      //alert(JSON.stringify(buffer));
-      /*
-      for (let j = 0; j < Object.keys(buffer).length; j++) {
-        for (let k = 0; k < buffer[buffer[Object.keys(j)]].length; k++) {
-            alert(k);
-        }
-      }*/
-      console.log(buffer);
-      for(let item in buffer) {
-          for (let subitem in buffer[item].targetBlocks)
-          buffer[item].targetBlocks[subitem].src = "Doggo!"
-          console.log(buffer[item].targetBlocks[subitem].objectNode);
+	function swapBlocks(username, targets, inputHex) {
+		let initials;
+ 		if (username.match(" ")) initials = username.split(" ")[0].charAt(0) + username.split(" ")[1].charAt(0);
+		else initials = username.charAt(0).toUpperCase();
+		for (let i = 0; i < targets.length; i++) {
+			let size = targets[i].src.match("&size=[0-9]*")[0].split("=")[1]; // <- To be fixed just with the correct regex
+			targets[i].src = "";
+			targets[i].srcset = "";
+			targets[i].style = "background-color:#" + inputHex.bg + ";height:" + size + "px;width:" +  size + "px;display:block;float:left";
+			targets[i].innerHTML = "<a class='initials' style='color:#" + inputHex.text + ";text-decoration:none; font-size:1vw; cursor:default; text-align: center;display: block; vertical-align: middle;'>" + initials + "</a>";
+		}
+	}
 
-      }
-    }
+	function colorManager(inputLink, outputHex) {
+		let extractedMD5 = inputLink.substring(inputLink.lastIndexOf("/") + 1, inputLink.lastIndexOf("?"));
+		let stringToHex = (parseInt(parseInt(extractedMD5, 36).toExponential().slice(2,-5), 10) & 0xFFFFFF).toString(16).toUpperCase();
+		return outputHex = {bg: stringToHex, text: 000};
+	}
 }
