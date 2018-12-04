@@ -1434,25 +1434,6 @@ function topMenuFeedback() {
 
 //WORK IN PROGRESS SECTION
 
-// Generate avatar initials with https://ui-avatars.com/ if user Gravatar is unset
-function defaultGravatarInitials() {
-  let messages;
-  if (document.getElementsByClassName('message reply') !== null) { // DOM selection stuff bla bla bla... too tedious...
-      messages = document.getElementsByClassName('message reply');
-      for (let i = 0; i < messages.length; i++) {
-        let imgBlock = messages[i].children[1].children[0];
-        if (!imgBlock.src.match("(identicon)|(wavatar)|(monsterid)|(retro)|(mm)")) {
-          let grabMD5hash = messages[i].children[1].children[0].src;
-          let extractedMD5 = grabMD5hash.substring(grabMD5hash.lastIndexOf("/") + 1, grabMD5hash.lastIndexOf("?"));
-          let stringToHex = (parseInt(parseInt(extractedMD5, 36).toExponential().slice(2,-5), 10) & 0xFFFFFF).toString(16).toUpperCase();
-          let linkToCheck = messages[i].children[1].children[0].src + "404";
-          let userName = encodeURI(messages[i].children[1].children[2].innerText);
-          imgBlock.src += ("https%3A%2F%2Fui-avatars.com%2Fapi%2F/" + userName + "/GoogleBlob/" + stringToHex);
-        }
-      }
-    }
-}
-
 //Self generate avatar initials if user's Gravatar is unset
 function defaultGravatarInitialsSG() {
 	let objects = document.querySelectorAll("#content .gravatar, #content .user.active");
