@@ -1480,6 +1480,6 @@ function defaultGravatarInitialsSG() {
 	function colorManager(inputLink, outputHex) {
 		let extractedMD5 = inputLink.substring(inputLink.lastIndexOf("/") + 1, inputLink.lastIndexOf("?"));
 		let stringToHex = (parseInt(parseInt(extractedMD5, 36).toExponential().slice(2,-5), 10) & 0xFFFFFF).toString(16).toUpperCase();
-		return outputHex = {bg: stringToHex, text: 000};
+		return outputHex = {bg: stringToHex, text: "000"};
 	}
 }
