@@ -57,22 +57,27 @@ div.flash.warning
 .conflict-details
 	font-size: 80%
 #ajax-indicator
+	color: white
 	position: absolute
 	border: 1px solid #bbb
-	top: 35%
-	left: 40%
-	width: 20%
+	top: 24px
+	left: 44%
+	width: 6%
 	font-weight: bold
 	text-align: center
-	padding: 0.6em
+	padding: .6em
 	z-index: 100
-	opacity: 0.5
-	span
-		background-position: 0% 40%
-		background-repeat: no-repeat
-		background-image: url(../images/icons/UI/loading.gif)
-		padding-left: 26px
+	opacity: 1
+	background: grey
+	border-bottom-left-radius: 20px
+	border-bottom-right-radius: 20px
+	span::before
+		font-family: 'Material Icons'
+		content: '\e88b'
+		font-size: 14px
 		vertical-align: bottom
+		display: inline-block
+		animation: rotationAnim 1s infinite
 
 @keyframes slideFlash
 	0%
@@ -99,3 +104,13 @@ div.flash.warning
 		border: 0
 		display: none
 		height: 0px
+
+@keyframes rotationAnim
+	0%
+		transform: rotate(0deg)
+	10%
+		transform: rotate(0deg)
+	90%
+		transform: rotate(180deg)
+	100%
+		transform: rotate(180deg)
