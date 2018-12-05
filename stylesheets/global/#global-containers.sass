@@ -71,10 +71,16 @@ html
 	border: 1px solid #cfcfcf
 
 //// GLOBAL LIST VIEW TABLES ////
+
+
 table.list, table.list th
 	background-color: #636363
 	border: 1px solid #4e4e4e
 	color: white
+
+table:not(.progress).list tr
+	height: 28px
+	border-bottom: 1px solid #e4e4e4
 
 //Odd even rows
 .day-mode table.list:not(.odd-even) tbody tr:nth-child(2n+1)
@@ -177,6 +183,7 @@ table.list
 //Other formats
 p.other-formats
 	text-align: right
+	padding-top: 20px
 
 .other-formats
 	span
