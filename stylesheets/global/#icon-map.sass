@@ -40,7 +40,7 @@
 	display: inline-block
 	vertical-align: -5%
 
-.icon.icon-group.groups::before
+.icon.icon-group::before
 	content: $groups
 	display: inline-block
 	vertical-align: -5%
@@ -55,7 +55,7 @@
 	display: inline-block
 	vertical-align: -5%
 
-.icon.icon-projects.projects::before
+.icon.icon-projects::before
 	content: $projects
 	display: inline-block
 	vertical-align: -5%
@@ -180,6 +180,7 @@
 	content: $download
 	display: inline-block
 	vertical-align: -5%
+	font-family: Material Icons
 
 //.icon-download
 	background-image: url(../images/icons/UI/download.png)
@@ -381,13 +382,15 @@
 	top: 4px
 	color: green !important
 
-
-
 .icon-not-ok
 	background-image: url(../images/icons/UI/false.png)
 
-.icon-link-break
-	background-image: url(../images/icons/UI/link_break.png)
+.icon-link-break::before
+	content: '\e15d'
+	display: inline-block
+	vertical-align: -5%
+	font-family: "Material Icons"
+	padding-right: 10px
 
 .icon-close
 	background-image: url(../images/icons/UI/close.png)
@@ -410,11 +413,6 @@
 
 //.icon-issue-closed
 	background-image: url(../images/icons/UI/ticket_checked.png)
-
-.icon.icon-news::before
-	content: $issuechecked
-	display: inline-block
-	vertical-align: -5%
 
 .icon.icon-issue-note::before
 	content: '\e06f'
@@ -450,8 +448,10 @@
 	display: inline-block
 	vertical-align: -5%
 
-.icon-add-bullet
-	background-image: url(../images/icons/UI/bullet_add.png)
+.icon-add-bullet::before
+	content: '\e147'
+	display: inline-block
+	vertical-align: -5%
 
 .icon-shared
 	background-image: url(../images/icons/UI/link.png)
@@ -592,3 +592,11 @@ fieldset.collapsible.collapsed legend::before
 	font-size: 20px
 	position: relative
 	top: 6px
+
+tr span.expander::before
+	font-family: 'Material Icons'
+	cursor: pointer
+	padding-left: 6px
+	content: "\e146"
+tr.open span.expander::before
+	content: "\e909"
