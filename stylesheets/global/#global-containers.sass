@@ -1,7 +1,7 @@
 //General rules
 html
 	hr
-		width: 95%
+		//width: 95%
 		position: relative
 		left: -6px
 
@@ -240,12 +240,13 @@ a.pdf::before
 			margin-left: 5px
 
 .contextual a, .buttons a, .contextual span
-	padding: 3px 7px 3px 5px !important
+	padding: 1px 7px 2px 5px !important
 	text-decoration: none
 
 .day-mode .contextual a, .day-mode #query_form .buttons a, .day-mode .contextual span
 	border: 1px solid #ccc
 	background: #dadada
+	border-radius: 4px
 	&:hover
 		background: white
 
@@ -284,8 +285,9 @@ a.pdf::before
 		height: 16px
 		box-sizing: border-box
 		vertical-align: middle
-		border: 1px solid #ccc
-		border-radius: 3px
+		border-bottom-right-radius: 0
+		border-top-right-radius: 0
+		padding-left: 14px
 
 //// GRAVATAR ////
 img.gravatar
@@ -337,9 +339,12 @@ div.gravatar-with-child
 		width: 250px
 
 //// MESSAGE CONTAINERS ////
-.message, .message.reply
-	padding: 7px
+.message, div.message.reply, .journal, div#activity dl
 	margin-bottom: 10px
+	background: #f3f2f2
+	padding: 8px
+	margin-bottom: 10px
+	border: 1px solid #d7d7d7
 
 #filters legend
 	color: black
@@ -492,14 +497,7 @@ input#user_search
 	label
 		display: inline-block
 		width: 210px
-input.autocomplete
-	background: #fff url(../images/icons/UI/magnifier.png) no-repeat 2px 50%
-	padding-left: 20px !important
-	border: 1px solid #9EB1C2
-	border-radius: 2px
-	height: 1.5em
-input.autocomplete.ajax-loading
-	background-image: url(../images/icons/UI/loading.gif)
+
 .role-visibility
 	padding-left: 2em
 .objects-selection
