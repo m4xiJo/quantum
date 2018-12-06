@@ -22,7 +22,7 @@
 	top: 25px
 	min-width: 100px
 	border: 1px solid #ccc
-	background: white
+	background: #7d7d7d
 	z-index: 99
 	.quick-search
 		margin: 8px
@@ -44,7 +44,6 @@
 	overflow: auto
 	>*
 		display: block
-		border: 1px solid #fff
 		overflow: hidden
 		text-overflow: ellipsis
 		white-space: nowrap
@@ -59,15 +58,6 @@ div
 	&+.drdn-items
 		border-top: 1px solid #ccc
 .drdn-items.selection
-	>*
-		&:before
-			content: ' '
-			display: inline-block
-			line-height: 1em
-			width: 1em
-			height: 1em
-			margin-right: 4px
-			font-weight: bold
 	>*.selected
 		&:before
 			content: "\2713 "
@@ -81,13 +71,15 @@ div
 	.drdn-trigger
 		height: 16px
 		display: inline-block
-		border-radius: 3px
 		border: 1px solid #ccc
 		margin: 0 !important
 		vertical-align: middle
 		font-size: 9px
 		padding: 2px
 		color: black
+		border-radius: 3px
+		border-bottom-left-radius: 0
+		border-top-left-radius: 0
 	.drdn-content
 		width: 280px
 
@@ -102,3 +94,24 @@ div.tooltip
 			padding: 4px
 			font-size: 0.8em
 			background: white
+
+input.autocomplete
+	//background: #fff url(../images/icons/UI/magnifier.png) no-repeat 2px 50%
+	padding-left: 20px !important
+	border: 1px solid #9EB1C2
+	border-radius: 2px
+	height: 1.5em
+	&::before
+		content: $magnifier
+
+input.autocomplete.ajax-loading
+	//background-image: url(../images/icons/UI/loading.gif)
+
+.quick-search::before
+		font-family: 'Material Icons'
+		content: '\e8b6'
+		display: block
+		position: absolute
+		top: 15px
+		left: 15px
+		color: black
