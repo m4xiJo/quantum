@@ -1471,7 +1471,7 @@ function defaultGravatarInitialsSG() {
 			targets[i].src = "";
 			targets[i].srcset = "";
 			targets[i].style = "background-color:#" + inputHex.bg + ";height:" + size + "px;width:" +  size + "px;display:block;float:left";
-			targets[i].innerHTML = "<a class='initials' style='color:#" + inputHex.text + ";text-decoration:none; font-size:1vw; cursor:default; text-align: center;display: block; vertical-align: middle;'>" + initials + "</a>";
+			targets[i].innerHTML = "<a class='initials' style='color:" + inputHex.text + ";text-decoration:none; font-size:1vw; cursor:default; text-align: center;display: block; vertical-align: middle;'>" + initials + "</a>";
 		}
 	}
 
