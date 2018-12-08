@@ -968,60 +968,7 @@ ul.projects
 ul.projects.root
 	margin: 0
 	padding: 0
-#projects-index .project.root.leaf::before
-		font-family: $iconfont
-		content: $projects
-		margin-right: 5px
-		text-decoration: none !important
-		display: inline-block
-		vertical-align: -10%
-#projects-index
-	column-count: auto
-	column-width: 400px
-	-webkit-column-count: auto
-	-webkit-column-width: 400px
-	-webkit-column-gap: 0.5rem
-	-moz-column-count: auto
-	-moz-column-width: 400px
-	-moz-column-gap: 0.5rem
-	ul.projects
-		li.root
-			>ul.projects
-				border-left: 3px solid #e0e0e0
-				padding-left: 1em
-			background: #e7e7e7
 
-			//experimental
-			display: block
-			-webkit-box-sizing: border-box
-			box-sizing: border-box
-			-webkit-box-flex: 0
-			-ms-flex: 0 1 auto
-			flex: 0 1 auto
-			width: 100%
-			margin-right: 10px
-			padding: 15px 15px
-			border: 1px solid #ccc
-			background-color: #f9f9f9
-			color: #555
-			min-height: 100%
-			margin-bottom: 10px
-
-		li.child
-			margin-top: 1em
-		div.root
-			a.project
-				font-family:	$globalFontTitles
-				font-weight: bold
-				font-size: 16px
-				margin: 0 0 10px 0
-				border-bottom: 1px dashed #aaa
-				width: 100%
-				display: block
-	a.icon-fav
-		padding-left: 0
-		padding-right: 20px
-		background-position: 98% 50%
 #notified-projects
 	>ul
 		max-height: 250px
