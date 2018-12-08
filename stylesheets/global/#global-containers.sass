@@ -289,11 +289,21 @@ a.pdf::before
 		border-top-right-radius: 0
 		padding-left: 14px
 
-//// GRAVATAR ////
-img.gravatar
+//// GRAVATAR & INITIALS////
+img.gravatar, div.gravatar
 	vertical-align: middle
 	border: 1px solid black
-	//height: 37px
+	display: table
+	float: left
+	a
+		font-weight: bold
+		font-size: 14px
+		display: table-cell
+		text-decoration: none
+		cursor: default
+		text-align: center
+		vertical-align: middle
+
 div.gravatar-with-child
 	position: relative
 	>img.gravatar

@@ -1443,7 +1443,7 @@ function defaultGravatarInitialsSG() {
 		}
 	}
 
-	for (let i = 0; i < Object.keys(buffer).length; i++) { //Get the avatar URL from the first stored block and append it to sored JSON array
+	for (let i = 0; i < Object.keys(buffer).length; i++) { //Get the avatar URL from the first stored block and append it to sorted JSON array
 		buffer[Object.keys(buffer)[i]].avatarURL = buffer[Object.keys(buffer)[i]][0].src;
 		if (!buffer[Object.keys(buffer)[i]].avatarURL.match("(identicon)|(wavatar)|(monsterid)|(retro)|(mm)")) { //Only check if not identicon, wavatar, monsterid, retro or mystery man
 			checkFile(buffer[Object.keys(buffer)[i]][0].src, function(error, response) {
@@ -1466,10 +1466,7 @@ function defaultGravatarInitialsSG() {
 		let initials = (username.match(" ")) ? username.split(" ")[0].charAt(0) + username.split(" ")[1].charAt(0) : username.charAt(0).toUpperCase(); //Maintain initials in case of "username" mode
 		for (let i = 0; i < targets.length; i++) {
 			let size = targets[i].src.match("(?!\&size=)[0-9]*(?=\&)")[0]; //Capture size number from the gravatar link
-			targets[i].src = "";
-			targets[i].srcset = "";
-			targets[i].style = "background-color:#" + inputHex.bg + ";height:" + size + "px;width:" +  size + "px;display:block;float:left";
-			targets[i].innerHTML = "<a class='initials' style='color:" + inputHex.text + ";text-decoration:none; font-size:1vw; cursor:default; text-align: center;display: block; vertical-align: middle;'>" + initials + "</a>";
+			targets[i].outerHTML = "<div class='gravatar' style='margin-right:10px;background-color:#" + inputHex.bg + ";height:" + size + "px;width:" +  size + "px'><a class='initials' style='color:" + inputHex.text + "'>" + initials + "</a>";
 		}
 	}
 
