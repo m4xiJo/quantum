@@ -1432,8 +1432,6 @@ function topMenuFeedback() {
     }
   }
 
-//WORK IN PROGRESS SECTION
-
 //Self generate avatar initials if user's Gravatar is unset
 function defaultGravatarInitialsSG() {
 	let objects = document.querySelectorAll("#content .gravatar, #content .user.active");
@@ -1482,3 +1480,5 @@ function defaultGravatarInitialsSG() {
 		return outputHex = {bg: bgColor, text: textColor};
 	}
 }
+
+//WORK IN PROGRESS SECTION
