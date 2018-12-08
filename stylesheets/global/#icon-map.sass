@@ -192,8 +192,9 @@
 .icon-multiple
 	background-image: url(../images/icons/UI/table_multiple.png)
 
-.icon-folder
-	background-image: url(../images/icons/UI/folder.png)
+.icon-folder:before
+	font-family: 'Material Icons'
+	content: '\e2c7'
 
 .open.icon-folder
 	background-image: url(../images/icons/UI/folder_open.png)
@@ -355,29 +356,42 @@
 	display: inline-block
 	vertical-align: -5%
 
-.icon-email
-	background-image: url(../images/icons/UI/email.png)
+.icon-email::before
+	content: '\e0be'
+	display: inline-block
+	vertical-align: -5%
 
-.icon-email-disabled
-	background-image: url(../images/icons/UI/email_disabled.png)
+.icon-email-disabled::before
+	content: '\e0e1'
+	display: inline-block
+	vertical-align: -5%
 
-.icon-email-add
-	background-image: url(../images/icons/UI/email_add.png)
+.icon-email-add::before
+	content: '\e0d0'
+	display: inline-block
+	vertical-align: -5%
 
-.icon-move-up
-	background-image: url(../images/icons/UI/1uparrow.png)
+.icon-move-up::before
+	content: '\e5d8'
+	display: inline-block
+	vertical-align: -5%
 
-.icon-move-top
-	background-image: url(../images/icons/UI/2uparrow.png)
+.icon-move-top::before
+	content: '\e25a'
+	display: inline-block
+	vertical-align: -5%
 
-.icon-move-down
-	background-image: url(../images/icons/UI/1downarrow.png)
+.icon-move-down::before
+	content: '\e5db'
+	display: inline-block
+	vertical-align: -5%
 
-.icon-move-bottom
-	background-image: url(../images/icons/UI/2downarrow.png)
+.icon-move-bottom::before
+	content: '\e258'
+	display: inline-block
+	vertical-align: -5%
 
 .icon.icon-ok::before
-	//background-image: url(../images/icons/UI/true.png)
 	content: '\e86c'
 	position: relative
 	top: 4px
@@ -404,9 +418,6 @@
 .icon-groupanonymous
 	background-image: url(../images/icons/UI/group.png)
 
-//.icon-news
-	background-image: url(../images/icons/UI/news.png)
-
 .icon.icon-news::before
 	content: $news
 	display: inline-block
@@ -420,8 +431,10 @@
 	display: inline-block
 	vertical-align: -5%
 
-.icon-changeset
-	background-image: url(../images/icons/UI/changeset.png)
+.icon-changeset::before
+	content: '\e255'
+	display: inline-block
+	vertical-align: -5%
 
 .icon.icon-message::before
 	content: '\e0c9'
@@ -599,5 +612,6 @@ tr span.expander::before
 	cursor: pointer
 	padding-left: 6px
 	content: "\e146"
+	font-size: 19px
 tr.open span.expander::before
 	content: "\e909"
