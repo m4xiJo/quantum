@@ -33,29 +33,56 @@ table.cal
 		p.day-num
 			font-weight: bold
 	.starting
-		a.issue
-			background: url(../images/icons/UI/bullet_go.png) no-repeat -1px -2px
-			padding-left: 16px
+		a.issue::before
+			content: "\e255"
+			font-family: 'Material Icons'
+			transform: rotate(90deg)
+			display: inline-block
+			vertical-align: -2px
+			color: green
 	.ending
-		a.issue
-			background: url(../images/icons/UI/bullet_end.png) no-repeat -1px -2px
-			padding-left: 16px
+		a.issue::before
+			content: "\e255"
+			font-family: 'Material Icons'
+			transform: rotate(-90deg)
+			display: inline-block
+			vertical-align: -2px
+			color: chocolate
 	.starting.ending
-		a.issue
-			background: url(../images/icons/UI/bullet_diamond.png) no-repeat -1px -2px
-			padding-left: 16px
+		a.issue::before
+			content: "\e047"
+			font-family: 'Material Icons'
+			transform: rotate(45deg)
+			display: inline-block
+			vertical-align: -2px
+			color: red
+
 p.cal.legend
-	.starting
-		background: url(../images/icons/UI/bullet_go.png) no-repeat -1px -2px
-		padding-left: 16px
-	.ending
-		background: url(../images/icons/UI/bullet_end.png) no-repeat -1px -2px
-		padding-left: 16px
+	.starting::before
+			content: "\e255"
+			font-family: 'Material Icons'
+			transform: rotate(90deg)
+			display: inline-block
+			vertical-align: -2px
+			color: green
+	.ending::before
+			content: "\e255"
+			font-family: 'Material Icons'
+			transform: rotate(-90deg)
+			display: inline-block
+			vertical-align: -2px
+			color: chocolate
 	.starting.ending
-		background: url(../images/icons/UI/bullet_diamond.png) no-repeat -1px -2px
-		padding-left: 16px
+		&::before
+			content: "\e047"
+			font-family: 'Material Icons'
+			transform: rotate(45deg)
+			display: inline-block
+			vertical-align: -2px
+			color: red
 	span
 		display: block
+
 .tooltip
 	position: relative
 	z-index: 24
