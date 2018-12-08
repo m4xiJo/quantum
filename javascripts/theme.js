@@ -1465,9 +1465,7 @@ function defaultGravatarInitialsSG() {
 	}
 
 	function swapBlocks(username, targets, inputHex) {
-		let initials;
- 		if (username.match(" ")) initials = username.split(" ")[0].charAt(0) + username.split(" ")[1].charAt(0);
-		else initials = username.charAt(0).toUpperCase();
+		let initials = (username.match(" ")) ? username.split(" ")[0].charAt(0) + username.split(" ")[1].charAt(0) : username.charAt(0).toUpperCase(); //Maintain initials in case of "username" mode
 		for (let i = 0; i < targets.length; i++) {
 			let size = targets[i].src.match("&size=[0-9]*")[0].split("=")[1]; // <- To be fixed just with the correct regex
 			targets[i].src = "";
