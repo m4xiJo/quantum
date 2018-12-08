@@ -1255,6 +1255,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   topMenuFeedback();
 	toggleSidebar();
 	defaultGravatarInitialsSG();
+	wrapSplitcontentBlocks();
 	insertLabels();
   //document.getElementById("wrapper").classList.add('is-visible');
 });
@@ -1274,10 +1275,23 @@ function moveDivsAround() {
 //A fix for custom check/radio boxes
 function insertLabels() {
 	let checkboxes = document.querySelectorAll("#content input[type='checkbox'], #content input[type='radio']");
-	for (checkbox in checkboxes) {
-		if (checkboxes[checkbox].nextElementSibling == null) {
-			checkboxes[checkbox].insertAdjacentHTML('afterend', '<label></label>');
+	for (let i = 0; i < checkboxes.length; i++) {
+		if (checkboxes[i].nextElementSibling == null) {
+			checkboxes[i].insertAdjacentHTML('afterend', '<label></label>');
 		}
+	}
+}
+
+//A temporary fix for inconsistent splitcontent blocks, which wrpas them into a flexbox
+function wrapSplitcontentBlocks() {
+	var contentleft = document.querySelectorAll('#content .splitcontentleft');
+	var contentright = document.querySelectorAll('#content .splitcontentright');
+	let wrapper = document.createElement('div');
+	wrapper.style.display = "flex";
+	for (let i = 0; i < contentleft.length; i++) {
+		contentleft[i].insertAdjacentElement('beforebegin', wrapper);
+		wrapper.appendChild(contentleft[i]);
+		wrapper.appendChild(contentright[i]);
 	}
 }
 
