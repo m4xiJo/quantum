@@ -1467,7 +1467,7 @@ function defaultGravatarInitialsSG() {
 	function swapBlocks(username, targets, inputHex) {
 		let initials = (username.match(" ")) ? username.split(" ")[0].charAt(0) + username.split(" ")[1].charAt(0) : username.charAt(0).toUpperCase(); //Maintain initials in case of "username" mode
 		for (let i = 0; i < targets.length; i++) {
-			let size = targets[i].src.match("&size=[0-9]*")[0].split("=")[1]; // <- To be fixed just with the correct regex
+			let size = targets[i].src.match("(?!\&size=)[0-9]*(?=\&)")[0]; //Capture size number from the gravatar link
 			targets[i].src = "";
 			targets[i].srcset = "";
 			targets[i].style = "background-color:#" + inputHex.bg + ";height:" + size + "px;width:" +  size + "px;display:block;float:left";
