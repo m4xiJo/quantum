@@ -6,7 +6,10 @@
 [![](https://img.shields.io/github/tag/redmine-cp/project-opal.svg?style=flat-square&label=Latest%20tag)](https://github.com/redmine-cp/project-opal/tags)
 [![](https://img.shields.io/discord/467920054797860865.svg?style=flat-square&logo=discord&label=Discord%20chat&colorB=7289da)](https://discord.gg/Jm6rej7)
 
-Visual appearance modernization project for Redmine, initiated by one of the newly formed Redmine communities. It aims to achieve a more flat and clean look, as well as introduce additional expansions with help of front-end features for additional use convenience.
+Visual appearance modernization project for Redmine, initiated by one of the newly formed Redmine communities. It aims to achieve a more flat and clean look, as well as introduce additional expansions with help of front-end features for additional use convenience.  
+Disclaimer: this theme project serves the purpose of sandbox to experiment and also test in order to research the best solutions for the improvement of markup of Redmine (not just the CSS), to later submit markup changes of appropriate Ruby views as a [patch](https://www.redmine.org/projects/redmine/issues), as Redmine's markup actually could use fixes to ease the CSS element selection, increased renponsiveness and simply just cleaner markup.
+The current design choice is by no means final, and may change alot.
+
 #### Navigation
 [Features](#features) |
 [Installation](#installation) |
@@ -25,6 +28,7 @@ ___
 7. Ability to set all the external links to open in the new tab of the browser.
 8. Emoji support, with emoji picker and ability to quick search (experimental feature).
 9. The bar on the top now has navigation feedback.
+10. Avatar initials if default and unset avatar (experimental feature).
 
 *These screenshots demonstrate the state as of 28 Nov 2018*
 <table cellspacing="0" border="0">
