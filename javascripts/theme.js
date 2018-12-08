@@ -1477,7 +1477,8 @@ function defaultGravatarInitialsSG() {
 
 	function colorManager(inputLink, outputHex) {
 		let extractedMD5 = inputLink.substring(inputLink.lastIndexOf("/") + 1, inputLink.lastIndexOf("?"));
-		let stringToHex = (parseInt(parseInt(extractedMD5, 36).toExponential().slice(2,-5), 10) & 0xFFFFFF).toString(16).toUpperCase();
-		return outputHex = {bg: stringToHex, text: "000"};
+		let bgColor = (parseInt(parseInt(extractedMD5, 36).toExponential().slice(2,-5), 10) & 0xFFFFFF).toString(16);
+		let textColor = ((((parseInt(bgColor.substr(0,2), 16) * 299) + (parseInt(bgColor.substr(2,2), 16) * 587) + (parseInt(bgColor.substr(4,2), 16) * 114)) / 1000) >= 128) ? 'black' : 'white'; //This is YIQ \m/
+		return outputHex = {bg: bgColor, text: textColor};
 	}
 }
