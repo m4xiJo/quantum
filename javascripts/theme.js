@@ -1257,6 +1257,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 	defaultGravatarInitialsSG();
 	wrapSplitcontentBlocks();
 	insertLabels();
+	moreModules();
   //document.getElementById("wrapper").classList.add('is-visible');
 });
 
@@ -1269,10 +1270,9 @@ function moveDivsAround() {
 	if (document.getElementById('quick-search')) document.getElementById('top-menu').insertAdjacentElement('beforeend', document.getElementById('quick-search')); //Move the quick search outside parent container
   if (document.getElementsByClassName('jstElements')[0]) document.getElementsByClassName('jstElements')[0].insertAdjacentHTML('beforeend', '<button type="button" tabindex="200" class="jstb_emoji" title="Emoji" onclick="showHideEmojiPicker()"><span>Emoji</span></button>'); //Place emoji selector button
 	if (document.getElementById('sidebar')) document.getElementById('sidebar').insertAdjacentHTML('afterbegin', '<div id="sbartoggle" onclick="toggleSidebar(true)"><div>'); //Insert a toggle for sidebar
-	document.getElementsByClassName('bgr')[0].innerHTML = "Powered by Jean-Philippe Lang &#x26A1";
 }
 
-//A fix for custom check/radio boxes
+//A temporary fix for custom check/radio boxes
 function insertLabels() {
 	let checkboxes = document.querySelectorAll("#content input[type='checkbox'], #content input[type='radio']");
 	for (let i = 0; i < checkboxes.length; i++) {
@@ -1284,8 +1284,8 @@ function insertLabels() {
 
 //A temporary fix for inconsistent splitcontent blocks, which wrpas them into a flexbox
 function wrapSplitcontentBlocks() {
-	var contentleft = document.querySelectorAll('#content .splitcontentleft');
-	var contentright = document.querySelectorAll('#content .splitcontentright');
+	let contentleft = document.querySelectorAll('#content .splitcontentleft');
+	let contentright = document.querySelectorAll('#content .splitcontentright');
 	let wrapper = document.createElement('div');
 	wrapper.style.display = "flex";
 	for (let i = 0; i < contentleft.length; i++) {
@@ -1293,6 +1293,11 @@ function wrapSplitcontentBlocks() {
 		wrapper.appendChild(contentleft[i]);
 		wrapper.appendChild(contentright[i]);
 	}
+}
+
+//A temporary fix for main menu "more" submenu
+function moreModules() {
+	let menu = document.querySelector('#main-menu > ul').insertAdjacentHTML('beforeend', '<li><a style="font-family:Material Icons;font-size: 25px;top:-5px;position: absolute;">&#xe5d3</a><ul class="menu-children"><li><a>Item1</a></li><li><a>Item2</a></li></ul></li>');
 }
 
 //Sidebar toggle
