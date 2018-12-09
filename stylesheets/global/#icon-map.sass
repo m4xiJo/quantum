@@ -6,6 +6,9 @@
 	font-size: 16px
 	&::before
 		padding-right: 6px
+		font-family: $iconfont
+		display: inline-block
+		vertical-align: -2px
 
 .icon-only
 	background-position: 0% 50%
@@ -29,368 +32,149 @@
 	font-size: 18px
 
 .icon-only.icon-settings::before
-	font-family: $iconfont
 	content: $settings
-
 .icon-only.icon-close::before
-	font-family: $iconfont
+	content: $delete
+.icon-only.icon-del::before
 	content: $delete
 
 .icon.icon-user.users::before
 	content: $users
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-group::before
 	content: $groups
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-roles.roles::before
 	content: $rolespermissions
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-issue-edit.issue-statuses::before
 	content: $issuestatuses
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-projects::before
 	content: $projects
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-issue.trackers::before
 	content: $trackers
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-workflows.workflows::before
 	content: $workflow
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-custom-fields.custom-fields::before
 	content: $customfields
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-list.enumerations::before
 	content: $enumerators
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-settings.settings::before
 	content: $settings
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-server-authentication.ldap-authentication::before
 	content: $LDAP
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-plugins.plugins::before
 	content: $plugins
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-help.info::before
 	content: $information
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-add::before
 	content: $new
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-save::before
 	content: $save
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-reload::before
 	content: $clear
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-lock::before, .icon-locked::before
 	content: $close
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-unlock::before, .icon-unlocked::before
 	content: $open
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-checked::before
 	content: $apply
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-issue::before
 	content: '\e065'
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-issue-closed::before
 	content: $apply
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-issue-edit::before
 	content: $apply
-	display: inline-block
-	vertical-align: -5%
-//.icon-edit
-	background-image: url(../images/icons/UI/edit.png)
-
 .icon-edit::before
 	content: $edit
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-copy::before
 	content: '\e14d'
-	display: inline-block
-	vertical-align: -5%
-
 .icon-duplicate
 	background-image: url(../images/icons/UI/duplicate.png)
-
-//.icon-del
-	background-image: url(../images/icons/UI/delete.png)
-
 .icon.icon-del::before
 	content: $delete
-	display: inline-block
-	vertical-align: -5%
 
 //.icon-move
 	background-image: url(../images/icons/UI/move.png)
-
 .icon.icon-move::before
 	content: $move
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-download::after
 	content: $download
 	display: inline-block
 	vertical-align: -5%
 	font-family: Material Icons
-
 //.icon-download
 	background-image: url(../images/icons/UI/download.png)
-
 .icon-cancel
 	background-image: url(../images/icons/UI/cancel.png)
-
 .icon-multiple
 	background-image: url(../images/icons/UI/table_multiple.png)
-
 .icon-folder:before
-	font-family: 'Material Icons'
 	content: '\e2c7'
-
 .open.icon-folder
 	background-image: url(../images/icons/UI/folder_open.png)
-
-//.icon-package
-	background-image: url(../images/icons/UI/package.png)
-
 .icon.icon-package::before
 	content: $package
-	display: inline-block
-	vertical-align: -5%
-
 .icon-project
 	background-image: url(../images/icons/UI/projects.png)
-
-//.icon-attachment
-	background-image: url(../images/icons/UI/attachment.png)
-
 .icon.icon-attachment::before
 	content: $attachment
-	display: inline-block
-	vertical-align: -5%
-
-//.icon-history
-	background-image: url(../images/icons/UI/history.png)
-
 .icon.icon-history::before
 	content: $history
-	display: inline-block
-	vertical-align: -5%
-
-//.icon-time-entry
-	background-image: url(../images/icons/UI/time.png)
-
-//.icon-time
-	background-image: url(../images/icons/UI/time.png)
-
 .icon.icon-time-entry::before
 	content: $time
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-time::before
 	content: $time
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-attachment::before
 	content: $attachment
-	display: inline-block
-	vertical-align: -5%
-
-//.icon-time-add
-	background-image: url(../images/icons/UI/time_add.png)
-
 .icon.icon-time-add::before
 	content: $timeadd
-	display: inline-block
-	vertical-align: -5%
-
 .icon-stats
 	background-image: url(../images/icons/UI/stats.png)
-
 .icon-warning
 	background-image: url(../images/icons/UI/warning.png)
-
 .icon.icon-error::before
 	content: "\e002"
 	position: relative
 	top: 4px
 	color: red !important
-
-//.icon-fav
-	background-image: url(../images/icons/UI/fav.png)
-
 .icon.icon-fav::before
 	content: $favourite
-	display: inline-block
-	vertical-align: -5%
-
-//.icon-fav-off
-	background-image: url(../images/icons/UI/fav_off.png)
-
 .icon.icon-fav-off::before
 	content: $favouriteoff
-	display: inline-block
-	vertical-align: -5%
-
 .icon-report
 	background-image: url(../images/icons/UI/report.png)
-
-//.icon-comment
-	background-image: url(../images/icons/UI/comment.png)
-
-//.icon-comments
-	background-image: url(../images/icons/UI/comment.png)
-
 .icon.icon-comment::before
 	content: $comment
-	display: inline-block
-	vertical-align: -5%
-
-.icon.icon-comment::before
+.icon.icon-comments::before
 	content: $comment
-	display: inline-block
-	vertical-align: -5%
-
 .icon-summary
 	background-image: url(../images/icons/UI/lightning.png)
-
-//.icon-zoom-in
-	background-image: url(../images/icons/UI/zoom_in.png)
-
-//.icon-zoom-out
-	background-image: url(../images/icons/UI/zoom_out.png)
-
 .icon.icon-zoom-in::before
 	content: $zoomin
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-zoom-out::before
 	content: $zoomout
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-magnifier::before
 	content: $magnifier
-	display: inline-block
-	vertical-align: -5%
-
-//.icon-magnifier
-	background-image: url(../images/icons/UI/magnifier.png)
-
 .icon-passwd
 	background-image: url(../images/icons/UI/textfield_key.png)
-
-//.icon-arrow-right
-	background-image: url(../images/icons/UI/bullet_go.png)
-
-//.icon-test
-	background-image: url(../images/icons/UI/bullet_go.png)
-
-//.icon-sticky
-	background-image: url(../images/icons/UI/bullet_go.png)
-
 .icon.icon-arrow-right::before
 	content: $sticky
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-test::before
 	content: $sticky
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-sticky::before
 	content: $sticky
-	display: inline-block
-	vertical-align: -5%
-
 .icon-email::before
 	content: '\e0be'
-	display: inline-block
-	vertical-align: -5%
-
 .icon-email-disabled::before
 	content: '\e0e1'
-	display: inline-block
-	vertical-align: -5%
-
 .icon-email-add::before
 	content: '\e0d0'
-	display: inline-block
-	vertical-align: -5%
-
 .icon-move-up::before
 	content: '\e5d8'
-	display: inline-block
-	vertical-align: -5%
-
 .icon-move-top::before
 	content: '\e25a'
-	display: inline-block
-	vertical-align: -5%
-
 .icon-move-down::before
 	content: '\e5db'
-	display: inline-block
-	vertical-align: -5%
-
 .icon-move-bottom::before
 	content: '\e258'
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-ok::before
 	content: '\e86c'
 	position: relative
@@ -428,44 +212,20 @@
 
 .icon.icon-issue-note::before
 	content: '\e06f'
-	display: inline-block
-	vertical-align: -5%
-
 .icon-changeset::before
 	content: '\e255'
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-message::before
 	content: '\e0c9'
-	display: inline-block
-	vertical-align: -5%
-
 .icon.icon-reply::before
 	content: '\e15e'
-	display: inline-block
-	vertical-align: -5%
-
-//.icon-wiki-page
-	background-image: url(../images/icons/UI/wiki_edit.png)
-
 .icon.wiki-page::before
 	content: $edit
-	display: inline-block
-	vertical-align: -5%
-
-//.icon-document
-	background-image: url(../images/icons/UI/document.png)
-
 .icon.icon-document::before
 	content: $document
-	display: inline-block
-	vertical-align: -5%
-
 .icon-add-bullet::before
 	content: '\e147'
-	display: inline-block
-	vertical-align: -5%
+.icon.icon-stats::before
+	content: '\e24b'
 
 .icon-shared
 	background-image: url(../images/icons/UI/link.png)
