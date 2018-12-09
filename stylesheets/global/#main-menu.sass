@@ -2,6 +2,7 @@
 	position: sticky
 	top: $mmHeight
 	width: 100%
+	height: 35px
 	z-index: 10
 	font-size: $mmTextSize
 	-webkit-touch-callout: none /* iOS Safari */
@@ -39,6 +40,7 @@
 			font-weight: bold
 			margin: 0
 			padding: 8px 8px 6px 10px
+			border-bottom: 4px solid transparent
 			&:hover
 				background: #759FCF
 				border-bottom: 4px solid black
@@ -61,11 +63,12 @@
 	.menu-children
 		display: none
 		position: absolute
-		width: inherit
+		width: 126px
+		top: 35px
 		z-index: 45
+		border-top: 1px solid #759FCF
 		border-right: 1px solid #759FCF
 		border-bottom: 1px solid #759FCF
-		border-left: 1px solid #759FCF
 		background: $mmBgColor
 		li
 			float: left
@@ -73,9 +76,73 @@
 			width: 100%
 			a
 				font-weight: normal
+				padding: 6px
 				&:hover
 	.tabs-buttons
 		right: 6px
+
+div.tabs-buttons
+
+button.tab-left
+	cursor: pointer
+	position: absolute
+	padding: 4px
+	height: 35px
+	width: 20px
+	right: 19px
+	bottom: 0px
+	&:hover
+	&:focus
+		outline: 0
+button.tab-right
+	cursor: pointer
+	position: absolute
+	padding: 4px
+	height: 35px
+	width: 20px
+	right: 1px
+	bottom: 0px
+	&:hover
+	&:focus
+		outline: 0
+button.tab-left.disabled
+	cursor: unset
+button.tab-right.disabled
+	cursor: unset
+
+#new-object
+	width: 20px
+
+#new-object::before
+	font-family: 'Material Icons'
+	content: '\e5d2'
+	position: absolute
+	font-size: 25px
+	display: inline-block
+	top: 2px
+	left: 7px
+
+.menu-children a::before
+	font-family: 'Material Icons'
+	padding-right: 7px
+	vertical-align: -2px
+
+.new-issue-sub::before
+	content: '\e868'
+.new-issue-category::before
+	content: '\e8ef'
+.new-version::before
+	content: '\e0b6'
+.new-timelog::before
+	content: '\e334'
+.new-news::before
+	content: '\e8b0'
+.new-document::before
+	content: $news
+.new-wiki-page::before
+	content: '\e90f'
+.new-file::before
+	content: '\e24d'
 
 //Day/night mode affected rules
 .day-mode
