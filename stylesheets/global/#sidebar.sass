@@ -90,14 +90,14 @@
 
 #sidebar.shown
 	margin-left: 10px
-	padding: 10px 0px 20px 20px
+	padding: 15px 0px 15px 15px
 	animation: slide 0.1s normal forwards
 
 #main.nosidebar #sidebar.shown + #content
 	width: 100% !important
 
 #sidebar.shown + #content
-	width: 88% !important
+	width: calc(100% - 230px) !important
 	transition: 0.1s
 
 #sidebar #sbartoggle::before
@@ -111,14 +111,12 @@
 	font-family: 'Material Icons'
 	content: '\e8f5'
 
-
-
 @keyframes slide
 	0%
 		display: none
 		width: 0
 	100%
-		width: 12%
+		width: 230px
 		display: block
 
 @-moz-keyframes slide
@@ -126,7 +124,7 @@
 		display: none
 		width: 0
 	100%
-		width: 12%
+		width: 230px
 		display: block
 
 @-webkit-keyframes slide
@@ -134,7 +132,7 @@
 		display: none
 		width: 0
 	100%
-		width: 12%
+		width: 230px
 		display: block
 
 @-ms-keyframes slide
@@ -142,5 +140,5 @@
 		display: none
 		width: 0
 	100%
-		width: 12%
+		width: 230px
 		display: block
