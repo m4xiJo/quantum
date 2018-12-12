@@ -50,16 +50,20 @@ html
 	display: flex
 
 .splitcontentleft
-	width: 100%
-	margin-right: 5px
+	width: calc(50% - 27px)
+	margin-bottom: 5px
+	float: left
+	padding: 10px
 
 .day-mode .splitcontentleft
 	background: #ececec
 	border: 1px solid #cfcfcf
 
 .splitcontentright
-	width: 100%
-	margin-left: 5px
+	width: calc(50% - 27px)
+	margin-bottom: 5px
+	float: right
+	padding: 10px
 
 .day-mode .splitcontentright
 	background: #ececec
@@ -236,6 +240,7 @@ a.pdf::before
 			margin-left: 5px
 
 .contextual a, .buttons a, .contextual span
+	vertical-align: middle
 	padding: 1px 7px 2px 5px !important
 	text-decoration: none
 
@@ -281,7 +286,6 @@ a.pdf::before
 		vertical-align: middle
 		border-bottom-right-radius: 0
 		border-top-right-radius: 0
-		padding-left: 14px
 
 //// GRAVATAR & INITIALS////
 img.gravatar, div.gravatar
@@ -817,14 +821,7 @@ table
 tr.builtin
 	td.name
 		font-style: italic
-a.sort
-	padding-right: 16px
-	background-position: 100% 50%
-	background-repeat: no-repeat
-a.sort.asc
-	background-image: url(../images/icons/UI/sort_asc.png)
-a.sort.desc
-	background-image: url(../images/icons/UI/sort_desc.png)
+
 table.boards
 	a.board
 		background: url(../images/icons/UI/comment.png) no-repeat 0% 50%
