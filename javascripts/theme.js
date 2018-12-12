@@ -1255,9 +1255,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
   topMenuFeedback();
 	toggleSidebar();
 	defaultGravatarInitialsSG();
-	wrapSplitcontentBlocks();
 	insertLabels();
 	moreModules();
+	//wrapSplitcontentBlocks();
 });
 
 //Move some containers out to achieve stickiness
