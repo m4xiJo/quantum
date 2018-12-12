@@ -1258,7 +1258,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
 	wrapSplitcontentBlocks();
 	insertLabels();
 	moreModules();
-  //document.getElementById("wrapper").classList.add('is-visible');
 });
 
 //Move some containers out to achieve stickiness
