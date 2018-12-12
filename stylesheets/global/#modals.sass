@@ -82,18 +82,23 @@ div
 		border-top-left-radius: 0
 	.drdn-content
 		width: 280px
-
 div.tooltip
+
 	&:hover
 		span.tip
 			display: block
 			position: absolute
-			top: 12px
-			width: 270px
+			top: -1px
+			left: calc(100% + 1px)
+			width: 180px
 			border: 1px solid #555
 			padding: 4px
 			font-size: 0.8em
 			background: white
+			color: black
+			a
+				color: black
+
 
 input.autocomplete
 	//background: #fff url(../images/icons/UI/magnifier.png) no-repeat 2px 50%
