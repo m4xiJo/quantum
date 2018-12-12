@@ -15,12 +15,12 @@
 	background-repeat: no-repeat
 	padding-left: 16px
 	display: inline-block
-	width: 12px
+	width: 10px
 	height: 16px
 	overflow: hidden
 	padding-top: 0
 	padding-bottom: 0
-	font-size: 12px
+	font-size: 18px
 	vertical-align: middle
 	font-family: 'Material Icons'
 
@@ -37,9 +37,10 @@
 	content: $delete
 .icon-only.icon-del::before
 	content: $delete
-
 .icon.icon-user.users::before
 	content: $users
+.icon.icon-user::before
+	content: '\e851'
 .icon.icon-group::before
 	content: $groups
 .icon.icon-roles.roles::before
@@ -90,9 +91,6 @@
 	background-image: url(../images/icons/UI/duplicate.png)
 .icon.icon-del::before
 	content: $delete
-
-//.icon-move
-	background-image: url(../images/icons/UI/move.png)
 .icon.icon-move::before
 	content: $move
 .icon.icon-download::after
@@ -100,8 +98,6 @@
 	display: inline-block
 	vertical-align: -5%
 	font-family: Material Icons
-//.icon-download
-	background-image: url(../images/icons/UI/download.png)
 .icon-cancel
 	background-image: url(../images/icons/UI/cancel.png)
 .icon-multiple
@@ -145,16 +141,16 @@
 	content: $comment
 .icon.icon-comments::before
 	content: $comment
-.icon-summary
-	background-image: url(../images/icons/UI/lightning.png)
+.icon-summary::before
+	content: '\e152'
 .icon.icon-zoom-in::before
 	content: $zoomin
 .icon.icon-zoom-out::before
 	content: $zoomout
 .icon.icon-magnifier::before
 	content: $magnifier
-.icon-passwd
-	background-image: url(../images/icons/UI/textfield_key.png)
+.icon-passwd::before
+	content: '\e32a'
 .icon.icon-arrow-right::before
 	content: $sticky
 .icon.icon-test::before
@@ -183,6 +179,8 @@
 
 .icon-not-ok
 	background-image: url(../images/icons/UI/false.png)
+.icon-actions::before
+	content: '\e5d3'
 
 .icon-link-break::before
 	content: '\e15d'
@@ -302,6 +300,9 @@
 .jstb_em::before
 	content: $format-italic
 
+.jstb_ins::before
+	content: '\e249'
+
 .jstb_ul::before
 	content: $format-bulletpoints
 
@@ -357,8 +358,6 @@ fieldset.collapsible legend::before
 
 fieldset.collapsible.collapsed legend::before
 	transform: rotate(-90deg)
-	//font-family: 'Material Icons'
-	//content: '\e5c8'
 
 .toggle-multiselect::before
 	font-family: 'Material Icons'
@@ -382,3 +381,15 @@ tr.open span.expander::before
 	color: #333
 	vertical-align: -2px
 	padding-right: 3px
+
+a.sort
+	&.asc::before
+		font-family: 'Material Icons'
+		content: '\e5c5'
+		font-size: 16px
+		vertical-align: -3px
+	&.desc::before
+		font-family: 'Material Icons'
+		content: '\e5c7'
+		font-size: 16px
+		vertical-align: -3px
