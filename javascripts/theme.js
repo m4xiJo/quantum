@@ -1380,7 +1380,7 @@ function toggleContrast(set) {
 function showHideEmojiPicker() {
 let emojiChecks;
 if (document.getElementById('emojiSelector') == null && document.getElementsByClassName('jstElements')[0] !== null) {
-  let buildEmojicontent = '<div id="emojiSelector"><input id="emojiSearch" placeholder="Find emoji by tag..."><hr style="box-shadow:0px 0px 5px black;margin:3px 0px 0px 0px;"><div id="allEmoji" style="height:154px;overflow-x:auto;padding:3px;width:99%;">';
+  let buildEmojicontent = '<div id="emojiSelector" style="position: absolute;height: 200px;width: 260px;top: 282px;background: white;right: 181px;border: 1px solid black;"><input id="emojiSearch" placeholder="Find emoji by tag..."><hr style=";margin:3px 0px 0px 0px;"><div id="allEmoji" style="height:154px;overflow-x:auto;padding:3px;width:99%;">';
       for (let category in data["emojiMap"]["GoogleBlob"]) { //for each emoji category
         buildEmojicontent += '<div id="' + category + '" class="emojiCat"><h4>' + category + '</h4>';
         for (let emoji in data["emojiMap"]["GoogleBlob"][category]) {
@@ -1390,7 +1390,7 @@ if (document.getElementById('emojiSelector') == null && document.getElementsByCl
       }
       buildEmojicontent += '</div></div>';
 
-      document.getElementsByClassName('jstElements')[0].insertAdjacentHTML('afterend', buildEmojicontent); //Place emoji selector
+      document.getElementsByClassName('jstEditor')[0].insertAdjacentHTML('afterend', buildEmojicontent); //Place emoji selector
       document.getElementsByClassName('wiki-edit')[0].focus();
 
       document.getElementById('emojiSelector').addEventListener('click', emojiChecks = function (emojiClicks) {
