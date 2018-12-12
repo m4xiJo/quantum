@@ -1274,9 +1274,9 @@ function moveDivsAround() {
 
 //A temporary fix for custom check/radio boxes
 function insertLabels() {
-	let checkboxes = document.querySelectorAll("#content input[type='checkbox'], #content input[type='radio']");
+	let checkboxes = document.querySelectorAll("#main input[type='checkbox'], #main input[type='radio']");
 	for (let i = 0; i < checkboxes.length; i++) {
-		if (checkboxes[i].nextElementSibling == null) {
+		if (checkboxes[i].nextElementSibling == null || checkboxes[i].nextElementSibling.tagName.toLowerCase() === "a") {
 			checkboxes[i].insertAdjacentHTML('afterend', '<label></label>');
 		}
 	}
