@@ -1,17 +1,9 @@
 //General rules
-#list-left
-	float: left
-	width: 49%
-//.splitcontentright
-	float: right
-	width: 49%
-#list-right
-	float: right
-	width: 49%
+
 
 .mypage-box
-
 	padding: 8px
+	margin-bottom: 8px
 	line-height: 1.5em
 	>.contextual
 		opacity: 0
@@ -21,14 +13,33 @@
 			opacity: 1
 
 //Day/night mode affected rules
+.block-receiver
+	min-height: 200px
+
+#list-left
+	float: left
+	width: calc(50% - 4px)
+
+#list-right
+	float: right
+	width: calc(50% - 4px)
+
 .night-mode
 	.mypage-box
+		background: #393939
 		border: 1px solid #4e4e4e
 	.block-receiver
-		background: #393939
-		border: 1px dotted #5f5f5f
+		//border: 1px dashed #5f5f5f
 	.dragging
 		.block-receiver
 			border: 1px dotted #5f5f5f
 
 .day-mode
+	.mypage-box
+		background: #ececec
+		border: 1px solid #cfcfcf
+	.block-receiver
+		//border: 1px dashed #5f5f5f
+	.dragging
+		.block-receiver
+			border: 1px dotted #5f5f5f
