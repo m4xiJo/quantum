@@ -5,21 +5,19 @@
 	top: 25px
 
 #sidebar
-	//transition: 0.2s
 	float: right
 	width: 0
 	box-sizing: border-box
-	position: relative
 	z-index: 1
 	padding: 0
 	margin: 0
 	animation: slide 0s reverse paused
 	background: #eee
 	position: sticky
-	//top: 56px
-	min-height: 300px
 	box-shadow: -1px -2px 4px 0px #888
 	border-left: 1px solid #ababab
+	height: calc(100vh - 159px)
+	display: block
 	h3
 		font-size: 14px
 		margin-top: 14px
@@ -73,7 +71,6 @@
 	#sidebar
 		background: #636363
 
-
 //Toggle view/hide
 #sbartoggle
 	display: block
@@ -97,13 +94,13 @@
 	width: 100% !important
 
 #sidebar.shown + #content
-	width: calc(100% - 230px) !important
+	width: calc(100% - 230px)
 	transition: 0.1s
 
 #sidebar #sbartoggle::before
 	font-family: 'Material Icons'
 	content: '\e8f4'
-	opacity: 1
+	visibility: visible
 	cursor: pointer
 	font-size: 16px
 
@@ -113,32 +110,32 @@
 
 @keyframes slide
 	0%
-		display: none
+		visibility: hidden
 		width: 0
 	100%
 		width: 230px
-		display: block
+		visibility: visible
 
 @-moz-keyframes slide
 	0%
-		display: none
+		visibility: hidden
 		width: 0
 	100%
 		width: 230px
-		display: block
+		visibility: visible
 
 @-webkit-keyframes slide
 	0%
-		display: none
+		visibility: hidden
 		width: 0
 	100%
 		width: 230px
-		display: block
+		visibility: visible
 
 @-ms-keyframes slide
 	0%
-		display: none
+		visibility: hidden
 		width: 0
 	100%
 		width: 230px
-		display: block
+		visibility: visible
