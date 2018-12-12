@@ -1300,6 +1300,20 @@ function moreModules() {
 	let menu = document.querySelector('#main-menu > ul').insertAdjacentHTML('beforeend', '<li><a style="font-family:Material Icons;font-size: 25px;top:-5px;position: absolute;">&#xe5d3</a><ul class="menu-children"><li><a>Item1</a></li><li><a>Item2</a></li></ul></li>');
 }
 
+//A temporary fix for callendar cells growing in height
+function overflowingCallendar() {
+	let callendarCells = document.querySelectorAll('.cal td');
+	//let callendarIssues = document.querySelectorAll('.cal td > div');
+	let wrapper = document.createElement('div');
+	wrapper.style.overflow = "auto";
+	for (let i = 0; i < callendarCells.length; i++) {
+		callendarCells[i].insertAdjacentElement('beforeend', wrapper);
+		for (let j = 0; j < document.querySelectorAll('.cal td > div').length; j++) {
+			wrapper.appendChild(document.querySelectorAll('.cal td > div')[j]);
+		}
+	}
+}
+
 //Sidebar toggle
 function toggleSidebar(set) {
 	let sidebar = document.getElementById('sidebar');
