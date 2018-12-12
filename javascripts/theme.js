@@ -1257,6 +1257,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 	defaultGravatarInitialsSG();
 	insertLabels();
 	moreModules();
+	//overflowingCallendar();
 	//wrapSplitcontentBlocks();
 });
 
