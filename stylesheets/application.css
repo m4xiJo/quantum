@@ -3731,23 +3731,14 @@ table.list.changesets th:nth-child(3)::before {
   margin: 5em auto 2em auto;
   padding: 20px;
   width: 340px;
-  border: 1px solid #FDBF3B;
-  border-radius: 4px;
-  box-sizing: border-box; }
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background: #f9f9f9; }
   #login-form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold; }
-  #login-form input[type=text] {
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 15px;
-    padding: 7px;
-    display: block;
-    width: 100%;
-    box-sizing: border-box; }
-  #login-form input[type=password] {
-    border: 1px solid #ccc;
+  #login-form input[type=text], #login-form input[type=password] {
     border-radius: 3px;
     margin-bottom: 15px;
     padding: 7px;
@@ -3763,11 +3754,10 @@ table.list.changesets th:nth-child(3)::before {
     background: #fff url(../images/icons/UI/openid-bg.gif) no-repeat 4px 50%;
     padding-left: 24px !important; }
   #login-form input#login-submit {
-    margin-top: 15px;
-    padding: 7px;
     display: block;
+    box-sizing: border-box;
     width: 100%;
-    box-sizing: border-box; }
+    font-weight: bold; }
 
 .mypage-box {
   padding: 8px;
